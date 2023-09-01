@@ -1,0 +1,39 @@
+/* .container-fluid:required {
+    background-color: black;
+    height: 70px;
+} */
+/* .dropdown:required {
+    margin-left: 100px;
+ } */
+ #PatientNavHeading{
+    color: white;
+    font-size: 50px ;
+    font-weight: 500;
+ }
+#PatientNavHeading:hover{
+    color: #CCFF00;
+ }
+ /* .navbar-nav:required {
+    margin-left: 90px;
+ } */
+ /* .nav-item:required {
+    padding: 8px;
+ } */
+ .NavigationBarBarDropdown{
+    margin-left: 230%;
+    margin-top: 5%;
+ } 
+ #PatientNavbar{
+   background-color: black;
+   height: 70px;
+ }
+ #PatientNav{
+   margin-left: 20px;
+ }
+ #PatientNavitem{
+   padding: 7px;
+ }
+ /* .Patientdropdown{
+   margin-right: 400px;
+   margin-top: 25px;
+ } */

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+.PatientHomePage{
+   background-image: url("../Index/index2.jpg");
+   height: auto;
+}
+.PatientHomeHeading{
+   font-size: 70px;
+   color: white;
+   margin-right: 50%;
+   font-weight: bold;
+   font-family: 'Secular One', sans-serif;
+}
+.PatientHomePara1{
+   font-size: 25px;
+   color: white;
+   margin-right: 50%;
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.PatientHomePara2{
+   font-size: 25px;
+   color: rgb(242, 121, 8);
+   margin-right: 50%;
+   
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.PatientHomePara3{
+   font-size: 25px;
+   color: white;
+   margin-right: 50%;
+  
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.PatientHomePara4{
+   font-size: 25px;
+   color: white;
+   margin-left: 3%;
+   margin-top: -1.5%;
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+.PatientHomeDescription{
+   font-size: 25px;
+   color: white;
+   margin-left: 3%;
+   font-family: 'Jost', sans-serif;
+}
+.PatientHomePageSecondPart{
+   background-color: #1F1F1F;
+   height: auto;
+}
+.PatientDiv1{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 3%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+}
+.PatientDivHeading{
+   font-weight: bold;
+   color: white;
+   font-size: 40px;
+   text-align: center;
+   font-family: 'Secular One', sans-serif;
+}
+.PatientDivPara{
+   text-align: center;
+   color: white;
+   font-size: 20px;
+   padding: 10px;
+   font-family: 'Jost', sans-serif;
+}
+.PatientDivIcon{
+   height: 50px;
+   width: 70px;
+   /* margin-left: 42%; */
+   margin-top: 3%;
+}
+.PatientHomeButton{
+   background-color: #1F1F1F;
+   color: #99FF33;
+   border-radius: 10px;
+   width: 200px;
+   /* margin-left: 24%; */
+   transition: 1s;
+}
+.PatientHomeButton:hover{
+   background-color: #99FF33;
+   color: #1F1F1F;
+   transform: scale(1.6);
+}
+.PatientDiv2{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 36%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+.PatientDiv3{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 69%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+.PatientDiv4{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 3%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: 3%;
+}
+.PatientDiv5{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 36%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+.PatientDiv6{
+   background-color: #2B302A;
+   height: 350px;
+   width: 420px;
+   margin-left: 69%;
+   border-radius: 15px;
+   border: 5px solid #99FF33;
+   margin-top: -24%;
+}
+ 
