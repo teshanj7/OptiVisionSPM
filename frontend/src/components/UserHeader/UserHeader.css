@@ -1,26 +1,13 @@
-/* .container-fluid:required {
-    background-color: black;
-    height: 70px;
-} */
-/* .dropdown:required {
-    margin-left: 100px;
- } */
  #PatientNavHeading{
-    color: white;
+    color: #ffffff;
     font-size: 50px ;
     font-weight: 500;
  }
 #PatientNavHeading:hover{
     color: #CCFF00;
  }
- /* .navbar-nav:required {
-    margin-left: 90px;
- } */
- /* .nav-item:required {
-    padding: 8px;
- } */
  .NavigationBarBarDropdown{
-    margin-left: 230%;
+    margin-left: 50%;
     margin-top: 5%;
  } 
  #PatientNavbar{
@@ -31,9 +18,5 @@
    margin-left: 20px;
  }
  #PatientNavitem{
-   padding: 7px;
+   padding: 5px;
  }
- /* .Patientdropdown{
-   margin-right: 400px;
-   margin-top: 25px;
- } */

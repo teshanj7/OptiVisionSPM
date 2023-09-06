@@ -3,46 +3,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 
 .PatientHomePage{
-   background-image: url("../Index/index2.jpg");
+   background-image: url("../PatientHomePage/image4.jpg");
    height: auto;
+   width: 100%;
 }
 .PatientHomeHeading{
-   font-size: 70px;
+   font-size: 50px;
    color: white;
-   margin-right: 50%;
-   font-weight: bold;
-   font-family: 'Secular One', sans-serif;
+   margin-right: 60%;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 900;
 }
-.PatientHomePara1{
-   font-size: 25px;
+.PatientHomeHeading2{
+   font-size: 50px;
    color: white;
-   margin-right: 50%;
-   font-weight: bold;
-   font-family: 'Jost', sans-serif;
+   margin-right: 76%;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 900;
 }
-.PatientHomePara2{
-   font-size: 25px;
-   color: rgb(242, 121, 8);
-   margin-right: 50%;
-   
-   font-weight: bold;
-   font-family: 'Jost', sans-serif;
-}
-.PatientHomePara3{
-   font-size: 25px;
+.PatientHomeHeading3{
+   font-size: 30px;
    color: white;
-   margin-right: 50%;
-  
-   font-weight: bold;
-   font-family: 'Jost', sans-serif;
+   margin-right: 67%;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 700;
+   margin-top: 50px;
 }
-.PatientHomePara4{
-   font-size: 25px;
+.PatientHomeHeading4{
+   font-size: 30px;
    color: white;
-   margin-left: 3%;
-   margin-top: -1.5%;
-   font-weight: bold;
-   font-family: 'Jost', sans-serif;
+   margin-right: 72%;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 700;
+}
+.PatientHomeHeading5{
+   font-size: 30px;
+   color: white;
+   margin-right: 75%;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 700;
+}
+.PatientHomeHeading6{
+   font-size: 30px;
+   color: white;
+   margin-right: 67%;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 700;
+}
+.PatientHomeHeading7{
+   font-size: 50px;
+   color: rgb(245, 7, 7);
+   margin-right: 49%;
+   font-family:Arial, Helvetica, sans-serif;
+   font-weight: 900;
+   margin-top: 40px;
+}
+.PatientHomeHeading8{
+   font-size: 50px;
+   color: rgb(245, 7, 7);
+   margin-right: 84%;
+   font-family:Arial, Helvetica, sans-serif;
+   font-weight: 900;
+}
+.PatientHomeHeading9{
+   font-size: 50px;
+   color: rgb(8, 28, 244);
+   margin-right: 56%;
+   font-family:Arial, Helvetica, sans-serif;
+   font-weight: 900;
+   margin-top: -66px;
 }
 .PatientHomeDescription{
    font-size: 25px;
@@ -56,16 +85,16 @@
 }
 .PatientDiv1{
    background-color: #2B302A;
-   height: 350px;
-   width: 420px;
-   margin-left: 3%;
+   height: 300px;
+   width: 320px;
+   margin-left: 2%;
    border-radius: 15px;
    border: 5px solid #99FF33;
 }
 .PatientDivHeading{
    font-weight: bold;
    color: white;
-   font-size: 40px;
+   font-size: 25px;
    text-align: center;
    font-family: 'Secular One', sans-serif;
 }
@@ -86,7 +115,8 @@
    background-color: #1F1F1F;
    color: #99FF33;
    border-radius: 10px;
-   width: 200px;
+   width: 180px;
+   height: 40px;
    /* margin-left: 24%; */
    transition: 1s;
 }
@@ -97,47 +127,29 @@
 }
 .PatientDiv2{
    background-color: #2B302A;
-   height: 350px;
-   width: 420px;
-   margin-left: 36%;
+   height: 300px;
+   width: 320px;
+   margin-left: 26.7%;
    border-radius: 15px;
    border: 5px solid #99FF33;
-   margin-top: -24%;
+   margin-top: -20.5%;
 }
 .PatientDiv3{
    background-color: #2B302A;
-   height: 350px;
-   width: 420px;
-   margin-left: 69%;
+   height: 300px;
+   width: 320px;
+   margin-left: 51.5%;
    border-radius: 15px;
    border: 5px solid #99FF33;
-   margin-top: -24%;
+   margin-top: -20.5%
 }
 .PatientDiv4{
    background-color: #2B302A;
-   height: 350px;
-   width: 420px;
-   margin-left: 3%;
+   height: 300px;
+   width: 320px;
+   margin-left: 76%;
    border-radius: 15px;
    border: 5px solid #99FF33;
-   margin-top: 3%;
-}
-.PatientDiv5{
-   background-color: #2B302A;
-   height: 350px;
-   width: 420px;
-   margin-left: 36%;
-   border-radius: 15px;
-   border: 5px solid #99FF33;
-   margin-top: -24%;
-}
-.PatientDiv6{
-   background-color: #2B302A;
-   height: 350px;
-   width: 420px;
-   margin-left: 69%;
-   border-radius: 15px;
-   border: 5px solid #99FF33;
-   margin-top: -24%;
+   margin-top: -20.5%;
 }
  

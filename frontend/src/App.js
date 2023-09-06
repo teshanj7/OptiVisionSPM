@@ -20,7 +20,16 @@ import DoctorHome from './components/DoctorHome/DoctorHomePage';
 import ViewProfile from './components/ViewUserDetails/ViewUserDetails';
 import UpdateUserDetails from './components/UpdateUserDetails/UpdateUserDetails';
 
+//Cataract Application
+import CreateCatForm from "./components/CreateCataractForm/CreateCataractForm";
+import ViewCatData from "./components/ViewCataractData/ViewCataractData";
+import SingleCatData from "./components/SingleCataractData/SingleCataractData";
+import UpdateCatData from "./components/UpdateCataractData/UpdataCataractData";
+import DoctorViewCatData from "./components/DoctorViewAllCataractData/DoctorViewAllCataractData";
+import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/DoctorViewSingleCataractData";
 
+//Glaucoma Application
+import GlaucomaForm from "./components/GlaucomaForm/GlaucomaForm";
 
 function App() {
 
@@ -58,7 +67,17 @@ function App() {
           <Route path='/DoctorHome/:id' element={<DoctorHome/>}/>
           <Route path='/profile/:id' element={<ViewProfile/>}/>
           <Route path='/updateProfile/:id' element={<UpdateUserDetails/>}/>
-         
+          
+          {/* Cataract Application */}
+          <Route path='/CreateCataractForm' element={<CreateCatForm/>}/>
+          <Route path='/ViewCataractData/:id' element={<ViewCatData/>}/>
+          <Route path='/Cataract/:id' element={<SingleCatData/>}/>
+          <Route path='/UpdateCataract/:id' element={<UpdateCatData/>}/>
+          <Route path='/ViewAllCataract' element={<DoctorViewCatData/>}/>
+          <Route path='/DoctorviewCataract/:id' element={<DoctorViewSingleCatData/>}/>
+
+          {/* Glaucoma Application */}
+          <Route path='/GlaucomaForm' element={<GlaucomaForm/>}/>
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
