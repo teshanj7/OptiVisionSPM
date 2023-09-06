@@ -28,6 +28,9 @@ import UpdateCatData from "./components/UpdateCataractData/UpdataCataractData";
 import DoctorViewCatData from "./components/DoctorViewAllCataractData/DoctorViewAllCataractData";
 import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/DoctorViewSingleCataractData";
 
+//Glaucoma Application
+import GlaucomaForm from "./components/GlaucomaForm/GlaucomaForm";
+
 function App() {
 
   // user details pass
@@ -72,6 +75,9 @@ function App() {
           <Route path='/UpdateCataract/:id' element={<UpdateCatData/>}/>
           <Route path='/ViewAllCataract' element={<DoctorViewCatData/>}/>
           <Route path='/DoctorviewCataract/:id' element={<DoctorViewSingleCatData/>}/>
+
+          {/* Glaucoma Application */}
+          <Route path='/GlaucomaForm' element={<GlaucomaForm/>}/>
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
