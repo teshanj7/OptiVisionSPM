@@ -23,7 +23,7 @@ export default function ViewProfile() {
     }, [])
 
     const getData = async () => {
-        let result = await axios.get(`http://localhost:8090/user/get/${params.id}`);
+        let result = await axios.get(`http://localhost:8040/user/get/${params.id}`);
 
         if (result.status === 200) {
             setData(result.data);
@@ -36,7 +36,7 @@ export default function ViewProfile() {
     //delete
     const deleteUser = async (_id) => {
         if (window.confirm("Are you sure that you want to delete this user account?")) {
-            const res = await axios.delete(`http://localhost:8090/user/delete/${_id}`);
+            const res = await axios.delete(`http://localhost:8040/user/delete/${_id}`);
             if (res.status === 200) {
                 window.location.href = `/add`;
                 toast.error('User account deleted..!', {

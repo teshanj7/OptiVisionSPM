@@ -2,7 +2,7 @@
     background-color: #2B302A;
     text-align: center;
     width: 600px;
-    height: 850px;
+    height: 870px;
     border-radius: 25px;
     margin-left: 450px;
 }
@@ -45,7 +45,7 @@
     height: 15px;
 }
 .reg_page{
-    background-image: url("../Index/index4.jpg");
+    background-image: url("../Index/index1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 150vh;

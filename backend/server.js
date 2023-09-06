@@ -5,11 +5,20 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
 require("dotenv").config();
+const path = require("path")
 
-const port = process.env.PORT || 8090;
+
+//image upload
+app.use(express.static(path.join(__dirname)))
+app.use(express.json())
+app.use("/images",express.static(path.join(__dirname+"/images")))
+
+
+const port = process.env.PORT || 8040;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json())
 
 //database connection
 const URL = process.env.MONGODB_URL;
@@ -42,3 +51,8 @@ if(req.body.Password && req.body.Email){
     res.send({result:"User not found"})
 }
 })
+
+//Cataract router
+const cataract = require("./routes/cataractApplication.js");
+app.use("/CataractApplication",cataract);
+

@@ -29,7 +29,7 @@ export default function UpdateUserDetails() {
     }, [])
 
     const getUserDetails = async () => {
-        let result = await fetch(`http://localhost:8090/user/get/${params.id}`);
+        let result = await fetch(`http://localhost:8040/user/get/${params.id}`);
         result = await result.json();
 
         console.warn(result);
@@ -45,7 +45,7 @@ export default function UpdateUserDetails() {
     }
 
     const updateUser = async () => {
-        let result = await fetch(`http://localhost:8090/user/update/${params.id}`, {
+        let result = await fetch(`http://localhost:8040/user/update/${params.id}`, {
             method: 'Put',
             body: JSON.stringify({ Fullname, Email, Address, TelephoneNumber, UserType, Gender, Username, Password }),
             headers: {
@@ -65,11 +65,11 @@ export default function UpdateUserDetails() {
     const HomepagesHandle = async () => {
         if (Fullname) {
             if (UserType === "Patient") {
-                history(`/PatientHome/${params.id}`, { state: { id: Fullname } })
+                history(`/PatientHome/${params.id}`)
                 window.location.href = `/PatientHome/${params.id}`;
             }
             else if (UserType === "Doctor") {
-                history(`/DoctorHome/${params.id}`, { state: { id: Fullname } })
+                history(`/DoctorHome/${params.id}`)
                 window.location.href = `/DoctorHome/${params.id}`;
             }
         }

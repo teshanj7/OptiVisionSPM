@@ -19,7 +19,7 @@ export default function Login(){
         e.preventDefault();
 
         //Users
-        let result = await fetch("http://localhost:8090/login", {
+        let result = await fetch("http://localhost:8040/login", {
             method: 'post',
             body: JSON.stringify({Email, Password, UserType}),
             headers: {
@@ -59,16 +59,17 @@ export default function Login(){
 
     return(
         <div className="login_page">
-            <div className="heading"><a href="/" className="loginCompanyName"><h1 className="name">FitCrib</h1></a>
-                <ul class="nav justify-content-end nav-underline">
-                    <li class="nav-item1">
-                        <a class="nav-link" href="/login">LOGIN</a>
+            <div className="heading"><a href="/" className="loginCompanyName"><h1 className="name">OptiVision</h1></a>
+                <ul class="nav justify-content-end nav-underline" id="IndexHeading">
+                    <li class="nav-item1" id="Login">
+                        <a class="nav-link" href="/login" id="LoginLink">LOGIN</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/add">SIGNUP</a>
+                    <li class="nav-item1" id="Signup">
+                        <a class="nav-link" href="/add" id="SignupLink">SIGNUP</a>
                     </li>
                 </ul>
             </div>
+            <br/><br/>
             <div className="rectangle">
                 <h1 className="login">LOGIN</h1>
             </div>
