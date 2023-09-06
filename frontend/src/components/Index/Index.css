@@ -1,11 +1,11 @@
 
 .index_bg{
-    background-image: url("../Index/index4.jpg");
+    background-image: url("../Index//index1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
   }
-.nav{
+#IndexHeading{
   font-size: 25px;
   position: relative;
   top: -120px;
@@ -13,53 +13,59 @@
   padding: 20px;
   font-weight: bold;
 }
-.nav-item1{
+#Login{
   padding-right: 20px;
+  padding-top: 15px;
 }
-.nav-link{
-  color: aliceblue !important;
+#Signup{
+  padding-right: 20px;
+  padding-top: 15px;  
 }
-.nav-link:hover{
-  border-bottom: 2px solid rgba(134, 198, 7, 1) !important;
+#LoginLink{
+  color: black;
+  font-weight: 900;
+  font-size: 30px;
+}
+#LoginLink:hover{
+  border-bottom: 2px solid rgb(5, 251, 5);
+}
+#SignupLink{
+  color: black;
+  font-weight: 900;
+  font-size: 30px;
+}
+#SignupLink:hover{
+  border-bottom: 2px solid rgb(5, 251, 5);
 }
 .name{
-  font-size: 80px;
-  font-weight: 500;
-  color: aliceblue;
+  font-size: 50px;
+  font-weight: 700;
+  color: black;
   text-align: left;
   padding: 10px;
   padding-left: 20px;
 }
+.Mainhe{
+  font-size: 65px;
+  font-weight: 900;
+  color:  rgb(8, 15, 97);
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 280px;
+}
 .he1{
   font-size: 50px;
-  font-weight: 700;
-  color:  rgba(134, 198, 7, 1);
+  font-weight: 900;
+  color:  black;
   text-align: left;
   padding-left: 20px;
-  padding-top: 200px;
+  padding-top: 20px;
 }
 .he2{
-  font-size: 80px;
-  font-weight: 700;
-  color: aliceblue;
+  font-size: 25px;
+  font-weight: 800;
+  color: black;
   position: relative;
-  bottom: 125px;
- margin-left: 180px;
-}
-.he3{
-  font-size: 50px;
-  font-weight: 700;
-  color:  rgba(134, 198, 7, 1);
-  text-align: left;
-  padding-left: 20px;
-  position: relative;
-  bottom: 160px;
-}
-.he4{
-  font-size: 20px;
-  font-weight: 700;
-  color: aliceblue;
-  position: relative;
-  bottom: 140px;
+  bottom: 20px;
   padding-left: 20px;
 }

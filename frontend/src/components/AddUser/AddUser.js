@@ -46,7 +46,7 @@ export default function AddUser() {
             return;
         }
 
-        axios.post("http://localhost:8090/user/add", newUser).then(() => {
+        axios.post("http://localhost:8040/user/add", newUser).then(() => {
             alert("User Added")
             window.location.href = `/login`;
         }).catch((err) => {
@@ -58,13 +58,13 @@ export default function AddUser() {
     return (
         <div className="reg_page">
             <div className="heading">
-                <a href="/" className="SignupCompanyName"><h1 className="name" >FitCrib</h1></a>
-                <ul class="nav justify-content-end nav-underline">
-                    <li class="nav-item1">
-                        <a class="nav-link" href="/login">LOGIN</a>
+                <a href="/" className="SignupCompanyName"><h1 className="name" >OptiVision</h1></a>
+                <ul class="nav justify-content-end nav-underline" id="IndexHeading">
+                    <li class="nav-item1" id="Login">
+                        <a class="nav-link" href="/login" id="LoginLink">LOGIN</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/add">SIGNUP</a>
+                    <li class="nav-item1" id="Signup">
+                        <a class="nav-link" href="/add" id="SignupLink">SIGNUP</a>
                     </li>
                 </ul>
             </div>
@@ -73,6 +73,7 @@ export default function AddUser() {
             </div>
             <div className="reg_form">
                 <form onSubmit={sendData}>
+                    <br/>
                     <label for="fullname" className="signupheading">Full Name: </label><br />
                     <input type="text" className="signupforminput" placeholder="Full Name" onChange={(e) => {
                         setName(e.target.value);

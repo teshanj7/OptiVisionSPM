@@ -1,9 +1,9 @@
-.trainer_page{
+.doctor_page{
     background-color: #252525;
     height: auto;
  }
  
- .trainerHomeHeading{
+ .doctorHomeHeading{
     color: #99FF33;
     font-size: 45px;
     font-weight: bold;
@@ -12,7 +12,7 @@
     text-align: center;
  }
  
- .trainerHomePara{
+ .doctorHomePara{
     font-size: 25px;
     color: white;
     margin-left: 30px;
@@ -21,16 +21,16 @@
     margin-right: 30px;
  }
  
- .TrainerDivDesc1{
+ .doctorDivDesc1{
     background-color: #2B302A;
     height: 350px;
-    width: 400px;
-    margin-left: 50px;
+    width: 420px;
+    margin-left: 30px;
     border-radius: 15px;
     border: 5px solid #99FF33;
  }
  
- .TrainerDivHeading{
+ .doctorDivHeading{
     font-weight: bold;
     color: white;
     font-size: 40px;
@@ -38,23 +38,44 @@
     font-family: 'Secular One', sans-serif;
  }
  
- .TrainerDivDesc2{
+ .doctorDivDesc2{
     background-color: #2B302A;
     height: 350px;
-    width: 400px;
-    margin-left: 540px;
+    width: 420px;
+    margin-left: 520px;
     border-radius: 15px;
     border: 5px solid #99FF33;
     margin-top: -348px;
  }
  
- .TrainerDivDesc3{
+ .doctorDivDesc3{
     background-color: #2B302A;
     height: 350px;
-    width: 400px;
-    margin-left: 1030px;
+    width: 420px;
+    margin-left: 1010px;
     border-radius: 15px;
     border: 5px solid #99FF33;
     margin-top: -347px;
     
  }
+.doctorDivPara{
+   text-align: center;
+   color: white;
+   font-size: 20px;
+   padding: 10px;
+   font-family: 'Jost', sans-serif;
+}
+.doctorButton{
+   background-color: #1F1F1F;
+   color: #99FF33;
+   border-radius: 10px;
+   width: 180px;
+   height: 40px;
+   /* margin-left: 24%; */
+   transition: 1s;
+}
+.doctorButton:hover{
+   background-color: #99FF33;
+   color: #1F1F1F;
+   transform: scale(1.6);
+}

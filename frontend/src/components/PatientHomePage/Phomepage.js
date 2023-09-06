@@ -29,81 +29,61 @@ export default function PatientHome() {
         <div className="PatientHomePage">
             
             <br /><br /><br />
-            <h1 className="PatientHomeHeading">Don't Stop Till <br /> You Drop</h1>
-            <br /><br />
-            <p className="PatientHomePara1">The best way to</p>
-            <p className="PatientHomePara2">make sure your body and mind</p>
-            <p className="PatientHomePara3">are ready for</p>
-            <p className="PatientHomePara4">work is to wake them up with a good workout.</p>
-            <br />
-            <p className="PatientHomeDescription">Welcome to our fitness website! Discover a wide range <br /> of resources, including workout plans, nutrition advice, and <br />expert tips, to help you achieve your health and wellness goals. <br /><b style={{ color: "rgb(242, 121, 8)" }}>Join our community and start your fitness journey today!</b></p>
-            <br /><br /><br />
+            <h1 className="PatientHomeHeading">Everybody deserves to</h1>
+            <h1 className="PatientHomeHeading2">see world..!</h1>
+
+            <h3 className="PatientHomeHeading3">Our motivation is to separate</h3> 
+            <h3 className="PatientHomeHeading4">ourseleves as a medical </h3>
+            <h3 className="PatientHomeHeading5">procedure that give </h3> 
+            <h3 className="PatientHomeHeading6">far-reaching ophthalmology.</h3>
+
+            <h1 className="PatientHomeHeading7">We Always Provide The</h1>
+            <h1 className="PatientHomeHeading8">Best</h1>
+            <h1 className="PatientHomeHeading9">Services</h1>
 
             <div className="PatientHomePageSecondPart">
                 <br /><br />
                 <div className="PatientDiv1">
                     <img src={myworkouticon} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">My Workout</h2>
-                    <p className="PatientDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <h2 className="PatientDivHeading">Cataract Application</h2>
+                    <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/MyWorkouts`;
-                    }}>MY WORKOUTS</button>
+                        window.location.href = `/CreateCataractForm`;
+                    }}>Application</button>
 
                 </div>
 
                 <div className="PatientDiv2">
                     <img src={exerciseicon} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">Exercises</h2>
-                    <p className="PatientDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <h2 className="PatientDivHeading">Appoinment</h2>
+                    <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
                         window.location.href = `/userDashboard`;
-                    }}>EXERCISES</button>
+                    }}>Appoinment</button>
 
                 </div>
 
                 <div className="PatientDiv3">
                     <img src={Marketicon} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">MarketPlace</h2>
-                    <p className="PatientDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <h2 className="PatientDivHeading">Galucoma Detection</h2>
+                    <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
                         window.location.href = `/buyer`;
-                    }}>MARKETPLACE</button>
+                    }}>Galucoma Detection</button>
 
                 </div>
 
                 <div className="PatientDiv4">
                     <img src={Edcontenticon} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">Educational Content</h2>
-                    <p className="PatientDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
+                    <h2 className="PatientDivHeading">Recovery Schedule</h2>
+                    <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/Bview`;
-                    }}>EDUCATIONAL CONTENT</button>
-
-                </div>
-
-                <div className="PatientDiv5">
-                    <img src={Nutritionicon} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">Nutrition Plans</h2>
-                    <p className="PatientDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
-                    <button className="PatientHomeButton" onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = `/mainNT`;
-                    }}>NUTRITION PLANS</button>
-
-                </div>
-
-                <div className="PatientDiv6">
-                    <img src={Recipesicon} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">Recipes</h2>
-                    <p className="PatientDivPara">All Registered Users, Trainers, Sellers and Administrators are listed here. All of the data related to them can be viewed by an administrator at any time.</p>
-                    <button className="PatientHomeButton" onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = `/RUVA`;
-                    }}>RECIPES</button>
+                        window.location.href = `/`;
+                    }}>Recovery Schedule</button>
 
                 </div>
                 <br /><br />
