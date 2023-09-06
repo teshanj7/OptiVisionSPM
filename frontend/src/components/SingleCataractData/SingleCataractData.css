@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
+
+.SingleViewBody{
+    background-color: rgb(35, 36, 29);;
+}
+.SingleViewCataract{
+    background-color: #E1F1C1;
+    width: 50% !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+/* .SingleViewCataract{
+    background-color: #E1F1C1;
+    width: 50%;
+} */
+.reactangleSinView{
+    background-color: #CCFF00;
+    width: 380px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 175px;
+}
+.SingleViewHeading{
+    font-weight: bold;
+    padding: 4px;
+}
+.imageCard{
+    border-radius: 10px;
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+    margin: 0px 0px 0px 0px;
+    width:377px;
+    height: 310px;
+}
+.CataractContent{
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-weight:500;
+    text-align: justify;
+    padding-left: 20px;
+    /* margin-left: 170px; */
+}
+.Cataractupdatebtn{
+    background-color: #CCFF00;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+}
+.Cataractupdatebtn:hover{
+    background-color: #1F1F1F;
+    color: #CCFF00;
+}
+.Cataractdeletebtn{
+    background-color: red;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+}
+.Cataractdeletebtn:hover{
+    background-color: #1F1F1F;
+    color: red;
+}

@@ -54,25 +54,19 @@ function Header(props) {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="/allusers" style={{ color: "#99FF33" }}>All Users</a>
+                            <a className="nav-link" href="/ViewAllCataract" style={{ color: "#99FF33" }}>ALL CATARACT APPLICATION</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>Finance</a>
+                            <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>APPOINTMENT</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/addTransaction" style={{ color: "#99FF33" }}>Create a Transaction</a>
+                            <a className="nav-link" href="/addTransaction" style={{ color: "#99FF33" }}>CREATE A RECOVERY PLAN</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/viewTransaction" style={{ color: "#99FF33" }}>View Transactions</a>
+                            <a className="nav-link" href="/viewTransaction" style={{ color: "#99FF33" }}>VIEW TRANSACTION</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>Financial Performance</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/calculate" style={{ color: "#99FF33" }}>Calculations</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/fnfaq" style={{ color: "#99FF33" }}>FAQs</a>
+                            <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>FINANCIAL PERFORMANCE</a>
                         </li>
                         <li>
                             <div className="NavigationBarBarDropdown dropdown">

@@ -43,44 +43,44 @@ export default function UserHeader(props) {
             <div className='NavigationBarB'>
                 <nav className="NavigationBarB navbar navbar-expand-lg bg-body-tertiary">
                     <div className="NavigationBarB container-fluid" id='PatientNavbar'>
-                        <a className="NavigationBarB navbar-brand" id='PatientNavHeading' onClick={HomepagesHandle}>FitCrib</a>
+                        <a className="NavigationBarB navbar-brand" id='PatientNavHeading' onClick={HomepagesHandle}>OptiVision</a>
                         <button className="NavigationBarB navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="NavigationBarB navbar-toggler-icon"></span>
                         </button>
                         <div className="NavigationBarB collapse navbar-collapse" id="navbarNavDropdown">
                             <ul className="NavigationBarB navbar-nav" id='PatientNav'>
-                                <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" onClick={(e) => {
+                                <li className="NavigationBarB nav-item" id="PatientNavitem">
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/MyWorkouts`
-                                    }}>MY WORKOUTS</a>
+                                        window.location.href = `/CreateCataractForm`
+                                    }}>CATARACT APPLICATION</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" onClick={(e) => {
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/userDashboard`
-                                    }}>EXERCISES</a>
+                                        window.location.href = `/ViewCataractData/${user._id}`
+                                    }}>VIEW CATARACT DETAILS</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" href="/buyer">MARKETPLACE</a>
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} href="/buyer">APPOINTMENT</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" onClick={(e) => {
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/Bview`
-                                    }}>EDUCATIONAL CONTENT</a>
+                                        window.location.href = `/Quiz`
+                                    }}>QUIZ</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" onClick={(e) => {
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/mainNT`
-                                    }}>NUTRITION PLANS</a>
+                                    }}>GALUCOMA DETECTION</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" onClick={(e) => {
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/RUVA`
-                                    }}>RECIPES</a>
+                                    }}>RECOVERY PLAN</a>
                                 </li>
 
                                 <li className='Patientdropdown'>
