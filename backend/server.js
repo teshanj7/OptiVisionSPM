@@ -13,6 +13,11 @@ app.use(express.static(path.join(__dirname)))
 app.use(express.json())
 app.use("/images",express.static(path.join(__dirname+"/images")))
 
+//images glaucoma
+app.use(express.static(path.join(__dirname)))
+app.use(express.json())
+app.use("/glaucomaImages",express.static(path.join(__dirname+"/glaucomaImages")))
+
 
 const port = process.env.PORT || 8040;
 
@@ -56,3 +61,6 @@ if(req.body.Password && req.body.Email){
 const cataract = require("./routes/cataractApplication.js");
 app.use("/CataractApplication",cataract);
 
+//Galucoma router
+const glaucoma = require("./models/glaucoma.js");
+app.use("/Glaucoma",glaucoma);

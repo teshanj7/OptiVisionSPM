@@ -71,7 +71,7 @@ export default function PatientHome() {
                     <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/buyer`;
+                        window.location.href = `/GlaucomaForm`;
                     }}>Galucoma Detection</button>
 
                 </div>
