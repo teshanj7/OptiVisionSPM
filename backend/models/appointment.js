@@ -31,11 +31,7 @@ const appointmentSchema = new Schema({
         required: true
     },
     date: {
-        type: String,
-        required: true
-    },
-    time: {
-        type: String,
+        type: Date,
         required: true
     }
 })

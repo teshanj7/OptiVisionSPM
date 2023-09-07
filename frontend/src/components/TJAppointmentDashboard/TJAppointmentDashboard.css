@@ -1,0 +1,102 @@
+.TJDashboardBG{
+    background-color: #004d4d;
+    height: auto;
+}
+
+
+.TJDashboardHeading{
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJDashboardPara{
+    font-size: 34px;
+    color: white;
+    width: 850px;
+    height: 300px;
+    font-family: 'Jost', sans-serif;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.TJDashboardPic{
+    width: 500px;
+    height: 300px;
+    margin-left: 900px;
+    margin-top: -320px;
+}
+
+.TJDashboardSqr1{
+    width: 450px;
+    height: 220px;
+    background-color: #008080;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid white;
+}
+
+.TJSqrHeading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Secular One', sans-serif;
+    color: white;
+}
+
+.TJSqrDesc{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.TJDashboardButton{
+    background-color: white;
+    color: #008080;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 170px;
+    transition: 1s;
+    margin-left: -10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.TJDashboardButton:hover {
+    background-color: white;
+    color:#008080 ;
+    transform: scale(1.6);
+  }
+
+.TJDashboardSqr2{
+    width: 450px;
+    height: 220px;
+    background-color:#008080 ;
+    margin-top: -240px;
+    margin-left: 517px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid white;
+}
+
+.TJDashboardSqr3{
+    width: 450px;
+    height: 220px;
+    background-color:#008080;
+    margin-top: -240px;
+    margin-left: 1000px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid white;
+}
+
+.TJsecondPara{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 50px;
+}
