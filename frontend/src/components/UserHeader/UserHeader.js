@@ -62,7 +62,10 @@ export default function UserHeader(props) {
                                     }}>VIEW CATARACT DETAILS</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} href="/buyer">APPOINTMENT</a>
+                                    <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
+                                        e.preventDefault();
+                                        window.location.href = `/AppointmentMgmt`
+                                    }}>APPOINTMENT</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
                                     <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
@@ -74,7 +77,7 @@ export default function UserHeader(props) {
                                     <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/mainNT`
-                                    }}>GALUCOMA DETECTION</a>
+                                    }}>GLAUCOMA DETECTION</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
                                     <a className="NavigationBarB nav-link" style={{ color: "#ffffff" }} onClick={(e) => {

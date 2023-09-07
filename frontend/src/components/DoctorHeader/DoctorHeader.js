@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import { useLocation, useParams } from 'react-router-dom';
 import UserContext from "../ContextComponents/ContextComponent";
+import "../DoctorHeader/DoctorHeader.css";
 
 function Header(props) {
 
@@ -49,24 +50,31 @@ function Header(props) {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <b><a className="navbar-brand" onClick={HomepagesHandle} style={{ color: "#99FF33" }}>FitCrib</a></b>
+                <b><a className="navbar-brand" onClick={HomepagesHandle} style={{ color: "#99FF33" }}>OptiVision</a></b>
                 {/* change */}
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="/ViewAllCataract" style={{ color: "#99FF33" }}>ALL CATARACT APPLICATION</a>
+                            <a className="nav-link" href="/ViewAllCataract" style={{ color: "#99FF33" }}>ALL CATARACT APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>APPOINTMENT</a>
+                            <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>ALL DOCTOR APPOINTMENT&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
+
+                            <a className="nav-link" href="/addTransaction" style={{ color: "#99FF33" }}>DOCTOR RECOVERY PLAN&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/viewTransaction" style={{ color: "#99FF33" }}>ABOUT US&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
                             <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#99FF33" }}>CREATE A RECOVERY PLAN</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/DCreatedRecoveryPlans" style={{ color: "#99FF33" }}>CREATED RECOVERY PLANS</a>
+
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>FINANCIAL PERFORMANCE</a>
+                            <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>HELP&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li>
                             <div className="NavigationBarBarDropdown dropdown">

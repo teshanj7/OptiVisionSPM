@@ -31,11 +31,19 @@ import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/D
 //Glaucoma Application
 import GlaucomaForm from "./components/GlaucomaForm/GlaucomaForm";
 
+
+//AppointmentSystem
+import CreateAppointment from "./components/TJaddAppointment/TJAddAppointment";
+import ViewAllAppointment from "./components/TJViewAllAppointments/TJViewAllAppointment";
+import UpdateAppointment from './components/TJUpdateAppointment/TJUpdateAppointment';
+import AppointmentDashboard from "./components/TJAppointmentDashboard/TJAppointmentDashboard";
+
 //RecoveryReschedule
 import DCreatedRecoveryPlans from './components/DoctorRecoverySchedule/DCreatedPlans';
 import SingleRecoveryPlan from './components/DoctorRecoverySchedule/SingleRecoveryPlan';
 import NewRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryCreate';
 import UpdateRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryUpdate';
+
 
 function App() {
 
@@ -85,12 +93,20 @@ function App() {
           {/* Glaucoma Application */}
           <Route path='/GlaucomaForm' element={<GlaucomaForm/>}/>
 
+
+          {/* Appointment Management */}
+          <Route path='/addAppointment' element={<CreateAppointment/>}/>
+          <Route path='/viewAllAppointments' element={<ViewAllAppointment/>}/>
+          <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
+          <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
+
           {/* Recovery Application */}
           <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
           <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
           <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan />} />
 
 
+            
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
