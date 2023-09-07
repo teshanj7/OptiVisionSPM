@@ -1,0 +1,77 @@
+/* Set the background color of the body element */
+.DCreatedPlans .body {
+    background-color: black;
+}
+
+/* Set the text color for all elements */
+.DCreatedPlans .text-white {
+    color: white;
+}
+
+.DCreatedPlans .text-black {
+    color: black;
+}
+
+/* Set the color of the "Create Recovery Plan" button */
+.DCreatedPlans .btn-outline-success {
+    color: white;
+    background-color: limegreen;
+    border-color: limegreen;
+}
+
+/* Set the color of the "Delete Plan" button */
+.DCreatedPlans .btn-outline-danger {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+/* Set the color of the search button */
+.DCreatedPlans .btn-outline-success.btn-ms-3 {
+    color: white;
+    background-color: limegreen;
+    border-color: limegreen;
+}
+
+/* Set the background color of the recovery plan cards */
+.DCreatedPlans .card.rounded-3 {
+    background-color: white;
+}
+
+/* Set the font size and color of the recovery plan names and descriptions */
+.DCreatedPlans .lead {
+    font-size: 24px;
+    color: black;
+}
+
+.DCreatedPlans .text-muted {
+    color: black;
+}
+
+.DCreatedPlans .btn-danger  {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #9b0606;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.DCreatedPlans .btn:hover {
+    background-color: #000;
+    color: #32cd32;
+    cursor: pointer;
+}
+
+.DCreatedPlans .btn-success  {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
