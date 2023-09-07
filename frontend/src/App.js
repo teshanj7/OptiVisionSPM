@@ -37,7 +37,8 @@ import CreateAppointment from "./components/TJaddAppointment/TJAddAppointment";
 import ViewAllAppointment from "./components/TJViewAllAppointments/TJViewAllAppointment";
 import UpdateAppointment from './components/TJUpdateAppointment/TJUpdateAppointment';
 import AppointmentDashboard from "./components/TJAppointmentDashboard/TJAppointmentDashboard";
-
+import ViewAllDoctors from './components/TJViewDoctors/TJViewDoctors';
+ 
 //RecoveryReschedule
 import DCreatedRecoveryPlans from './components/DoctorRecoverySchedule/DCreatedPlans';
 import SingleRecoveryPlan from './components/DoctorRecoverySchedule/SingleRecoveryPlan';
@@ -99,11 +100,12 @@ function App() {
           <Route path='/viewAllAppointments' element={<ViewAllAppointment/>}/>
           <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
           <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
+          <Route path='/ViewAllOpticians' element={<ViewAllDoctors/>}/>
 
           {/* Recovery Application */}
           <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
           <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
-          <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan />} />
+          <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} />
 
 
             
