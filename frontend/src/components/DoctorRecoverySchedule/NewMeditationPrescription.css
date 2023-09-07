@@ -1,0 +1,188 @@
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    /* Place responsive styles here */
+  }
+  
+  /* General styles */
+  .NewMeditationPrescription {
+    margin: 10;
+    padding: 10;
+    font-family: sans-serif;
+  }
+  
+  /* Colors */
+  .NewMeditationPrescription .black {
+    color: #201f1f;
+  }
+  .NewMeditationPrescription .white {
+    color: #fff;
+  }
+  .NewMeditationPrescription .lime-green {
+    color: #c7ea46;
+  }
+  
+  /* Background */
+  .NewMeditationPrescription {
+    background-color: rgb(218, 211, 191);
+    color: white;
+  }
+  
+  /* Header */
+  .NewMeditationPrescription .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: lime-green;
+  }
+  
+  .NewMeditationPrescription .header .h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  /* Navigation */
+  .NewMeditationPrescription .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+  }
+  
+  .NewMeditationPrescription .nav .ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .NewMeditationPrescription .nav .ul .li {
+    margin-right: 20px;
+  }
+  
+  .NewMeditationPrescription .nav .ul .li .a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .NewMeditationPrescription .nav .ul .li .a:hover {
+    background-color: lime-green;
+    color: black;
+  }
+  
+  /* Main content */
+  .NewMeditationPrescription .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .NewMeditationPrescription .article {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+  
+  .NewMeditationPrescription .article .img {
+    width: 100%;
+  }
+  
+  .NewMeditationPrescription .article .h2 {
+    margin: 10px;
+  }
+  
+  .NewMeditationPrescription .article .p {
+    margin: 10px;
+  }
+  
+  /* Footer */
+  .NewMeditationPrescription .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #222;
+  }
+  
+  .NewMeditationPrescription .footer .p {
+    margin: 0;
+  }
+  
+  .NewMeditationPrescription .container-md {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .NewMeditationPrescription .card {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .NewMeditationPrescription .card-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .NewMeditationPrescription .card-text {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+  
+  .NewMeditationPrescription .list-group-item {
+    font-size: 1.2rem;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  
+  .NewMeditationPrescription .list-group-item:last-child {
+    border-bottom: none;
+  }
+  
+  .NewMeditationPrescription .btn-primary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .NewMeditationPrescription .btn-danger {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #9b0606;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .NewMeditationPrescription .btn:hover {
+    background-color: #000;
+    color: #32cd32;
+    cursor: pointer;
+  }
+  
+  .NewMeditationPrescription .outline {
+    border-radius: 10px;
+    outline: 1px solid limegreen;
+  }
+  
+  .NewMeditationPrescription .cardoutline {
+    border-radius: 10px;
+    outline: 4px solid limegreen;
+  }
+  

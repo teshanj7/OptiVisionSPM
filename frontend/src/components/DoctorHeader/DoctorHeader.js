@@ -60,10 +60,10 @@ function Header(props) {
                             <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>APPOINTMENT</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/addTransaction" style={{ color: "#99FF33" }}>CREATE A RECOVERY PLAN</a>
+                            <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#99FF33" }}>CREATE A RECOVERY PLAN</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/viewTransaction" style={{ color: "#99FF33" }}>VIEW TRANSACTION</a>
+                            <a className="nav-link" href="/DCreatedRecoveryPlans" style={{ color: "#99FF33" }}>CREATED RECOVERY PLANS</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>FINANCIAL PERFORMANCE</a>

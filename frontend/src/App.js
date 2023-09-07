@@ -31,6 +31,12 @@ import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/D
 //Glaucoma Application
 import GlaucomaForm from "./components/GlaucomaForm/GlaucomaForm";
 
+//RecoveryReschedule
+import DCreatedRecoveryPlans from './components/DoctorRecoverySchedule/DCreatedPlans';
+import SingleRecoveryPlan from './components/DoctorRecoverySchedule/SingleRecoveryPlan';
+import NewRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryCreate';
+import UpdateRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryUpdate';
+
 function App() {
 
   // user details pass
@@ -78,6 +84,13 @@ function App() {
 
           {/* Glaucoma Application */}
           <Route path='/GlaucomaForm' element={<GlaucomaForm/>}/>
+
+          {/* Recovery Application */}
+          <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
+          <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
+          <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan />} />
+
+
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
