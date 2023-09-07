@@ -61,18 +61,12 @@ function Header(props) {
                             <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>ALL DOCTOR APPOINTMENT&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
-
-                            <a className="nav-link" href="/addTransaction" style={{ color: "#99FF33" }}>DOCTOR RECOVERY PLAN&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#99FF33" }}>DOCTOR RECOVERY PLAN&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/viewTransaction" style={{ color: "#99FF33" }}>ABOUT US&nbsp;&nbsp;&nbsp;&nbsp;</a>
-
-                            <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#99FF33" }}>CREATE A RECOVERY PLAN</a>
+                            <a className="nav-link" href="/DCreatedRecoveryPlans" style={{ color: "#99FF33" }}>CREATED RECOVERY PLANS&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/DCreatedRecoveryPlans" style={{ color: "#99FF33" }}>CREATED RECOVERY PLANS</a>
-
-                        </li>
+                        
                         <li className="nav-item">
                             <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>HELP&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
