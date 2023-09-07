@@ -3,7 +3,7 @@ let Appointment = require("../models/appointment");
 
 //create appointment
 router.route("/add").post((req, res) => {
-    const { userId, fullName, age, email, telephoneNo, reasonOfApp, docName, date, time } = req.body;
+    const { userId, fullName, age, email, telephoneNo, reasonOfApp, docName, date } = req.body;
 
     const newAppointment = new Appointment({
         userId,
@@ -13,8 +13,7 @@ router.route("/add").post((req, res) => {
         telephoneNo,
         reasonOfApp,
         docName,
-        date,
-        time
+        date
     })
 
     newAppointment.save().then(() => {
@@ -22,7 +21,7 @@ router.route("/add").post((req, res) => {
         if (age <= 0 || !age === 'number') {
             return res.status(400).json({ message: 'Age must be positive' })
         }
-        if (!fullName || !age || !email || !telephoneNo || !reasonOfApp || !docName || !date || !time) {
+        if (!fullName || !age || !email || !telephoneNo || !reasonOfApp || !docName || !date) {
             return res.status(400).json({ message: 'All fields are required!' })
         }
         res.json("Appointment made succesfully!")
@@ -44,7 +43,7 @@ router.route("/").get((req, res) => {
 //update an appointment
 router.route("/update/:id").put(async (req, res) => {
     let appointmentId = req.params.id;
-    const { userId, fullName, age, email, telephoneNo, reasonOfApp, docName, date, time } = req.body;
+    const { userId, fullName, age, email, telephoneNo, reasonOfApp, docName, date } = req.body;
 
     const updateAppointment = {
         userId,
@@ -54,8 +53,7 @@ router.route("/update/:id").put(async (req, res) => {
         telephoneNo,
         reasonOfApp,
         docName,
-        date,
-        time
+        date
     }
 
     const update = await Appointment.findByIdAndUpdate(appointmentId, updateAppointment).then(() => {

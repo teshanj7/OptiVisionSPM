@@ -1,0 +1,104 @@
+.TJAddAppointmentPage{
+    background-color: #004d4d;
+    height: auto;
+}
+
+.TJCreateHeading{
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJCreateBtn{
+    background-color:#008080 ;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 70px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 1230px;
+    border: 5px solid white;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJCreateBtn:hover{
+    background-color: white;
+    color: #008080;
+    transform: scale(1.4);
+    border: 5px solid black;
+}
+
+.TJAddAppointmentForm{
+    margin-top: -90px;
+    background-color: #008080;
+    text-align: center;
+    width: 600px;
+    height: 800px;
+    border-radius: 50px;
+    margin-left: 450px;
+}
+
+.TJCreateFormHeading{
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.TJCreateFormInput{
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+}
+
+.TJCreateTextArea{
+    border-radius: 10px;
+    font-family: 'Jost', sans-serif;
+}
+
+.TJCreateSubmit{
+    background-color: #99FF33;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 70px;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJCreateSubmit:hover{
+    background-color: #1F1F1F;
+    color: #99FF33;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJCreateReset{
+    background-color: #99FF33;
+    color: #1F1F1F;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    transition: 1s;
+    margin-left: -20px;
+    font-size: 17px;
+    margin-top: 5px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJButtonCancel{
+    background-color: #F44336;
+    color: #1F1F1F;
+    border: 3px solid black;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 10px;
+}
