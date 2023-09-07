@@ -29,7 +29,7 @@ function Dashboard(){
                 
                     <button className="TJDashboardButton" onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            window.location.href=`/addTransaction`;
+                                                                            window.location.href=`/ViewAllOpticians`;
                                                                             }}>VIEW DOCTORS</button>
                 
             </div>
