@@ -1,0 +1,62 @@
+.TJViewDocPage{
+    background-color: #004d4d;
+    height: auto;
+}
+
+.TJViewPara{
+    color: white;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+}
+
+.TJViewDocTable{
+    border-collapse: collapse;
+    font-size: 25px;
+    width: 1250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 5px solid black;
+    /* margin:auto; */
+    border-radius: 10px;
+    margin-left: 120px;
+    font-family: 'Jost', sans-serif;
+}
+
+.TJViewDocTable thead tr{
+    background-color: white;
+    color: #008080;
+    text-align: left;
+}
+
+.TJViewDocTable th, .FNViewTable td{
+    padding: 12px 15px;
+}
+
+.TJViewDocTable tbody tr{
+    border-bottom: 5px solid black;
+}
+
+.TJViewDocTable tbody tr:nth-of-type(odd){
+    background-color: #2B302A;
+    color: white;
+    font-weight: bold;
+}
+
+.TJViewDocTable tbody tr:nth-of-type(even){
+    background-color: #008080;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.TJViewDocTable tbody tr:last-of-type{
+    border-bottom: 2px solid black;
+}
+
+.TJDocButton-update{
+    background-color: #66CC33;
+    color: #1F1F1F;
+    border: 3px solid black;
+    width: 200px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
