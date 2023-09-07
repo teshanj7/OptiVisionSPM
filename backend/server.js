@@ -72,3 +72,7 @@ app.use("/CataractApplication",cataract);
 //Galucoma router
 const glaucoma = require("./models/glaucoma.js");
 app.use("/Glaucoma",glaucoma);
+
+const meditationPrescriptionRouter = require('./routes/MeditationPrescription'); // Import the meditationPrescriptionRoute file
+app.use("/meditationPrescription", meditationPrescriptionRouter); // Use the meditationPrescriptionRouter for the "/meditationPrescription" route
+

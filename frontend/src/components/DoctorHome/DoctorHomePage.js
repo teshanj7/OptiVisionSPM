@@ -49,11 +49,11 @@ export default function DoctorHome() {
                 <div className="doctorDivDesc3">
                     <br/>
                     <h2 className="doctorDivHeading"> Recovery Plan </h2>
-                    <p className="doctorDivPara">Trainers can access the exercises management system from here. They can view everything they post from here.</p> 
+                    <p className="doctorDivPara">Doctors can access there published prescriptions from here. They can view every prescription and related exercises they post from here.</p> 
                     
                     <button className="doctorButton" onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            window.location.href=`/trainerFeed`;
+                                                                            window.location.href=`/DCreatedRecoveryPlans`;
                                                                             }}>Recovery Plan</button>
                 </div>
                 <br/><br/><br/><br/>
