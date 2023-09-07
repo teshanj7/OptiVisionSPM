@@ -101,11 +101,12 @@ function App() {
           <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
           <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
           <Route path='/ViewAllOpticians' element={<ViewAllDoctors/>}/>
+          {/* <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} /> */}
 
           {/* Recovery Application */}
           <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
           <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
-          <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} />
+          <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan/>} />
 
 
             

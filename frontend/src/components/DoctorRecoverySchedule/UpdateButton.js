@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import React from "react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export default function UpdateButton(props) {
-  const navigate = new useNavigate();
-  const [updateId, setUpdateId] = useState("");
+  const navigate = useNavigate();
 
-  const updateWokorkout = (workoutId) => {
+  const updateWorkout = (workoutId) => {
     let path = `/UpdateRecoveryPlan/${workoutId}`;
     navigate(path);
   };
 
-
   return (
     <>
       <Button
-                      variant = "success"
-                      onClick={() => updateWokorkout(props.id)}
-                    >
-                      Update Plan
-                    </Button>
+        id="custom-radius"
+        variant="success"
+        onClick={() => updateWorkout(props.id)}
+      >
+        Update Plan
+      </Button>
     </>
   );
 }
