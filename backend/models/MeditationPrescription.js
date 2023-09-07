@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const exercisePlanSchema = new mongoose.Schema({
   day: {
     type: String,
-    required: true
+    
   },
   exerciseName: {
     type: String,
