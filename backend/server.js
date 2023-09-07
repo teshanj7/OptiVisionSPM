@@ -42,6 +42,7 @@ app.use("/user",userRouter);
 
 const User = require("./models/user.js");
 
+
 //login
 app.post("/login", async(req,res)=>{
 
@@ -56,6 +57,13 @@ if(req.body.Password && req.body.Email){
     res.send({result:"User not found"})
 }
 })
+
+//appointment scheduling system
+const appointmentRouter = require("./routes/appointments.js");
+app.use("/appointment", appointmentRouter);
+
+const paymentRouter = require("./routes/payments.js");
+app.use("/payment", paymentRouter);
 
 //Cataract router
 const cataract = require("./routes/cataractApplication.js");

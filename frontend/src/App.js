@@ -31,6 +31,12 @@ import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/D
 //Glaucoma Application
 import GlaucomaForm from "./components/GlaucomaForm/GlaucomaForm";
 
+//AppointmentSystem
+import CreateAppointment from "./components/TJaddAppointment/TJAddAppointment";
+import ViewAllAppointment from "./components/TJViewAllAppointments/TJViewAllAppointment";
+import UpdateAppointment from './components/TJUpdateAppointment/TJUpdateAppointment';
+import AppointmentDashboard from "./components/TJAppointmentDashboard/TJAppointmentDashboard";
+
 function App() {
 
   // user details pass
@@ -78,6 +84,12 @@ function App() {
 
           {/* Glaucoma Application */}
           <Route path='/GlaucomaForm' element={<GlaucomaForm/>}/>
+
+          {/* Appointment Management */}
+          <Route path='/addAppointment' element={<CreateAppointment/>}/>
+          <Route path='/viewAllAppointments' element={<ViewAllAppointment/>}/>
+          <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
+          <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
