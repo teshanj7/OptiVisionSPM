@@ -23,9 +23,10 @@
   
   /* Background */
   .NewMeditationPrescription {
-    background-color: rgb(218, 211, 191);
+    background-color: rgb(231, 228, 209);
     color: white;
   }
+  /*rgb(218, 211, 191)*/
   
   /* Header */
   .NewMeditationPrescription .header {
@@ -117,23 +118,25 @@
   }
   
   .NewMeditationPrescription .card {
-    background-color: #fff;
+    background-color: #DAD3BF;
     color: #000;
     border: none;
-    border-radius: 0;
+    border-radius: 2;
   }
   
   .NewMeditationPrescription .card-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #000;
+    color: #351f1f;
     margin-bottom: 1rem;
+    border-radius: 2;
   }
   
   .NewMeditationPrescription .card-text {
     font-size: 1.5rem;
-    color: #000;
+    color: #3e2e2e;
     margin-bottom: 2rem;
+    border-radius: 2;
   }
   
   .NewMeditationPrescription .list-group-item {
@@ -154,7 +157,7 @@
     color: #fff;
     background-color: #32cd32;
     border: none;
-    border-radius: 0;
+    border-radius: 2;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
   }
@@ -184,5 +187,13 @@
   .NewMeditationPrescription .cardoutline {
     border-radius: 10px;
     outline: 4px solid limegreen;
+  }
+
+  #custom-radius {
+    border-radius: 10px; /* You can adjust the value to control the amount of border-radius */
+  }
+
+  #custom-text {
+    font-weight: bolder;
   }
   

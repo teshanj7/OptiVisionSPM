@@ -95,8 +95,8 @@ export default function NewMeditationPrescription() {
           <div className="row justify-content-center">
             <div className="col-md-8 col-lg-10 col-xl-12">
               <div className="card shadow NewMeditationPrescription card w-100 cardoutline">
-                <div className="card w-100">
-                  <div className="card-body NewMeditationPrescription">
+                <div className="card w-100" >
+                  <div className="card-body ">
                     <h1 className="card-title">Create a new Meditation Prescription</h1>
                     <div className="mb-3">
                       <label htmlFor="medicineName" className="form-label">Medicine Name</label>
@@ -115,14 +115,14 @@ export default function NewMeditationPrescription() {
                       <input type="text" className="form-control NewMeditationPrescription outline" id="medicineFrequency" value={medicineFrequency} onChange={handleMedicineFrequencyChange} autoComplete="off" required />
                     </div>
                     <div className="mb-3">
-                      <h3 className="card-title NewMeditationPrescription">Exercise Plan</h3>
+                      <h3 className="card-title ">Exercise Plan</h3>
                       {exercisePlan.map((day, dayIndex) => (
                         <div key={dayIndex} className="day-container mb-6">
                           <hr /> 
                           <div className="d-flex justify-content-between align-items-center mb-2">
-                            <h3 className="card-subtitle NewMeditationPrescription">Day {dayIndex + 1}</h3>
+                            <h3 id ="custom-text" className="card-subtitle">Day {dayIndex + 1}</h3>
                             {exercisePlan.length > 0 && (
-                              <button type="button" className="btn btn-danger" onClick={() => removeDay(dayIndex)}>
+                              <button id= "custom-radius" type="button" className="btn btn-danger" onClick={() => removeDay(dayIndex)}>
                                 Remove Day
                               </button>
                             )}
@@ -134,8 +134,8 @@ export default function NewMeditationPrescription() {
                                 
                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                 
-                                  <h4 className="card-subtitle NewMeditationPrescription">Exercise {exerciseIndex + 1}</h4>
-                                  <button type="button" className="btn btn-danger" onClick={() => removeExercise(dayIndex, exerciseIndex)}>
+                                  <h4 id ="custom-text" className="card-subtitle ">Exercise {exerciseIndex + 1}</h4>
+                                  <button id= "custom-radius" type="button" className="btn btn-danger" onClick={() => removeExercise(dayIndex, exerciseIndex)}>
                                     Remove Exercise
                                   </button>
                                 </div>
@@ -156,7 +156,7 @@ export default function NewMeditationPrescription() {
                                   <input type="text" className="form-control NewMeditationPrescription outline" id={`exerciseInstruction-${dayIndex}-${exerciseIndex}`} name="exerciseInstruction" defaultValue={exercise.exerciseInstruction} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} autoComplete="off" />
                                 </div>
                               </div>))}
-                              <div className="d-flex justify-content-center NewMeditationPrescription">
+                              <div className="d-flex justify-content-center ">
                           <button type="button" className="btn btn-primary" onClick={() => addExercise(dayIndex)}>
                             Add Exercise
                           </button>
@@ -165,13 +165,13 @@ export default function NewMeditationPrescription() {
                       </div>
                     ))}
                     <hr/>
-                    <div className="d-flex justify-content-center NewMeditationPrescription">
+                    <div className="d-flex justify-content-center ">
                     <button type="button" className="btn btn-primary" onClick={addDay}>
                       Add Day
                     </button>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-center NewMeditationPrescription">
+                  <div className="d-flex justify-content-center ">
                   <button type="button" className="btn btn-primary" onClick={handleCreateMeditationPrescription}>
                     Confirm Workout Plan
                   </button>
