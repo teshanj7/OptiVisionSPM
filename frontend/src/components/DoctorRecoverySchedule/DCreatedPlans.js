@@ -43,7 +43,7 @@ export default function DCreatedPlans() {
   };
 
   const createNewRecoveryPlan = () => {
-    let path = `/NewRecoveryPlan`;
+    let path = `/DRelatedAppoinment`;
     navigate(path);
   };
 
