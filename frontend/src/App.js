@@ -37,7 +37,7 @@ import CreateAppointment from "./components/TJaddAppointment/TJAddAppointment";
 import ViewAllAppointment from "./components/TJViewAllAppointments/TJViewAllAppointment";
 import UpdateAppointment from './components/TJUpdateAppointment/TJUpdateAppointment';
 import AppointmentDashboard from "./components/TJAppointmentDashboard/TJAppointmentDashboard";
-import ViewAllDoctors from './components/TJViewDoctors/TJViewDoctors';
+import ViewAllDoctors from './components/TJViewDoctors/TJViewDoctors'; 
  
 //RecoveryReschedule
 import DCreatedRecoveryPlans from './components/DoctorRecoverySchedule/DCreatedPlans';
