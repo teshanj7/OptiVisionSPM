@@ -58,7 +58,7 @@ function Header(props) {
                             <a className="nav-link" href="/ViewAllCataract" style={{ color: "#99FF33" }}>ALL CATARACT APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/finance" style={{ color: "#99FF33" }}>ALL DOCTOR APPOINTMENT&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a className="nav-link" href="/DRelatedAppoinment" style={{ color: "#99FF33" }}>ALL DOCTOR APPOINTMENT&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#99FF33" }}>DOCTOR RECOVERY PLAN&nbsp;&nbsp;&nbsp;&nbsp;</a>

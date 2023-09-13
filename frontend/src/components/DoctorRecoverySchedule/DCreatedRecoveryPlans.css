@@ -75,3 +75,24 @@
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
 }
+
+#custom-radius {
+    border-radius: 10px;
+  }
+
+#custom-card {
+    background-color: #A9A9A9;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

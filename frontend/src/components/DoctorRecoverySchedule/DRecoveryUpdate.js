@@ -91,7 +91,7 @@ export default function UpdateMedicinePrescription() {
         exercisePlan,
       })
       .then(() => {
-        navigate(`/SingleMedicinePrescription/${id}`);
+        navigate(`/DCreatedRecoveryPlans`);
       })
       .catch((err) => {
         alert(err.message);
