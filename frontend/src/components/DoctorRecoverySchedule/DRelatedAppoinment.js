@@ -55,7 +55,7 @@ export default function AppointmentsComponent() {
 
   return (
     <div>
-      <h2 style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#778899" }}>Appointments for Dr.{doctorName}</h2>
+      <h2 style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#778899" }}>Appointments for {doctorName}</h2>
       {filteredAppointments.map((appointment) => (
         <Card key={appointment._id} style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#C0C0C0" }}>
           <Card.Body className="p-4 DCreatedPlans" style={{ margin: "2rem", borderRadius: "10px" }}>
