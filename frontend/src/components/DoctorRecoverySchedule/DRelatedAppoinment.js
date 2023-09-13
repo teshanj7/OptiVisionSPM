@@ -13,7 +13,7 @@ export default function AppointmentsComponent() {
   const { user } = useContext(UserContext);
   const [appointments, setAppointments] = useState([]);
   const [filteredAppointments, setFilteredAppointments] = useState([]);
-  const [doctorName, setDoctorName] = useState(user.Username);
+  const [doctorName, setDoctorName] = useState(user.Fullname);
   const navigate = useNavigate();
 
   useEffect(() => {
