@@ -1,16 +1,20 @@
 import './UpdateMedicinePrescription.css';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import DeleteButton from "../DoctorRecoverySchedule/DeleteButton";
 
 export default function UpdateMedicinePrescription() {
   const [prescription, setPrescription] = useState(null);
   const { id } = useParams();
+  // const location = useLocation();
+  // const {patientName, appointmentReason } = location.state || {};
   const [medicineName, setMedicineName] = useState("");
   const [medicineDosage, setMedicineDosage] = useState("");
   const [medicineDuration, setMedicineDuration] = useState("");
   const [medicineFrequency, setMedicineFrequency] = useState("");
+  const [patientName, setPatientName] = useState("");
+  const [appointmentReason, setAppointmentReason] = useState("");
   const [exercisePlan, setExercisePlan] = useState([]);
 
   const navigate = useNavigate();
@@ -25,7 +29,9 @@ export default function UpdateMedicinePrescription() {
           setMedicineDosage(res.data.medicineDosage);
           setMedicineDuration(res.data.medicineDuration);
           setMedicineFrequency(res.data.medicineFrequency);
-          setExercisePlan(res.data.exercisePlan);
+          setPatientName(res.data.patientName); // Set patientName
+          setAppointmentReason(res.data.appointmentReason); // Set appointmentReason
+
         })
         .catch((err) => {
           alert(err.message);
@@ -49,6 +55,7 @@ export default function UpdateMedicinePrescription() {
   const handleMedicineFrequencyChange = (event) => {
     setMedicineFrequency(event.target.value);
   };
+  
 
   const handleExercisePlanChange = (event, dayIndex, exerciseIndex) => {
     const { name, value } = event.target;
@@ -89,6 +96,9 @@ export default function UpdateMedicinePrescription() {
         medicineDuration,
         medicineFrequency,
         exercisePlan,
+        patientName,
+        appointmentReason
+          
       })
       .then(() => {
         navigate(`/DCreatedRecoveryPlans`);
@@ -109,6 +119,10 @@ export default function UpdateMedicinePrescription() {
                 <div className="card w-100 UpdateMedicinePrescription">
                   <div className="card-body UpdateMedicinePrescription">
                     <h1 className="card-title UpdateMedicinePrescription">Update Medicine Prescription</h1>
+                    <div>
+                      <p>Patient Name: {patientName}</p>
+                      <p>Appointment Reason: {appointmentReason}</p>
+                    </div>
                     <div className="mb-3 UpdateMedicinePrescription">
                       <label htmlFor="medicineName" className="form-label UpdateMedicinePrescription">Medicine Name</label>
                       <input type="text" className="form-control UpdateMedicinePrescription outline" id="medicineName" value={medicineName} onChange={handleMedicineNameChange} />
