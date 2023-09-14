@@ -31,7 +31,7 @@ export default function NewMeditationPrescription() {
     axios.post("http://localhost:8040/meditationPrescription/addMeditationPrescription", newMeditationPrescription)
       .then(() => {
         alert("Meditation Prescription Added");
-        navigate(`/MyMeditationPrescriptions`);
+        navigate(`/DCreatedRecoveryPlans`);
       })
       .catch((err) => {
         alert(err);

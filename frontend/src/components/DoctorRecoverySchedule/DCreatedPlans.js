@@ -7,6 +7,7 @@ import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import UserContext from "../ContextComponents/ContextComponent";
 import axios from "axios";
 import UpdateButton from "../DoctorRecoverySchedule/UpdateButton";
+import image from "../DoctorRecoverySchedule/imgRe.jpg";
 
 export default function DCreatedPlans() {
   const { user } = useContext(UserContext);
@@ -42,7 +43,7 @@ export default function DCreatedPlans() {
   };
 
   const createNewRecoveryPlan = () => {
-    let path = `/NewRecoveryPlan`;
+    let path = `/DRelatedAppoinment`;
     navigate(path);
   };
 
@@ -66,15 +67,15 @@ export default function DCreatedPlans() {
 
   return (
     <>
-      <div className="DCreatedPlans">
+      <div  id = "custom-color">
         <section
           className="h-100 DCreatedPlans"
-          style={{ backgroundColor: "#1F1F1F" }}
+          style={{ backgroundColor: "gray" }}
         >
           <Container className="h-100 py-5 DCreatedPlans">
-            <Row className="d-flex justify-content-start align-items-center h-100 DCreatedPlans">
+            <Row className="d-flex justify-content-start align-items-center h-100 DCreatedPlans" id = "custom-card">
               <Col>
-                <div className="d-flex justify-content-between align-items-left mb-4 DCreatedPlans">
+                <div className="d-flex justify-content-between align-items-left mb-4 DCreatedPlans" >
                   <h3 className="fw-normal mb-0 text-black text-white DCreatedPlans">
                     My Recovery Plans
                   </h3>
@@ -103,11 +104,12 @@ export default function DCreatedPlans() {
                     allRecoveryPlans.map((recoveryPlan) => (
                       <Card
                         className="rounded-3 mb-4 DCreatedPlans"
-                        style={{ backgroundColor: "white" }}
+                        style={{ backgroundColor: "#C0C0C0",boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.2)", animation: "fadeIn 2s ease-in-out" }}
                         key={recoveryPlan._id}
                       >
+                        {/* #778899 */}
                         <Card.Body className="p-4 DCreatedPlans">
-                          <Row className="d-flex justify-content-between align-items-center DCreatedPlans">
+                          <Row className="d-flex justify-content-between align-items-center DCreatedPlans" >
                             <Col md={2} lg={2} xl={2}>
                               <div
                                 className="Clickable DCreatedPlans"
@@ -117,7 +119,7 @@ export default function DCreatedPlans() {
                               >
                                 <Card.Img
                                   variant="top"
-                                  src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                                  src={image}
                                   className="img-fluid rounded-3 DCreatedPlans"
                                   alt="Recovery Plan"
                                 />
@@ -162,7 +164,7 @@ export default function DCreatedPlans() {
                   )}
                 </div>
 
-                <Card className="mb-4 DCreatedPlans">
+                <Card className="mb-4 DCreatedPlans" style={{ backgroundColor: "#778899", animation: "fadeIn 2s ease-in-out"}}>
                   <Card.Body className="p-4 d-flex flex-row DCreatedPlans">
                     <div className="form-outline flex-fill DCreatedPlans">
                       <Card.Title as="h3">

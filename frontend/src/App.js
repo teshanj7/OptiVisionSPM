@@ -39,12 +39,14 @@ import UpdateAppointment from './components/TJUpdateAppointment/TJUpdateAppointm
 import AppointmentDashboard from "./components/TJAppointmentDashboard/TJAppointmentDashboard";
 import ViewAllDoctors from './components/TJViewDoctors/TJViewDoctors';
 import PaymentPortal from './components/TJPaymentPortal/TJPaymentPortal';
+
  
 //RecoveryReschedule
 import DCreatedRecoveryPlans from './components/DoctorRecoverySchedule/DCreatedPlans';
 import SingleRecoveryPlan from './components/DoctorRecoverySchedule/SingleRecoveryPlan';
 import NewRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryCreate';
 import UpdateRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryUpdate';
+import DRelatedAppoinment from './components/DoctorRecoverySchedule/DRelatedAppoinment';
 
 
 function App() {
@@ -102,13 +104,18 @@ function App() {
           <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
           <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
           <Route path='/ViewAllOpticians' element={<ViewAllDoctors/>}/>
+
+          {/* <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} /> */}
+
           <Route path='/PaymentPortal' element={<PaymentPortal/>}/>
+
 
           {/* Recovery Application */}
           <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
           <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
-          <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} />
-
+          <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan/>} />
+          <Route path="/DRelatedAppoinment" element={<DRelatedAppoinment/>} />
+          
 
             
 
