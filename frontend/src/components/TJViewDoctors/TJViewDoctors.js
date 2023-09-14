@@ -16,7 +16,6 @@ function ViewDoctors(){
     }
 
     const doctors = user.filter(user => user.UserType === 'Doctor');
-
     console.log(doctors);
 
     return(
@@ -34,6 +33,7 @@ function ViewDoctors(){
                         <th style={{ textAlign: "center" }}>Telephone Number</th>
                         <th style={{ textAlign: "center" }}>Gender</th>
                         <th style={{ textAlign: "center" }}>Schedule your booking</th>
+                        <th style={{ textAlign: "center" }}>Rating</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,15 +50,18 @@ function ViewDoctors(){
                                 <td>
                                     <button className="TJDocButton TJDocButton-update" onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/updateAppointment/${item._id}`;
+                                        window.location.href = "/addAppointment/" + item._id ;
                                     }}>Schedule appointment</button><br />
                                 </td>
+                                <td>4.5 ★</td>
                             </tr>
                         );
                     })}
                 </tbody>
             </table>
-            <br/><br/>
+            <br/><br/><br/><br/><br/><br/>
+            <p className="TJViewPara">All rights reserved. - OptiVision (PVT-Ltd) </p>
+            <br/>
         </div>
     )
 }

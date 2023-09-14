@@ -21,7 +21,7 @@ router.route("/add").post((req, res) => {
         if (age <= 0 || !age === 'number') {
             return res.status(400).json({ message: 'Age must be positive' })
         }
-        if (!fullName || !age || !email || !telephoneNo || !reasonOfApp || !docName || !date) {
+        if (!fullName || !age || !email || !telephoneNo || !reasonOfApp || !date) {
             return res.status(400).json({ message: 'All fields are required!' })
         }
         res.json("Appointment made succesfully!")

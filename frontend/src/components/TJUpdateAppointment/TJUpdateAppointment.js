@@ -95,7 +95,7 @@ const UpdateAppointment = () => {
                 <button className="TJUpdateSubmit" onClick={updateAppointment}>Update</button>&nbsp;&nbsp;&nbsp;
                 <button className="TJButtonCancel" onClick={(e) => {
                     e.preventDefault();
-                    window.location.href = `/viewTransaction`;
+                    window.location.href = `/viewAllAppointments`;
                 }}>Cancel</button> <br />
 
             </div>
