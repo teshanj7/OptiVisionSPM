@@ -12,6 +12,7 @@
   background-color: white;
   color: black;
   margin: auto;
+  width: 700px !important;
 }
 .para1{
   margin-top: 10px;
@@ -19,14 +20,17 @@
   font-weight:700;
   text-align: left;
   padding-left: 20px;
+  font-size: 20px;
+  /* margin-left: 400px; */
 }
 .imageCard{
   border-radius: 10px;
   border-end-end-radius: 0;
   border-end-start-radius: 0;
   margin: 0px 0px 0px 0px;
-  width:377px;
+  width:700px !important;
   height: 310px;
+  /* margin-left: -123px !important; */
  }
 
  .rectangleCatView{

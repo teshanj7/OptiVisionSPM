@@ -20,7 +20,7 @@ function Header(props) {
 
     const hideHeader = location.pathname === '/' || location.pathname === '/login' || location.pathname === '/add';
 
-    if (hideHeader) {
+    if (hideHeader) { 
         return null; // Render nothing if header should be hidden
     }
 
