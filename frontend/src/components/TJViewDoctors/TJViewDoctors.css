@@ -22,9 +22,10 @@
 }
 
 .TJViewDocTable thead tr{
-    background-color: white;
-    color: #008080;
+    background-color:#008080 ;
+    color: white;
     text-align: left;
+    font-weight: bold;
 }
 
 .TJViewDocTable th, .FNViewTable td{
@@ -36,15 +37,17 @@
 }
 
 .TJViewDocTable tbody tr:nth-of-type(odd){
-    background-color: #2B302A;
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: bold;
+    height: 100px;
 }
 
 .TJViewDocTable tbody tr:nth-of-type(even){
-    background-color: #008080;
-    color: #1F1F1F;
+    background-color: white;
+    color: black;
     font-weight: bold;
+    height: 100px;
 }
 
 .TJViewDocTable tbody tr:last-of-type{
@@ -52,10 +55,10 @@
 }
 
 .TJDocButton-update{
-    background-color: #66CC33;
+    background-color: goldenrod;
     color: #1F1F1F;
     border: 3px solid black;
-    width: 200px;
+    width: 150px;
     font-weight: bold;
     border-radius: 10px;
     font-size: 20px;
