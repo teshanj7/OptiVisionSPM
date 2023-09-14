@@ -8,7 +8,7 @@ function Dashboard(){
 <div className="TJDashboardBG">
             <br/>
             <h1 className="TJDashboardHeading">APPOINTMENT MANAGEMENT SYSTEM</h1>
-            <br/><br/>
+            <br/><br/><br/>
             <div className="TJDashboardPara">
                 <p className="TJsecondPara"><i>"Everyone deserves to see"</i></p>
                 <p> Welcome to OptiVision's Appointment Centre! <br/>
@@ -48,13 +48,13 @@ function Dashboard(){
 
             <div className="TJDashboardSqr3">
                 <br/>
-                <h2 className="TJSqrHeading">Create an Appoinment</h2>
-                <p className="TJSqrDesc">Schedule an appointment with your preferred doctor from here. </p>
+                <h2 className="TJSqrHeading">View FAQ's</h2>
+                <p className="TJSqrDesc">View frequently asked questions regarding appointments here. </p>
               
                 <button className="TJDashboardButton" onClick={(e) => {
                                                                         e.preventDefault();
                                                                         window.location.href=`/addAppointment`;
-                                                                        }}>CREATE</button>
+                                                                        }}>VIEW FAQs</button>
 
             </div>
 

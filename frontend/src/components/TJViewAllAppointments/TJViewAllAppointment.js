@@ -60,7 +60,7 @@ function ViewAll() {
 
             <button type="submit" className="TJViewCreateBtn" onClick={(e) => {
                 e.preventDefault();
-                window.location.href = `/addAppointment`;
+                window.location.href = `/ViewAllOpticians`;
             }}>CREATE AN APPOINTMENT</button> <br /><br />
 
             <table className="TJViewTable">
