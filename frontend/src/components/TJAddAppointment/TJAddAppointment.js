@@ -1,7 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import './TJAddAppointment.css';
 import axios from "axios";
 import UserContext from '../ContextComponents/ContextComponent';
+import { useParams } from 'react-router-dom';  
 
 function CreateAppointment() {
 
@@ -16,6 +17,18 @@ function CreateAppointment() {
     const [docName, setDocName] = useState("");
     const [date, setDate] = useState("");
 
+    const { id } = useParams();
+
+
+    useEffect(() => {
+        axios.get(`http://localhost:8040/user/get/${id}`).then((res) => {
+
+            setDocName(res.data.user.Fullname);
+            
+        }).catch((err) => {
+            console.log(err);
+        })
+    },[id]);
 
     function sendData(e) {
         e.preventDefault();
@@ -31,11 +44,14 @@ function CreateAppointment() {
         }
 
         axios.post("http://localhost:8040/Appointment/add", newAppointment).then(() => {
-            alert("Appointment added successfully!")
+            alert("Appointment added successfully")
+            alert("Now heading to Payment Portal..")
+            window.location.href=`/PaymentPortal`
         }).catch((error) => {
             alert("Appointment creation failed!")
         })
     }
+
 
     return (
         <div className="TJAddAppointmentPage">
@@ -59,7 +75,7 @@ function CreateAppointment() {
                     }} required />
                     <br /><br />
                     <label for="subject" className="TJCreateFormHeading">Patient's Email Address: </label><br />
-                    <input type="string" className="TJCreateFormInput" id="TJAddEmail" placeholder="Enter your email here" onChange={(e) => {
+                    <input type="text" className="TJCreateFormInput" id="TJAddEmail" placeholder="Enter your email here" onChange={(e) => {
                         setEmail(e.target.value);
                     }} required />
                     <br /><br />
@@ -74,9 +90,9 @@ function CreateAppointment() {
                     }} required/>
                     <br /><br />
                     <label for="subject" className="TJCreateFormHeading">Doctor's Name: </label><br />
-                    <input type="text" className="TJCreateFormInput" id="TJAddDoc" placeholder="Enter your prefered doctor" onChange={(e) => {
+                    <input type="text" className="TJUpdateFormInput" id="TJAddDoc" value={docName} placeholder="Enter the name of the transaction recorder here" required readOnly onChange={(e)=>{
                         setDocName(e.target.value);
-                    }} required />
+                    }}  />
                     <br /><br />
                     <label for="date" className="TJCreateFormHeading"> Appointment Date: </label><br />
                     <input type="date" className="TJCreateFormInput" id="FNAddDate" placeholder="Enter Appointment date here" onChange={(e) => {

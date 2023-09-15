@@ -23,7 +23,7 @@ router.route("/add").post((req, res) => {
         if (!amount || !cardNo || !expiryMonth || !expiryYear || !cardholderName || !CVV) {
             return res.status(400).json({ message: 'All fields are required!' })
         }
-        if (expiryYear < 2023){
+        if (expiryYear < 23){
             return res.status(400).json({message: 'Invalid expiry date!'})
         }
         else{

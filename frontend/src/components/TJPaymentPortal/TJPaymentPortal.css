@@ -1,49 +1,61 @@
-.TJUpdatePage{
+.TJAddPaymentPage{
     background-color: #004d4d;
     height: auto;
 }
 
-.TJUpdateHeading{
+.TJPaymentHeading{
     color: white;
     font-size: 45px;
     font-weight: bold;
     margin-left: 15px;
     font-family: 'Secular One', sans-serif;
-    
 }
 
-.TJUpdateForm{
-    margin-top: 20px;
+.TJPaymentSubHeading{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 30px;
+}
+
+.TJAddPaymentForm{
+    margin-top: -90px;
     background-color: #008080;
     text-align: center;
     width: 600px;
-    height: 760px;
+    height: 500px;
     border-radius: 50px;
     margin-left: 450px;
     border: 5px solid black;
 }
 
-.TJUpdateFormHeading{
+.TJExpHeading{
     color: white;
     font-family: 'Jost', sans-serif;
     font-weight: bold;
-    font-size: 20px;
-}
-
-.TJUpdateFormInput{
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
     font-size: 15px;
 }
 
-.TJUpdateTextArea{
+.TJCreateExpDetails{
+    width: 60px;
     border-radius: 10px;
     text-align: center;
+    font-family: 'Jost', sans-serif;
     font-size: 15px;
 }
 
-.TJUpdateSubmit{
+.TJCreateExpDetails2{
+    max-width: 60px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.TJPaymentSubmit{
     background-color: #99FF33;
     color: #1F1F1F;
     border-radius: 10px;
@@ -52,19 +64,14 @@
     transition: 1s;
     font-weight: bold;
     font-size: 20px;
-    margin-left: 70px;
+    margin-left: 20px;
+    text-align: center;
     font-family: 'Secular One', sans-serif;
+    margin-bottom: 90px ;
 }
 
-.TJUpdateSubmit:hover{
+.TJPaymentSubmit:hover{
     background-color: #1F1F1F;
     color: #99FF33;
-}
-
-.TJButtonCancel{
-    background-color: #FF3300;
-    border-radius: 10px;
-    color: #1F1F1F;
-    font-weight: bold;
     font-family: 'Secular One', sans-serif;
 }

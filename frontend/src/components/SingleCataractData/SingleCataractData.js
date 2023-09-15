@@ -53,7 +53,7 @@ export default function SingleCataractData(){
             </div>
             <br/>
             <div className="SingleCataract">
-                <img className="imageCard" src={'http://localhost:8040/'+data.image} alt="P 1" width="30%"></img>
+                <img className="imageCard1" src={'http://localhost:8040/'+data.image} alt="P 1" width="30%"></img>
                 <div className="CataractContent">
                     <p>Fullname: {data.Fullname}</p>
                     <p>Email: {data.Email}</p>

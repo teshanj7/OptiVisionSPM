@@ -62,8 +62,8 @@
 }
 
 .TJViewTable thead tr{
-    background-color: white;
-    color: #008080;
+    background-color:#008080 ;
+    color: white;
     text-align: left;
 }
 
@@ -76,14 +76,14 @@
 }
 
 .TJViewTable tbody tr:nth-of-type(odd){
-    background-color: #2B302A;
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: bold;
 }
 
 .TJViewTable tbody tr:nth-of-type(even){
-    background-color: #008080;
-    color: #1F1F1F;
+    background-color: white;
+    color: black;
     font-weight: bold;
 }
 
