@@ -6,7 +6,7 @@ Repository for the Cataract, Glaucoma Detection and Eye Care System built for So
 
 <h2>Contributors and their Contribution</h2>
 <ul>
-  <li>Teshan Jayakody - Appointment Scheduling Management System</li>
+  <li>Teshan Jayakody - Appointment scheduling sanagement system</li>
   <li>Bihesha Dilshan - Cataract detecting and visual tests </li>
   <li>Keshan Pathirana - Glaucoma detecting model</li>
   <li>Manula Gunatilleke - Recovery plan management system</li>
