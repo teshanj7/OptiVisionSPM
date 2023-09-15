@@ -1,19 +1,47 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import UserContext from '../ContextComponents/ContextComponent';
 import './NewMeditationPrescription.css'; 
 
 export default function NewMeditationPrescription() {
   const { user } = useContext(UserContext);
+  const location = useLocation();
+  const { patientName, appointmentReason } = location.state || {};
   const userID = user._id;
   const [medicineName, setMedicineName] = useState("");
   const [medicineDosage, setMedicineDosage] = useState("");
   const [medicineDuration, setMedicineDuration] = useState("");
   const [medicineFrequency, setMedicineFrequency] = useState("");
   const [exercisePlan, setExercisePlan] = useState([]);
+  const [existingData, setExistingData] = useState([]);
+
+  useEffect(() => {
+    // Fetch existing data when the component mounts
+    axios
+      .get(`http://localhost:8040/meditationPrescription/getMeditationPrescriptionsAppoinment/${patientName}`)
+      .then((res) => {
+        if (res.data && Array.isArray(res.data)) {
+          // Assuming `res.data` is an array of existing data
+          setExistingData(res.data);
+
+          // Check if there is existing data with the same appointmentReason
+          const hasData = res.data.some(item => item.appointmentReason === appointmentReason);
+          if (hasData) {
+            alert("Already Have an exercise");
+            navigate('/DRelatedAppoinment');
+          }
+        }
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  }, [patientName, appointmentReason]);
 
   const handleCreateMeditationPrescription = () => {
+
+    
+    
     if (!medicineName) {
       alert("Please enter a medicine name");
       return;
@@ -25,6 +53,8 @@ export default function NewMeditationPrescription() {
       medicineDosage,
       medicineDuration,
       medicineFrequency,
+      patientName: patientName,
+      appointmentReason: appointmentReason,
       exercisePlan,
     };
 
@@ -55,6 +85,7 @@ export default function NewMeditationPrescription() {
   };
 
   const handleExercisePlanChange = (event, dayIndex, exerciseIndex) => {
+    
     const { name, value } = event.target;
     const list = [...exercisePlan];
     list[dayIndex][exerciseIndex][name] = value;
@@ -68,6 +99,7 @@ export default function NewMeditationPrescription() {
   };
 
   const addExercise = (index) => {
+
     const list = [...exercisePlan];
     list[index].push({ exerciseName: "", exerciseDuration: 0, exerciseFrequency: 0 });
     setExercisePlan(list);
@@ -98,6 +130,10 @@ export default function NewMeditationPrescription() {
                 <div className="card w-100" >
                   <div className="card-body ">
                     <h1 className="card-title">Create a new Meditation Prescription</h1>
+                    <div>
+                      <p>Patient Name: {patientName}</p>
+                      <p>Appointment Reason: {appointmentReason}</p>
+                    </div>
                     <div className="mb-3">
                       <label htmlFor="medicineName" className="form-label">Medicine Name</label>
                       <input type="text" className="form-control NewMeditationPrescription outline" id="medicineName" value={medicineName} onChange={handleMedicineNameChange} autoComplete="off" required />

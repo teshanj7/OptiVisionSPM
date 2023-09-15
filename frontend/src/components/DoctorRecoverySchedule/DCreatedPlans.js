@@ -133,7 +133,7 @@ export default function DCreatedPlans() {
                                 }
                               >
                                 <Card.Title className="lead fw-normal mb-2 DCreatedPlans">
-                                  {recoveryPlan.medicineName}
+                                  {recoveryPlan.patientName}
                                 </Card.Title>
                               </div>
                               <div
@@ -144,7 +144,7 @@ export default function DCreatedPlans() {
                               >
                                 <Card.Text>
                                   <span className="text-muted DCreatedPlans">
-                                    {recoveryPlan.medicineName}
+                                    {recoveryPlan.appointmentReason}
                                   </span>
                                 </Card.Text>
                               </div>
