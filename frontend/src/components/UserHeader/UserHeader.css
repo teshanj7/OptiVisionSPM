@@ -2,17 +2,18 @@
     color: #ffffff;
     font-size: 50px ;
     font-weight: 500;
+    transition: 1s;
  }
 #PatientNavHeading:hover{
-    color: #CCFF00;
+    color: black;
  }
  .NavigationBarBarDropdown{
     margin-left: 50%;
     margin-top: 5%;
  } 
  #PatientNavbar{
-   background-color: black;
-   height: 70px;
+   background-color: #008080;
+   height: 80px;
  }
  #PatientNav{
    margin-left: 20px;
