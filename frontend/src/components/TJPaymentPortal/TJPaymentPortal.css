@@ -1,10 +1,10 @@
 .TJAddPaymentPage{
-    background-color: #004d4d;
+    background-color: white;
     height: auto;
 }
 
 .TJPaymentHeading{
-    color: white;
+    color: #008080;
     font-size: 45px;
     font-weight: bold;
     margin-left: 15px;
@@ -12,7 +12,7 @@
 }
 
 .TJPaymentSubHeading{
-    color: white;
+    color: #008080;
     font-size: 25px;
     font-weight: bold;
     margin-left: 15px;

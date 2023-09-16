@@ -43,14 +43,14 @@ function CreatePayment() {
             alert("Invalid expiry date!")
         }
 
-        else{
+        setTimeout(() => {
             axios.post("http://localhost:8040/payment/add", newPayment).then(() => {
                 alert("Payment Successful!")
-                window.location.href=`/viewAllAppointments`
+                window.location.href = `/viewAllAppointments`
             }).catch((error) => {
                 alert("Payment failed try again after some time!")
             })
-        }  
+        }, 4000); 
     }
 
     return (
@@ -77,7 +77,8 @@ function CreatePayment() {
                     <label for="subject" className="TJExpHeading">Exp.Month: </label>&nbsp;
                     <input type="number" className="TJCreateExpDetails" id="TJAddExpMonth" onChange={(e) => {
                         setExpiryMonth(e.target.value);
-                    }} required /> &nbsp;&nbsp;
+                    }} required /> &nbsp;
+                    <label for="subject" className="TJExpHeading"> / </label>&nbsp;
                     <label for="subject" className="TJExpHeading">Exp.Year: </label>&nbsp;
                     <input type="number" className="TJCreateExpDetails" id="TJAddExpYear" onChange={(e) => {
                         setExpiryYear(e.target.value);

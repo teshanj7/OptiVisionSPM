@@ -9,6 +9,7 @@ import UserContext from "./components/ContextComponents/ContextComponent";
 import UserHeader from './components/UserHeader/UserHeader';
 import DoctorHeader from './components/DoctorHeader/DoctorHeader';
 // import DoctorFooter from './components/DoctorFooter/DoctorFooter';
+import UserFooter from './components/UserFooter/FNfooter';
 
 
 //UserManagementSystem
@@ -88,6 +89,7 @@ function App() {
           <Route path='/DoctorHome/:id' element={<DoctorHome/>}/>
           <Route path='/profile/:id' element={<ViewProfile/>}/>
           <Route path='/updateProfile/:id' element={<UpdateUserDetails/>}/>
+
           
           {/* Cataract Application */}
           <Route path='/CreateCataractForm' element={<CreateCatForm/>}/>
@@ -107,9 +109,6 @@ function App() {
           <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
           <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
           <Route path='/ViewAllOpticians' element={<ViewAllDoctors/>}/>
-
-          {/* <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} /> */}
-
           <Route path='/PaymentPortal' element={<PaymentPortal/>}/>
 
 
@@ -128,6 +127,7 @@ function App() {
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
+        {user?.UserType === 'Patient' && <UserFooter/>}
 
       </div>
      </UserContext.Provider>
