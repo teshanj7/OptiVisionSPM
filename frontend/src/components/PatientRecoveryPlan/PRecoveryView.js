@@ -2,14 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import UserContext from "../ContextComponents/ContextComponent";
-import { Card, Container, Button } from "react-bootstrap"; // Assuming you're using Bootstrap
+import { Card, Container, Button, Form, FormControl } from "react-bootstrap"; // Assuming you're using Bootstrap
 
 export default function ViewMeditationPrescription() {
-  
   const [prescription, setPrescription] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(""); // State for search term
   const { user } = useContext(UserContext);
   const patientName = user.Fullname;
-  
 
   useEffect(() => {
     // Fetch the meditation prescription details by ID
@@ -32,12 +31,27 @@ export default function ViewMeditationPrescription() {
     return <div>Loading...</div>;
   }
 
-  
+  // Filter prescriptions based on search term
+  const filteredPrescriptions = prescription.filter((prescriptionPlan) =>
+    prescriptionPlan.appointmentReason.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <Container>
       <h1 className="mt-3">View Meditation Prescriptions</h1>
-      {prescription.map((prescriptionPlan, index) => (
+      <Form className="my-3">
+        <FormControl
+          type="text"
+          placeholder="Search by Appointment Reason"
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+      </Form>
+      {filteredPrescriptions.map((prescriptionPlan, index) => (
         <Card key={index} className="my-3">
           <Card.Body>
             <Card.Title>Patient Name: {prescriptionPlan.patientName}</Card.Title>
