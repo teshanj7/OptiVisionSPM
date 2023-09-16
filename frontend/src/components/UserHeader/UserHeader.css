@@ -3,6 +3,7 @@
     font-size: 50px ;
     font-weight: 500;
     transition: 1s;
+    cursor: pointer !important;
  }
 #PatientNavHeading:hover{
     color: black;
@@ -17,6 +18,10 @@
  }
  #PatientNav{
    margin-left: 20px;
+   cursor:  pointer !important;
+ }
+ #PatientNav :hover{
+  color: black !important;
  }
  #PatientNavitem{
    padding: 5px;
