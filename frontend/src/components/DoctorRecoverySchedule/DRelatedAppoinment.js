@@ -47,7 +47,9 @@ export default function AppointmentsComponent() {
   const handleCreateRecoveryPlan = (fullName, reasonOfApp) => {
     // Perform any actions or condition checks before navigating
     if (doctorName) {
-      navigate('/NewRecoveryPlan');
+      navigate('/NewRecoveryPlan', {
+        state: { patientName: fullName, appointmentReason: reasonOfApp },
+      });
     } else {
       // Handle other cases or show a message
     }
@@ -74,7 +76,7 @@ export default function AppointmentsComponent() {
               onClick={() =>
                 handleCreateRecoveryPlan(
                   appointment.fullName,
-                  appointment.reasonOfApp
+                  appointment.reasonOfApp,
                 )
               }
             >

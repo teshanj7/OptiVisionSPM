@@ -55,6 +55,14 @@ const MeditationPrescriptionSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  patientName : {
+    type: String,
+    required: true
+  },
+  appointmentReason : {
+    type: String,
+    required: true
+  },
   exercisePlan: {
     type: [[exercisePlanSchema]],
     required: true

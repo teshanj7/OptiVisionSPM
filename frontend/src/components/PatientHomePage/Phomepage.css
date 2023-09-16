@@ -3,107 +3,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 
 .PatientHomePage{
-   background-image: url("../PatientHomePage/image4.jpg");
+   background-color: white;
    height: auto;
    width: 100%;
 }
 .PatientHomeHeading{
-   font-size: 50px;
-   color: white;
-   margin-right: 60%;
-   font-family:'Times New Roman', Times, serif;
-   font-weight: 900;
+   font-size: 80px;
+   color: #008080;
+   font-family: 'Secular One', sans-serif;
+   font-weight: 0;
+   text-align: center;
 }
-.PatientHomeHeading2{
-   font-size: 50px;
-   color: white;
-   margin-right: 76%;
-   font-family:'Times New Roman', Times, serif;
-   font-weight: 900;
-}
-.PatientHomeHeading3{
-   font-size: 30px;
-   color: white;
-   margin-right: 67%;
-   font-family:'Times New Roman', Times, serif;
-   font-weight: 700;
-   margin-top: 50px;
-}
-.PatientHomeHeading4{
-   font-size: 30px;
-   color: white;
-   margin-right: 72%;
-   font-family:'Times New Roman', Times, serif;
-   font-weight: 700;
-}
-.PatientHomeHeading5{
-   font-size: 30px;
-   color: white;
-   margin-right: 75%;
-   font-family:'Times New Roman', Times, serif;
-   font-weight: 700;
-}
-.PatientHomeHeading6{
-   font-size: 30px;
-   color: white;
-   margin-right: 67%;
-   font-family:'Times New Roman', Times, serif;
-   font-weight: 700;
-}
-.PatientHomeHeading7{
-   font-size: 50px;
-   color: rgb(245, 7, 7);
-   margin-right: 49%;
-   font-family:Arial, Helvetica, sans-serif;
-   font-weight: 900;
-   margin-top: 40px;
-}
-.PatientHomeHeading8{
-   font-size: 50px;
-   color: rgb(245, 7, 7);
-   margin-right: 84%;
-   font-family:Arial, Helvetica, sans-serif;
-   font-weight: 900;
-}
-.PatientHomeHeading9{
-   font-size: 50px;
-   color: rgb(8, 28, 244);
-   margin-right: 56%;
-   font-family:Arial, Helvetica, sans-serif;
-   font-weight: 900;
-   margin-top: -66px;
-}
-.PatientHomeDescription{
-   font-size: 25px;
-   color: white;
-   margin-left: 3%;
+
+.PHPara1{
    font-family: 'Jost', sans-serif;
+   font-size: 30px;
+   margin-left: 50px;
+   margin-right: 50px;
 }
+
+.PHDashBoardPic{
+   height: 450px;
+   width: 1000px;
+   margin-top: 30px;
+   transition: 1s;
+   border: 5px solid black;
+   border-radius: 15px;
+}
+
+.PHDashBoardPic:hover{
+   transform: scale(1.1);
+}
+
+.PHPara2{
+   font-family: 'Jost', sans-serif;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.PHPara3{
+   font-family: 'Jost', sans-serif;
+   font-size: 30px;
+   color: #008080;
+   font-weight: bold;
+
+}
+
 .PatientHomePageSecondPart{
-   background-color: #1F1F1F;
+   background-color: #008080;
    height: auto;
+   margin-left: 20px;
+   margin-right: 20px;
 }
+
 .PatientDiv1{
-   background-color: #2B302A;
+   background-color: white;
    height: 300px;
    width: 320px;
    margin-left: 2%;
    border-radius: 15px;
-   border: 5px solid #99FF33;
+   border: 5px solid black;
 }
 .PatientDivHeading{
    font-weight: bold;
-   color: white;
+   color: #008080;
    font-size: 25px;
    text-align: center;
    font-family: 'Secular One', sans-serif;
 }
 .PatientDivPara{
    text-align: center;
-   color: white;
+   color: #008080;
    font-size: 20px;
    padding: 10px;
    font-family: 'Jost', sans-serif;
+   font-weight: bold;
 }
 .PatientDivIcon{
    height: 50px;
@@ -112,8 +86,8 @@
    margin-top: 3%;
 }
 .PatientHomeButton{
-   background-color: #1F1F1F;
-   color: #99FF33;
+   background-color: #008080;
+   color: white;
    border-radius: 10px;
    width: 180px;
    height: 40px;
@@ -121,35 +95,72 @@
    transition: 1s;
 }
 .PatientHomeButton:hover{
-   background-color: #99FF33;
-   color: #1F1F1F;
+   background-color: white;
+   color: #008080;
+   font-weight: bold;
    transform: scale(1.6);
 }
 .PatientDiv2{
-   background-color: #2B302A;
+   background-color: white;
    height: 300px;
    width: 320px;
    margin-left: 26.7%;
    border-radius: 15px;
-   border: 5px solid #99FF33;
-   margin-top: -20.5%;
+   border: 5px solid black;
+   margin-top: -20.8%;
 }
 .PatientDiv3{
-   background-color: #2B302A;
+   background-color: white;
    height: 300px;
    width: 320px;
    margin-left: 51.5%;
    border-radius: 15px;
-   border: 5px solid #99FF33;
-   margin-top: -20.5%
+   border: 5px solid black;
+   margin-top: -20.8%
 }
 .PatientDiv4{
-   background-color: #2B302A;
+   background-color: white;
    height: 300px;
    width: 320px;
    margin-left: 76%;
    border-radius: 15px;
-   border: 5px solid #99FF33;
-   margin-top: -20.5%;
+   border: 5px solid black;
+   margin-top: -20.8%;
 }
- 
+
+.PHDashBoardPic2{
+   height: 480px;
+   width: 600px;
+   margin-top: 40px;
+   transition: 1s;
+   border: 5px solid black;
+   border-radius: 15px;
+   margin-left: -700px;
+}
+
+.ph3div{
+   margin-left: 250px;
+   margin-top: -450px;
+}
+
+.PatientHomeHeading2{
+   font-family: 'Secular One', sans-serif;
+   color: #008080;
+   font-size: 50px;
+   margin-left: 160px;
+}
+
+.PH3Para{
+   text-align: left;
+   margin-left: 490px;
+   font-family: 'Jost', sans-serif;
+   font-size: 30px;
+}
+
+.PH3Para2{
+   text-align: left;
+   margin-left: 490px;
+   font-family: 'Jost', sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+}

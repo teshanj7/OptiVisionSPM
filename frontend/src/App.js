@@ -9,6 +9,7 @@ import UserContext from "./components/ContextComponents/ContextComponent";
 import UserHeader from './components/UserHeader/UserHeader';
 import DoctorHeader from './components/DoctorHeader/DoctorHeader';
 // import DoctorFooter from './components/DoctorFooter/DoctorFooter';
+import UserFooter from './components/UserFooter/FNfooter';
 
 
 //UserManagementSystem
@@ -47,6 +48,9 @@ import SingleRecoveryPlan from './components/DoctorRecoverySchedule/SingleRecove
 import NewRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryCreate';
 import UpdateRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryUpdate';
 import DRelatedAppoinment from './components/DoctorRecoverySchedule/DRelatedAppoinment';
+import PRecoveryView from './components/PatientRecoveryPlan/PRecoveryView'
+// PrescriptionDetailsPage
+import PrescriptionDetailsPage from './components/PatientRecoveryPlan/PRecoveryDetails'
 
 
 function App() {
@@ -85,6 +89,7 @@ function App() {
           <Route path='/DoctorHome/:id' element={<DoctorHome/>}/>
           <Route path='/profile/:id' element={<ViewProfile/>}/>
           <Route path='/updateProfile/:id' element={<UpdateUserDetails/>}/>
+
           
           {/* Cataract Application */}
           <Route path='/CreateCataractForm' element={<CreateCatForm/>}/>
@@ -104,23 +109,25 @@ function App() {
           <Route path='/updateAppointment/:id' element={<UpdateAppointment/>}/>
           <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
           <Route path='/ViewAllOpticians' element={<ViewAllDoctors/>}/>
-
-          {/* <Route path="/UpdateRecoveryPlan/:id" element={<ViewAllDoctors/>} /> */}
-
           <Route path='/PaymentPortal' element={<PaymentPortal/>}/>
 
 
-          {/* Recovery Application */}
+          {/* Recovery Application Doctor Related */}
           <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
           <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
           <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan/>} />
           <Route path="/DRelatedAppoinment" element={<DRelatedAppoinment/>} />
+
+          {/* Recovery Application Patient Related */}
+          <Route path="/PRecoveryView" element={<PRecoveryView/>} />
+          <Route path="/prescription/:patientName/:appointmentReason" element={<PrescriptionDetailsPage />} />
           
 
             
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
+        {user?.UserType === 'Patient' && <UserFooter/>}
 
       </div>
      </UserContext.Provider>

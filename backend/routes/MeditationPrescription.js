@@ -28,6 +28,37 @@ router.get('/getMeditationPrescriptions/:userID', async (req, res) => {
   }
 });
 
+// Endpoint to retrieve existing exercises for a specific user
+router.get("/getMeditationPrescriptionsAppoinment/:patientName", async (req, res) => {
+  const patientName = req.params.patientName;
+
+  try {
+    const prescriptions = await MeditationPrescription.find({ patientName: patientName });
+    res.json(prescriptions);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+router.get("/getPrescriptionDetails/:patientName/:appointmentReason", async (req, res) => {
+  const { patientName, appointmentReason } = req.params;
+
+  try {
+    const prescription = await MeditationPrescription.find({ patientName, appointmentReason });
+    
+    if (!prescription || prescription.length === 0) {
+      return res.status(404).json({ error: "Prescription not found" });
+    }
+
+    res.json(prescription);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+
 // Get a single Meditation Prescription by ID
 router.get('/:id', async (req, res) => {
   const prescriptionId = req.params.id;
