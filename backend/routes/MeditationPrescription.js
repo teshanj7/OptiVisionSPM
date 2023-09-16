@@ -28,6 +28,19 @@ router.get('/getMeditationPrescriptions/:userID', async (req, res) => {
   }
 });
 
+// Endpoint to retrieve existing exercises for a specific user
+router.get("/getMeditationPrescriptionsAppoinment/:patientName", async (req, res) => {
+  const patientName = req.params.patientName;
+
+  try {
+    const prescriptions = await MeditationPrescription.find({ patientName: patientName });
+    res.json(prescriptions);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
 // Get a single Meditation Prescription by ID
 router.get('/:id', async (req, res) => {
   const prescriptionId = req.params.id;
