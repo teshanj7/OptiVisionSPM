@@ -1,11 +1,11 @@
 .TJDashboardBG{
-    background-color: #004d4d;
+    background-color: white;
     height: auto;
 }
 
 
 .TJDashboardHeading{
-    color: white;
+    color: #008080;
     font-size: 45px;
     font-weight: bold;
     margin-left: 15px;
@@ -14,12 +14,13 @@
 
 .TJDashboardPara{
     font-size: 28px;
-    color: white;
+    color: #008080;
     width: 850px;
     height: 300px;
     font-family: 'Jost', sans-serif;
     margin-left: 150px;
     text-align: left;
+    font-weight: bold;
 }
 
 .TJDashboardPic{
@@ -32,11 +33,11 @@
 .TJDashboardSqr1{
     width: 450px;
     height: 220px;
-    background-color: #008080;
+    background-color: white;
     margin-left: 35px;
     margin-bottom: 20px;
     border-radius: 25px;
-    border: 5px solid white;
+    border: 5px solid #008080;
 }
 
 .TJSqrHeading{
@@ -44,7 +45,7 @@
     font-weight: bold;
     font-size: 30px;
     font-family: 'Secular One', sans-serif;
-    color: white;
+    color: #008080;
 }
 
 .TJSqrDesc{
@@ -56,8 +57,8 @@
 }
 
 .TJDashboardButton{
-    background-color: white;
-    color: #008080;
+    background-color: #008080;
+    color: white;
     border-radius: 10px;
     width: 150px;
     margin-left: 170px;
@@ -68,31 +69,31 @@
 }
 
 .TJDashboardButton:hover {
-    background-color: white;
-    color:#008080 ;
+    background-color: black;
+    color:white ;
     transform: scale(1.6);
   }
 
 .TJDashboardSqr2{
     width: 450px;
     height: 220px;
-    background-color:#008080 ;
+    background-color:white;
     margin-top: -240px;
     margin-left: 517px;
     margin-bottom: 20px;
     border-radius: 25px;
-    border: 5px solid white;
+    border: 5px solid #008080;
 }
 
 .TJDashboardSqr3{
     width: 450px;
     height: 220px;
-    background-color:#008080;
+    background-color:white;
     margin-top: -240px;
     margin-left: 1000px;
     margin-bottom: 20px;
     border-radius: 25px;
-    border: 5px solid white;
+    border: 5px solid #008080;
 }
 
 .TJsecondPara{
