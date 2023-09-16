@@ -82,8 +82,8 @@ export default function UserHeader(props) {
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
                                     <a className="NavigationBarB nav-link" id="PatientHeaderHd" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/RUVA`
-                                    }}>RECOVERY PLAN</a>
+                                        window.location.href = `/PRecoveryView`
+                                    }}>RECOVERY PLANS</a>
                                 </li>
 
                                 <li className='Patientdropdown'>
