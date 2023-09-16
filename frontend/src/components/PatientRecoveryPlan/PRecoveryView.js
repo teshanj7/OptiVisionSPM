@@ -36,7 +36,7 @@ export default function ViewMeditationPrescription() {
 
   return (
     <Container>
-      <h1 className="mt-3">View Meditation Prescription</h1>
+      <h1 className="mt-3">View Meditation Prescriptions</h1>
       {prescription.map((prescriptionPlan, index) => (
         <Card key={index} className="my-3">
           <Card.Body>

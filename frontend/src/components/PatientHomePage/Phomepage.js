@@ -82,7 +82,7 @@ export default function PatientHome() {
                     <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/`;
+                        window.location.href = `/PRecoveryView`;
                     }}>Recovery Schedule</button>
 
                 </div>
