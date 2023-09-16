@@ -103,6 +103,7 @@ function ViewAll() {
                 </tbody>
             </table>
             <br /><br />
+            <ToastContainer />
         </div>
     )
 
