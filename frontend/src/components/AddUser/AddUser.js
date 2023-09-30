@@ -68,12 +68,12 @@ export default function AddUser() {
                     </li>
                 </ul>
             </div>
-            <div className="rectangle">
-                <h1 className="signup">SIGNUP</h1>
-            </div>
+
             <div className="reg_form">
                 <form onSubmit={sendData}>
-                    <br/>
+                    <div>
+                        <h1 className="signup">Signup</h1>
+                    </div>
                     <label for="fullname" className="signupheading">Full Name: </label><br />
                     <input type="text" className="signupforminput" placeholder="Full Name" onChange={(e) => {
                         setName(e.target.value);
@@ -104,7 +104,7 @@ export default function AddUser() {
                         setUserType(e.target.value);
                     }} required />&nbsp;&nbsp;
                     <label for="Seller" className="signupheading">Doctor</label>
-                    <br/>
+                    <br />
                     <label for="gender" className="signupheading">Gender: </label><br />
                     <input type="radio" className="genderradio" name="gender" value="Male" onChange={(e) => {
                         setGender(e.target.value);

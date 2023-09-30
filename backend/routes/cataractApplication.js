@@ -13,7 +13,7 @@ router.post("/addCataract", uploadMiddleware.single('files'), async (req, res) =
     const newPath = path+'.'+ext
     fs.renameSync(path, newPath);
 
-    const {userID,Fullname,Email,Address,TelephoneNumber,Gender} = req.body;
+    const {userID,Fullname,Email,Address,TelephoneNumber,Age,Gender} = req.body;
 
     const postCataract = await CataractPost.create({
         userID,
@@ -21,11 +21,41 @@ router.post("/addCataract", uploadMiddleware.single('files'), async (req, res) =
         Email,
         Address,
         TelephoneNumber,
+        Age,
         Gender,
         image:newPath,
     })
     res.json(postCataract);
 });
+//-----------------comment-----------------------------------
+router.put("/comment",(req,res) => {
+    // const _id = req.params._id;
+    const comment = {
+        comment : req.body.text,
+    }
+    CataractPost.findByIdAndUpdate(req.body.cataractID, {
+        $push: {comments: comment}
+    }, {
+        new: true
+    }).catch((err,result)=>{
+        if(err){
+            return res.status(422).json({ error: err })
+        }else{
+            res.json(result)
+        }
+    })
+})
+//-----------------delete comment--------------------------
+router.route("/singleCataract/:id/comments/:comment_id").delete(async (req,res) =>{
+    const { id, comment_id } = req.params;
+
+    await CataractPost.findByIdAndUpdate(id, { $pull: { comments: { _id: comment_id } } }).then(() =>{
+        res.status(200).send({ status: "Cataract comment Deleted" });
+    }).catch((err) =>{
+        console.log(err.message);
+        res.status(500).send({ status: "Error Deleting comment Details", error: err.message });
+    });
+})
 
 //---------------get all Cataract Details display for patient----------------------------------
 router.route("/viewCataract/:userID").get((req,res) =>{
@@ -39,6 +69,7 @@ router.route("/viewCataract/:userID").get((req,res) =>{
 })
 //---------------get all Cataract Details to display for Doctor----------------------------------
 router.get("/viewAllCataract", async(req,res) =>{
+
     CataractPost.find().then((cat)=>{
         res.json(cat)
     }).catch((err)=>{
@@ -66,7 +97,7 @@ router.put("/updateCataract/:id",uploadMiddleware.single('files'), async(req,res
         fs.renameSync(path, newPath);           
     }
 
-    const {id,Fullname,Email,Address,TelephoneNumber,Gender} = req.body;
+    const {id,Fullname,Email,Address,TelephoneNumber,Age,Gender} = req.body;
 
 
     const postCataract = await CataractPost.findById(id)
@@ -76,6 +107,7 @@ router.put("/updateCataract/:id",uploadMiddleware.single('files'), async(req,res
         Email,
         Address,
         TelephoneNumber,
+        Age,
         Gender,
         image: newPath ? newPath : postCataract.image,
     });

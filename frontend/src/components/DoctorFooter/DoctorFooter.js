@@ -1,52 +1,74 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../DoctorFooter/DoctorFooter.css";
-import FNfootericon from "../DoctorFooter/adminfootericon.png";
+import { useLocation} from "react-router-dom";
+import FNfootericon from "../UserFooter/footerpic.png";
+import UserContext from "../ContextComponents/ContextComponent";
 
 function Footer() {
+
+    const location = useLocation()
+    const { user } = useContext(UserContext);
+
+    //Home pages Control
+    const HomepagesHandle = async () => {
+        if (user.Fullname) {
+            if (user.UserType === "Doctor") {
+                window.location.href = `/DoctorHome/${user._id}`;
+            }
+            // else if (user.UserType === "Doctor") {
+            //     // history(`/trainer_home/${user._id}`, { state: { id:user.Fullname } })
+            //     window.location.href = `/trainer_home/${user._id}`;
+            // }
+        }
+
+    }
+
+    const hideFooter = location.pathname === '/' || location.pathname === '/login' || location.pathname === '/add';
+
+    if (hideFooter) {
+        return null; // Render nothing if header should be hidden
+    }
+
     return (
         <div className="FNFooterDiv">
             <footer className="FNExactFooter">
                 <div>
-                    
-                    <a href="/adminHome"><img src={FNfootericon} className="FNFooterPic" /></a>
+
+                    <img src={FNfootericon} className="FNFooterPic" onClick={HomepagesHandle}/>
                 </div>
                 <div className="FNFooterHeading">
-                    <p>FitCrib's <br /> Administration <br /> System</p>
+                    <p onClick={HomepagesHandle}>OptiVision</p>
                 </div>
                 <div>
-                    <p className="FNFooterHead1" onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = `/adminHome`;
-                    }}>HOME</p>
+                    <p className="FNFooterHead1" onClick={HomepagesHandle}>HOME</p>
 
 
                     <p className="FNFooterHead2" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/allusers`;
-                    }}>ALL USERS</p>
+                        window.location.href = `/ViewAllCataract`;
+                    }}>ALL CATARACT</p>
 
                     <p className="FNFooterHead3" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/financialperformance`;
-                    }}>FINANCIAL PERFORMANCE</p>
+                        window.location.href = `/DRelatedAppoinment`;
+                    }}>ALL APPOINTMENTS</p>
 
                     <p className="FNFooterHead4" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
-                    }}>BLOGS</p>
+                        window.location.href = `/DCreatedRecoveryPlans`;
+                    }}>CREATE RECOVERY PLAN</p>
 
                     <p className="FNFooterHead5" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/calculate`;
-                    }}>CALCULATIONS</p>
+                        window.location.href = `#`;
+                    }}>HELP</p>
                 </div>
-               
                 <div>
                     <hr className="FNHr"></hr>
                 </div>
                 <div className='footer-bottom'>
-                    <p className='FNFooterBottom' style={{ color: "#99FF33" }}>
-                        © 2023 FITCRIB All Rights Reserved.
+                    <p className='FNFooterBottom' style={{ color: "white" }}>
+                        © 2023 OptiVision All Rights Reserved.
                     </p>
 
                 </div>

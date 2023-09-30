@@ -3,19 +3,14 @@
 
 
 .ViewallCataractBody{
-  background-color: rgb(35, 36, 29);
+  background-color: white;
   height: auto;
-}
-.rectangleAllCatView{
-  background-color: #CCFF00;
-  width: 380px;
-  height: 60px;
-  border-radius: 10px;
-  margin-left: 545px;
 }
 .ViewAllCatHeading{
   font-weight: bold;
   padding: 4px;
+  color: #008080;
+  font-family: 'Secular One', sans-serif;
 } 
 .CataractContainer{
   border-radius: 10px;
