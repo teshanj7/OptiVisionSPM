@@ -49,6 +49,9 @@ import SingleRecoveryPlan from './components/DoctorRecoverySchedule/SingleRecove
 import NewRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryCreate';
 import UpdateRecoveryPlan from './components/DoctorRecoverySchedule/DRecoveryUpdate';
 import DRelatedAppoinment from './components/DoctorRecoverySchedule/DRelatedAppoinment';
+import PRecoveryView from './components/PatientRecoveryPlan/PRecoveryView'
+// PrescriptionDetailsPage
+import PrescriptionDetailsPage from './components/PatientRecoveryPlan/PRecoveryDetails'
 
 
 function App() {
@@ -111,11 +114,15 @@ function App() {
           <Route path='/AppointmentFaq' element={<FAQPage/>}/>
 
 
-          {/* Recovery Application */}
+          {/* Recovery Application Doctor Related */}
           <Route path="/DCreatedRecoveryPlans" element={<DCreatedRecoveryPlans />} />
           <Route path='/NewRecoveryPlan' element={<NewRecoveryPlan/>}/>
           <Route path="/UpdateRecoveryPlan/:id" element={<UpdateRecoveryPlan/>} />
           <Route path="/DRelatedAppoinment" element={<DRelatedAppoinment/>} />
+
+          {/* Recovery Application Patient Related */}
+          <Route path="/PRecoveryView" element={<PRecoveryView/>} />
+          <Route path="/prescription/:patientName/:appointmentReason" element={<PrescriptionDetailsPage />} />
           
 
             
