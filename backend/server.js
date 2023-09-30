@@ -7,7 +7,6 @@ const app = express();
 require("dotenv").config();
 const path = require("path")
 
-
 //image upload
 app.use(express.static(path.join(__dirname)))
 app.use(express.json())
@@ -18,9 +17,9 @@ app.use(express.static(path.join(__dirname)))
 app.use(express.json())
 app.use("/glaucomaImages",express.static(path.join(__dirname+"/glaucomaImages")))
 
-
 const port = process.env.PORT || 8040;
 
+// app middlewares
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json())
@@ -75,4 +74,6 @@ app.use("/Glaucoma",glaucoma);
 
 const meditationPrescriptionRouter = require('./routes/MeditationPrescription'); // Import the meditationPrescriptionRoute file
 app.use("/meditationPrescription", meditationPrescriptionRouter); // Use the meditationPrescriptionRouter for the "/meditationPrescription" route
+
+
 
