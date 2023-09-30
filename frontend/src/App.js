@@ -47,6 +47,7 @@ import UpdateAppointment from './components/TJUpdateAppointment/TJUpdateAppointm
 import AppointmentDashboard from "./components/TJAppointmentDashboard/TJAppointmentDashboard";
 import ViewAllDoctors from './components/TJViewDoctors/TJViewDoctors';
 import PaymentPortal from './components/TJPaymentPortal/TJPaymentPortal';
+import FAQPage from './components/TJAppointmentFaq/AppointmentFaq';
 
  
 //RecoveryReschedule
@@ -123,6 +124,7 @@ function App() {
           <Route path='/AppointmentMgmt' element={<AppointmentDashboard/>}/>
           <Route path='/ViewAllOpticians' element={<ViewAllDoctors/>}/>
           <Route path='/PaymentPortal' element={<PaymentPortal/>}/>
+          <Route path='/AppointmentFaq' element={<FAQPage/>}/>
 
 
           {/* Recovery Application Doctor Related */}

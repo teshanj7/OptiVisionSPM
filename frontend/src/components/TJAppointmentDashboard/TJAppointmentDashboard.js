@@ -53,7 +53,7 @@ function Dashboard(){
               
                 <button className="TJDashboardButton" onClick={(e) => {
                                                                         e.preventDefault();
-                                                                        window.location.href=`/addAppointment`;
+                                                                        window.location.href=`/AppointmentFaq`;
                                                                         }}>VIEW FAQs</button>
 
             </div>

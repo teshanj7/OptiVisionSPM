@@ -1,64 +1,70 @@
-import React from "react"
-import { useState, useContext } from "react"
-// import axios from "axios";
-import { useNavigate } from "react-router-dom"
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import UserContext from "../ContextComponents/ContextComponent";
+import "./GlaucomaForm.css"; // Import the CSS file
 
-import UserContexxt from '../ContextComponents/ContextComponent';
+export default function CreateGlaucomaForm() {
+  const { user } = useContext(UserContext);
+  const userID = user._id;
 
-export default function CreateGlaucomaForm(){
+  const [imageFile, setImageFile] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
 
-    const {user} = useContext(UserContexxt);
-    const userID = user._id
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setImageFile(file);
+    // Display a preview of the selected image
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImagePreview(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
-    const his = useNavigate()
+  const handlePredictClick = () => {
+    if (imageFile) {
+      const formData = new FormData();
+      formData.append("file", imageFile);
 
-    const[files,setFiles] = useState('')
-    const[redirect,setRedirect] = useState('')
-
-    async function sendData(event) {
-
-        const newGlaucoma = new FormData();
-
-        newGlaucoma.set('userID',userID)
-        newGlaucoma.set('files',files[0])
-
-        event.preventDefault();
-        console.log(files);
-        const response = await fetch('http://localhost:8040/Glaucoma/addGlaucoma',{
-            method: 'POST',
-            body: newGlaucoma,
+      fetch("http://localhost:5000/predict", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.prediction);
+          // Handle the prediction result here
+        })
+        .catch((error) => {
+          console.error("Error:", error);
         });
-        if(response.ok){
-            setRedirect(true);
-        }
     }
+  };
 
-    if(redirect){
-        return his(`/PatientHome/${userID}`)
-    }
-
-
-    return(
-        <div className="CataractFormBackground">
-            <br/>
-            <div className="rectangleCat">
-                <h1 className="CataractHeading">Glaucoma Application</h1>
-            </div>
-            <br/>
-            <form className="CataractForm" onSubmit={sendData}>
-
-                    <label for="image" className="CataractFormHeading">Image: &nbsp;&nbsp;&nbsp;</label>            
-                    <input type="file" name="file"  className="CataractFormImg" onChange={(event) => {
-                        setFiles(event.target.files);
-                    }} /><br/><br/>
-
-                    <button className="CataractFormCancelbtn" onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = `/PatientHome/${userID}`;
-                    }}>Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="submit" className="CataractFormSubmitbtn">SUBMIT</button>                    
-            </form>
-            <br/><br/><br/>
+  return (
+    <>
+    <div class="container-md ML">
+        <div class="mb-3">
+          <label for="formFile" class="form-label">
+            Select an Image
+          </label>
+          <input
+            class="form-control"
+            type="file"
+            id="formFile"
+            accept="image/*"
+            onChange={handleFileChange}
+          />
         </div>
-    )
+        {imagePreview && (
+          <img src={imagePreview} alt="Preview" className="preview-image" />
+        )}
+        <button onClick={handlePredictClick} className="predict-button">
+          Predict
+        </button>
+        </div>
+    </>
+  );
 }
