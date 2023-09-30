@@ -22,10 +22,24 @@ const CataractDoc = new Schema({
         type : Number,
         require : true,
     },
+    Age : {
+        type : String,
+        require : true
+    },
     Gender : {
         type : String,
         require : true
     },
+    comments: [{
+        comment : {
+            type: String,
+            require: true
+        },
+        postedBy: {
+            type: String,
+            require: true
+        }
+    }],
     image: {
         type : String,
         require : false,

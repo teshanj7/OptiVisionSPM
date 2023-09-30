@@ -23,7 +23,7 @@
   
   /* Background */
   .NewMeditationPrescription {
-    background-color: rgb(231, 228, 209);
+    background-color: white;
     color: white;
   }
   /*rgb(218, 211, 191)*/
@@ -118,7 +118,7 @@
   }
   
   .NewMeditationPrescription .card {
-    background-color: #DAD3BF;
+    background-color: #C9E5F6;
     color: #000;
     border: none;
     border-radius: 2;
@@ -181,12 +181,12 @@
   
   .NewMeditationPrescription .outline {
     border-radius: 10px;
-    outline: 1px solid limegreen;
+    outline: 1px solid #A9D5F1;
   }
   
   .NewMeditationPrescription .cardoutline {
     border-radius: 10px;
-    outline: 4px solid limegreen;
+    outline: 4px solid #A9D5F1;
   }
 
   #custom-radius {

@@ -52,14 +52,8 @@ export default function UserHeader(props) {
                                 <li className="NavigationBarB nav-item" id="PatientNavitem">
                                     <a className="NavigationBarB nav-link" id="PatientHeaderHd"style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/CreateCataractForm`
-                                    }}>CATARACT APPLICATION</a>
-                                </li>
-                                <li className="NavigationBarB nav-item" id='PatientNavitem'>
-                                    <a className="NavigationBarB nav-link" id="PatientHeaderHd" style={{ color: "#ffffff" }} onClick={(e) => {
-                                        e.preventDefault();
-                                        window.location.href = `/ViewCataractData/${user._id}`
-                                    }}>VIEW CATARACT DETAILS</a>
+                                        window.location.href = `/EyeTestMgmt`
+                                    }}>EYE TEST</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
                                     <a className="NavigationBarB nav-link" id="PatientHeaderHd" style={{ color: "#ffffff" }} onClick={(e) => {
@@ -86,7 +80,7 @@ export default function UserHeader(props) {
                                     }}>RECOVERY PLANS</a>
                                 </li>
 
-                                <li className='Patientdropdown'>
+                                <li className='Patientdropdown' >
                                     <div className="NavigationBarBarDropdown dropdown">
                                         <button className="NavigationBarB btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                                             {user.Username}

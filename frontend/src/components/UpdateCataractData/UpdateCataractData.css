@@ -1,27 +1,17 @@
-.UpdateCatBackground{
-    background-image: url("../CreateCataractForm/image3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: auto;
-    background-position: 69%;
-}
-
 .UpdateCataractForm{
-    background-color: #2B302A;
+    background-color: #008080;
     text-align: center;
     width: 600px;
-    height: 560px;
+    height: 690px;
     border-radius: 25px;
     margin-left: 420px;
-}
-.rectangleCatUpdate{
-    background-color: #CCFF00;
-    width: 580px;
-    height: 60px;
-    border-radius: 10px;
-    margin-left: 427px;
+    border: 5px solid black;
 }
 .UpdateCataractHeading{
+    color: #008080;
+    font-size: 45px;
     font-weight: bold;
-    padding: 4px;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+    margin-bottom: 30px;
 }

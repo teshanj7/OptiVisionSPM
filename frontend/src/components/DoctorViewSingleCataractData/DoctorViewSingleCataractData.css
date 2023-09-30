@@ -1,14 +1,6 @@
 
 .SingleViewbody{
-    background-color: rgb(35, 36, 29);
-    margin: auto;
-}
-.reactangleDoctorSinView{
-    background-color: #CCFF00;
-    width: 380px;
-    height: 60px;
-    border-radius: 10px;
-    margin-left: 540px;
+    background-color: white;
 }
 .SingleCataract{
     background-color: #E1F1C1;
@@ -18,17 +10,49 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    /* border: 5px solid black; */
 }
 .SingleCataractContent{
     font-size: 20px;
     margin-top: 10px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight:500;
     text-align: justify;
     padding-left: 20px;
-    margin-left: 170px;
+    margin-left: 100px;
 }
-/* .CataractContent{
-    padding-bottom: 12px;
-    padding-left:7px;
-} */
+.comntheading{
+    font-size: 30px;
+    font-family: 'Secular One', sans-serif;
+    margin-right: 500px; 
+}
+.comntbox{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 740px;
+    height: auto;
+    margin-left: 25%;
+}
+.CommentArea{
+    border-radius: 2px;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+}
+.commentbutton{
+    background-color: #008080;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 580px;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+}
+.commentbutton:hover{
+    background-color: white;
+    color: #008080;
+    font-family: 'Secular One', sans-serif;
+}
