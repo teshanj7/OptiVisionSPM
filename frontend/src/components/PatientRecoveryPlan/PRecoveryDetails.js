@@ -116,12 +116,12 @@ export default function PrescriptionDetailsPage() {
     <Container>
       <h1 className="mt-3">View Meditation Prescription</h1>
       
-      <Card className="my-3">
-        <Card.Body>
+      <Card className="my-3" style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080" }}>
+        <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080" }}>
           <Card.Title>Patient Name: {prescriptionPlan.patientName}</Card.Title>
           <Card.Text>Appointment Reason: {prescriptionPlan.appointmentReason}</Card.Text>
-          <Card>
-            <Card.Body>
+          <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
+            <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
               <Card.Title>Medicine Details</Card.Title>
               <Card.Text>Medicine Name: {prescriptionPlan.medicineName}</Card.Text>
               <Card.Text>Medicine Dosage: {prescriptionPlan.medicineDosage}</Card.Text>
@@ -129,15 +129,15 @@ export default function PrescriptionDetailsPage() {
               <Card.Text>Medicine Frequency: {prescriptionPlan.medicineFrequency}</Card.Text>
             </Card.Body>
           </Card>
-          <Card>
-            <Card.Body>
+          <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
+            <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
               <Card.Title>Exercise Plan</Card.Title>
               {prescriptionPlan.exercisePlan.map((day, dayIndex) => (
                 <div key={dayIndex}>
                   <Card.Title>Day {dayIndex + 1}</Card.Title>
                   {day.map((exercise, exerciseIndex) => (
-                    <Card key={exerciseIndex} className="my-2">
-                      <Card.Body>
+                    <Card key={exerciseIndex} className="my-2" style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
+                      <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
                         <Card.Title>Exercise {exerciseIndex + 1}</Card.Title>
                         <Card.Text>Exercise Name: {exercise.exerciseName}</Card.Text>
                         <Card.Text>Exercise Duration: {exercise.exerciseDuration}</Card.Text>
