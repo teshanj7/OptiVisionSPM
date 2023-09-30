@@ -1,73 +1,126 @@
 .doctor_page{
-    background-color: #252525;
+    background-color: white;
     height: auto;
  }
  
  .doctorHomeHeading{
-    color: #99FF33;
+    color: #008080;
     font-size: 45px;
     font-weight: bold;
-    margin-left: 15px;
     font-family: 'Secular One', sans-serif;
     text-align: center;
  }
- 
+ #Docimg4{
+   border-radius: 100% 0% 0% 100%;
+   border: 2px solid black;
+   width: 350px;
+   height: 250px;
+   transition: 2s;
+ }
+ #Docimg4:hover{
+   transform: scale(1.1);
+ }
+ .Docimg6{
+   border-radius: 0% 100% 100% 0%;
+   border: 2px solid black;
+   width: 350px;
+   height: 250px;
+   transition: 2s;
+ }
+ .Docimg6:hover{
+   transform: scale(1.1);
+ }
  .doctorHomePara{
     font-size: 25px;
-    color: white;
+    color: black;
     margin-left: 30px;
     font-family: 'Jost', sans-serif;
     text-align: center;
     margin-right: 30px;
+    font-weight: 700;
  }
- 
+ .Docimg1{
+   height: 350px;
+   width: 450px;
+   border-radius: 0% 0% 0% 40%;
+   border: 2px solid black;
+ }
+ .Docimg1:hover{
+   transform: scale(1.1);
+   transition: 2s;
+}
+ .Docimg2{
+   height: 350px;
+   width: 450px;
+   border: 2px solid black;
+ }
+ .Docimg2:hover{
+   transform: scale(1.1);
+   transition: 2s;
+}
+ .Docimg3{
+   height: 350px;
+   width: 450px;
+   border-radius: 0% 40% 0% 0%;
+   border: 2px solid black;
+ }
+ .Docimg3:hover{
+   transform: scale(1.1);
+   transition: 2s;
+}
+ .DoctorHomePageSecond{
+   background-color: #008080;
+   height: auto;
+
+ }
  .doctorDivDesc1{
-    background-color: #2B302A;
+    background-color: white;
     height: 350px;
     width: 420px;
     margin-left: 30px;
     border-radius: 15px;
-    border: 5px solid #99FF33;
+    border: 5px solid black;
  }
  
  .doctorDivHeading{
     font-weight: bold;
-    color: white;
+    color: #008080;
     font-size: 40px;
     text-align: center;
     font-family: 'Secular One', sans-serif;
  }
  
  .doctorDivDesc2{
-    background-color: #2B302A;
+    background-color: white;
     height: 350px;
     width: 420px;
     margin-left: 520px;
     border-radius: 15px;
-    border: 5px solid #99FF33;
-    margin-top: -348px;
+    border: 5px solid black;
+    margin-top: -349px;
  }
  
  .doctorDivDesc3{
-    background-color: #2B302A;
+    background-color: white;
     height: 350px;
     width: 420px;
     margin-left: 1010px;
     border-radius: 15px;
-    border: 5px solid #99FF33;
-    margin-top: -347px;
+    border: 5px solid black;
+    margin-top: -349px;
     
  }
 .doctorDivPara{
    text-align: center;
-   color: white;
+   color: black;
    font-size: 20px;
+   font-weight: 700;
    padding: 10px;
    font-family: 'Jost', sans-serif;
 }
 .doctorButton{
-   background-color: #1F1F1F;
-   color: #99FF33;
+   background-color: #008080;
+   color: white;
    border-radius: 10px;
    width: 180px;
    height: 40px;
@@ -75,7 +128,47 @@
    transition: 1s;
 }
 .doctorButton:hover{
-   background-color: #99FF33;
-   color: #1F1F1F;
+   background-color: white;
+   color: #008080;
    transform: scale(1.6);
+}
+
+.Docimg5{
+   height: 480px;
+   width: 600px;
+   margin-top: 40px;
+   transition: 2s;
+   border: 5px solid black;
+   border-radius: 15px;
+   margin-left: -700px;
+   border-radius: 0% 40% 0% 40%;
+}
+.Docimg5:hover{
+   transform: scale(1.1);
+}
+.ph3div{
+   margin-left: 250px;
+   margin-top: -450px;
+}
+
+.PatientHomeHeading2{
+   font-family: 'Secular One', sans-serif;
+   color: #008080;
+   font-size: 50px;
+   margin-left: 160px;
+}
+
+.PH3Para{
+   text-align: left;
+   margin-left: 490px;
+   font-family: 'Jost', sans-serif;
+   font-size: 30px;
+}
+
+.PH3Para2{
+   text-align: left;
+   margin-left: 490px;
+   font-family: 'Jost', sans-serif;
+   font-size: 20px;
+   font-weight: bold;
 }

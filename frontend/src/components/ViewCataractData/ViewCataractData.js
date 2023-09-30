@@ -12,15 +12,6 @@ export default function ViewCataractData(){
 
     const [data,setdata] = useState('');
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:8040/CataractApplication/viewCataract/${userID}`).then(response => {
-    //         response.json().then(data => {
-    //             setdata(data);
-    //             console.log(data)
-    //         });
-    //     });
-    // }, []);
-
     useEffect(()=>{
         getCataract();
     },[]);
@@ -52,8 +43,10 @@ export default function ViewCataractData(){
                                 <p className="para1">Email : {cat.Email}</p>
                                 <p className="para1">Address : {cat.Address}</p>
                                 <p className="para1">TelephoneNumber : {cat.TelephoneNumber}</p>
+                                <p className="para1">Age : {cat.Age}</p>
                                 <p className="para1">Gender : {cat.Gender}</p>
                             </div>
+                            <br/><br/>
                         </div>
                     )
                 })}

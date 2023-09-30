@@ -3,60 +3,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 
 .FNExactFooter{
-    background-color: black;
-    height: 300px;
+    background-color: #008080;
+    height: 270px;
 }
 
 .FNFooterPic{
     width: 300px;
     height: 250px;
-    margin-left: 40px;
+    margin-left: -1200px;
+    cursor: pointer;
+}
+.FNFooterHeading{
+    color: white;
+    font-size: 50px;
+    margin-left: 270px;
+    margin-top: -170px;
+    font-family: 'Secular One', sans-serif;
+    text-align: left;
+    transition: 1s;
     cursor: pointer;
 }
 
-.FNFooterHeading{
-    color: white;
-    font-size: 40px;
-    margin-left: 330px;
-    margin-top: -210px;
-    font-family: 'Secular One', sans-serif;
+.FNFooterHeading:hover{
+    color: black;
 }
 
 .FNFooterHead1{
     color: white;
     font-size: 20px;
-    margin-left: 720px;
-    margin-top: -130px;
+    margin-left: -200px;
+    margin-top: -70px;
     cursor: pointer;
     font-family: 'Secular One', sans-serif;
+    transition: 1s;
+}
+
+.FNFooterHead1:hover{
+    color: black;
 }
 
 .FNFooterHead2{
     color: white;
     font-size: 20px;
-    margin-left: 810px;
+    margin-left: 50px;
     margin-top: -46px;
     cursor: pointer;
     font-family: 'Secular One', sans-serif;
+    transition: 1s;
 }
+
+.FNFooterHead2:hover{
+    color: black;
+}
+
 
 .FNFooterHead3{
     color: white;
     font-size: 20px;
-    margin-left: 940px;
+    margin-left: 450px;
     margin-top: -46px;
     cursor: pointer;
     font-family: 'Secular One', sans-serif;
+    transition: 1s;
 }
+
+.FNFooterHead3:hover{
+    color: black;
+}
+
 
 .FNFooterHead4{
     color: white;
     font-size: 20px;
-    margin-left: 1220px;
+    margin-left: 930px;
     margin-top: -46px;
     cursor: pointer;
     font-family: 'Secular One', sans-serif;
+    transition: 1s;
 }
+
+.FNFooterHead4:hover{
+    color: black;
+}
+
 
 .FNFooterHead5{
     color: white;
@@ -65,14 +94,21 @@
     margin-top: -46px;
     cursor: pointer;
     font-family: 'Secular One', sans-serif;
+    transition: 1s;
 }
 
+.FNFooterHead5:hover{
+    color: black;
+}
+
+
 .FNHr{
-    margin-top: 120px;
+    margin-top: 90px;
     border: 2px solid white;
 }
 
 .FNFooterBottom{
     text-align: center;
     font-family: 'Jost', sans-serif;
+    color: white;
 }

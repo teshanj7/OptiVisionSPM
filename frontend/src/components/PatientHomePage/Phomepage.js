@@ -41,12 +41,12 @@ export default function PatientHome() {
                 <br />
                 <div className="PatientDiv1">
                     <img src={cataract} className="PatientDivIcon" />
-                    <h2 className="PatientDivHeading">Cataract Application</h2>
+                    <h2 className="PatientDivHeading">Eye Test</h2>
                     <p className="PatientDivPara">All Patient can upload their details in this button. Also they can upload their eye picture in this form.</p>
                     <button className="PatientHomeButton" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/CreateCataractForm`;
-                    }}>Application</button>
+                        window.location.href = `/EyeTestMgmt`;
+                    }}>Eye Test</button>
 
                 </div>
 

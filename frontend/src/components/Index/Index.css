@@ -1,11 +1,10 @@
+.index_bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 
-.index_bg{
-    background-image: url("../Index//index1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-#IndexHeading{
+#IndexHeading {
   font-size: 25px;
   position: relative;
   top: -120px;
@@ -13,59 +12,141 @@
   padding: 20px;
   font-weight: bold;
 }
-#Login{
+
+#Login {
   padding-right: 20px;
   padding-top: 15px;
 }
-#Signup{
+
+#Signup {
   padding-right: 20px;
-  padding-top: 15px;  
+  padding-top: 15px;
 }
-#LoginLink{
+
+#LoginLink {
   color: black;
   font-weight: 900;
   font-size: 30px;
 }
-#LoginLink:hover{
+
+#LoginLink:hover {
   border-bottom: 2px solid rgb(5, 251, 5);
 }
-#SignupLink{
+
+#SignupLink {
   color: black;
   font-weight: 900;
   font-size: 30px;
 }
-#SignupLink:hover{
+
+#SignupLink:hover {
   border-bottom: 2px solid rgb(5, 251, 5);
 }
-.name{
-  font-size: 50px;
+
+.name {
+  font-size: 70px;
   font-weight: 700;
-  color: black;
   text-align: left;
   padding: 10px;
   padding-left: 20px;
+  color: #008080;
+  font-family: 'Secular One', sans-serif;
 }
-.Mainhe{
-  font-size: 65px;
-  font-weight: 900;
-  color:  rgb(8, 15, 97);
-  text-align: left;
-  padding-left: 20px;
-  padding-top: 280px;
-}
-.he1{
+
+.Mainhe {
   font-size: 50px;
   font-weight: 900;
-  color:  black;
   text-align: left;
-  padding-left: 20px;
-  padding-top: 20px;
+  color:  white;
+  font-family: 'Jost', sans-serif;
+  text-align: center;
 }
-.he2{
+
+.IndexSecondDiv {
+  margin-top: -20px;
+  background-color: #008080;
+  height: 470px;
+}
+
+.indexpic {
+  margin-top: 40px;
+  height: 390px;
+  width: 500px;
+  margin-left: -700px;
+  transition: 1s;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+.indexpic:hover{
+  transform: scale(1.1);
+}
+
+.IndexPicPara{
+  margin-left: 650px;
+  margin-top: -340px;
+}
+
+
+.he1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  font-family: 'Secular One', sans-serif;
+}
+
+.he2 {
   font-size: 25px;
   font-weight: 800;
-  color: black;
-  position: relative;
+  color: white;
   bottom: 20px;
   padding-left: 20px;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Jost', sans-serif;
+}
+
+.he3{
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  bottom: 20px;
+  padding-left: 20px;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  cursor: pointer;
+}
+
+.logoIndex{
+  height: 150px;
+  width: 300px;
+}
+
+.IndexBtn{
+  background-color: #008080;
+  color: white;
+  border-radius: 10px;
+  width: 250px;
+  height: 40px;
+  transition: 1s;
+  font-family: 'Secular One', sans-serif;
+}
+
+.IndexBtn:hover{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.LogoUpTop{
+  height: 60px;
+  width: 60px;
+  margin-left: 1350px;
+  margin-top: -140px;
+  border-radius: 10px;
+}
+
+.LogoUpTop:hover{
+  transform: scale(1.1);
 }

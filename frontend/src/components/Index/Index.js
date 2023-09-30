@@ -1,29 +1,53 @@
 import React from "react";
 import '../Index/Index.css';
+import indexpic2 from '../Index/indexpic2.jpg';
+import logo from '../Index/logo.png';
+import eyelogo from "../Index/eyelogo.png";
 
-export default function Index(){
-    return(
-        <div className= "index_bg">
+export default function Index() {
+    return (
+        <div className="index_bg">
             <div>
                 <h1 className="name">OptiVision</h1>
-                <ul class="nav justify-content-end nav-underline" id="IndexHeading">
-                    <li class="nav-item1" id="Login">
-                        <a class="nav-link" href="/login" id="LoginLink">LOGIN</a>
-                    </li>
-                    <li class="nav-item1" id="Signup">
-                        <a class="nav-link" href="/add" id="SignupLink">SIGNUP</a>
-                    </li>
-                </ul>
+                <img src={eyelogo} className="LogoUpTop" onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`;
+                }} />
             </div>
-            <div className="Mainhe">
-                <p>Welcome to the OptiVision</p>
+            <div className="IndexSecondDiv">
+                <div className="IndexPicDiv">
+                    <img src={indexpic2} className="indexpic" />
+                </div>
+                <div className="IndexPicPara">
+                    <img src={logo} className="logoIndex" />
+                    <div className="he1">
+                        <p>Eye Care Services For You</p>
+                    </div>
+                    <div className="he2">
+                        <p>"Give Your Vision The Treatment It Deserves"</p>
+                    </div>
+                    <div className="he3">
+                        <p onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = `/`;
+                        }}>www.OptiVision.lk</p>
+                    </div>
+                </div>
             </div>
-            <div className="he1">
-                <p>Eye Care Services For You</p>
-            </div>
-            <div className="he2">
-                <p align = "left">Give Your Vision The Treatment It Deserves</p>
-            </div>
+            <br /><br /><br />
+            <button className="IndexBtn" onClick={(e) => {
+                e.preventDefault();
+                window.location.href = `/login`;
+            }}>LOGIN</button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="IndexBtn" onClick={(e) => {
+                e.preventDefault();
+                window.location.href = `/add`;
+            }}>SIGN UP</button>
+            <br /><br />
+            <p className='FNFooterBottom' style={{ color: "black" }}>
+                © 2023 OptiVision All Rights Reserved.
+            </p>
+
         </div>
     )
 }

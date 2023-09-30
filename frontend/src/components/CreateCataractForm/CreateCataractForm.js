@@ -17,6 +17,7 @@ export default function CreateCataractForm(){
     const[Email,setEmail] = useState('')
     const[Address,setAddress] = useState('')
     const[TelephoneNumber,setTelephoneNumber] = useState('')
+    const[Age,setAge] = useState('')
     const[Gender,setGender] = useState('')
     const[files,setFiles] = useState('')
     const[redirect,setRedirect] = useState('')
@@ -30,6 +31,7 @@ export default function CreateCataractForm(){
         newCataract.set('Email',Email)
         newCataract.set('Address',Address)
         newCataract.set('TelephoneNumber',TelephoneNumber)
+        newCataract.set('Age',Age)
         newCataract.set('Gender',Gender)
         newCataract.set('files',files[0])
 
@@ -45,6 +47,7 @@ export default function CreateCataractForm(){
     }
 
     if(redirect){
+        alert("Cataract Created Successfully..!")
         return his(`/ViewCataractData/${userID}`)
     }
 
@@ -77,6 +80,26 @@ export default function CreateCataractForm(){
                         setTelephoneNumber(event.target.value);
                     }} required /><br />
 
+                    <label for="Age"  className="CataractFormHeading">Age: </label><br/>
+                    <input type="radio"  className="ageradio" name="age" value="Under 18" onChange={(event) => {
+                        setAge(event.target.value);
+                    }} required />&nbsp;&nbsp;
+                    <label for="Under 18" className="CataractFormHeading">Under 18</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" className="ageradio" name="age" value="18-30" onChange={(event) => {
+                        setAge(event.target.value);
+                    }} required />&nbsp;&nbsp;
+                    <label for="18-30" className="CataractFormHeading">18-30</label>&nbsp;&nbsp;&nbsp;
+                    <input type="radio"  className="ageradio" name="age" value="31-50" onChange={(event) => {
+                        setAge(event.target.value);
+                    }} required />&nbsp;&nbsp;
+                    <label for="31-50" className="CataractFormHeading">31-50</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" className="ageradio" name="age" value="Above 50" onChange={(event) => {
+                        setAge(event.target.value);
+                    }} required />&nbsp;&nbsp;
+                    <label for="Above 50" className="CataractFormHeading">Above 50</label><br />
+
                     <label for="Gender"  className="CataractFormHeading">Gender: </label><br/>
                     <input type="radio"  className="genderradio" name="gender" value="Male" onChange={(event) => {
                         setGender(event.target.value);
@@ -95,7 +118,7 @@ export default function CreateCataractForm(){
 
                     <button className="CataractFormCancelbtn" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `/PatientHome/${userID}`;
+                        window.location.href = `/EyeTestMgmt`;
                     }}>Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
                     <button type="submit" className="CataractFormSubmitbtn">SUBMIT</button>                    
             </form>
