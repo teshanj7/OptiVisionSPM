@@ -8,7 +8,7 @@ import UserContext from "./components/ContextComponents/ContextComponent";
 //headers
 import UserHeader from './components/UserHeader/UserHeader';
 import DoctorHeader from './components/DoctorHeader/DoctorHeader';
-// import DoctorFooter from './components/DoctorFooter/DoctorFooter';
+import DoctorFooter from './components/DoctorFooter/DoctorFooter';
 import UserFooter from './components/UserFooter/FNfooter';
 
 
@@ -22,12 +22,19 @@ import ViewProfile from './components/ViewUserDetails/ViewUserDetails';
 import UpdateUserDetails from './components/UpdateUserDetails/UpdateUserDetails';
 
 //Cataract Application
+import EyeTestDashboard from "./components/EyeTestDashboard/EyeTestDashboard";
 import CreateCatForm from "./components/CreateCataractForm/CreateCataractForm";
 import ViewCatData from "./components/ViewCataractData/ViewCataractData";
 import SingleCatData from "./components/SingleCataractData/SingleCataractData";
 import UpdateCatData from "./components/UpdateCataractData/UpdataCataractData";
 import DoctorViewCatData from "./components/DoctorViewAllCataractData/DoctorViewAllCataractData";
 import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/DoctorViewSingleCataractData";
+
+//Quiz
+import Main from "./components/Quiz/main";
+import Quiz from "./components/Quiz/quiz";
+import QuizResult from "./components/Quiz/result";
+import { CheckUserExist } from './helper/helper';
 
 //Glaucoma Application
 import GlaucomaForm from "./components/GlaucomaForm/GlaucomaForm";
@@ -92,12 +99,18 @@ function App() {
 
           
           {/* Cataract Application */}
+          <Route path='/EyeTestMgmt' element={<EyeTestDashboard/>}/>
           <Route path='/CreateCataractForm' element={<CreateCatForm/>}/>
           <Route path='/ViewCataractData/:id' element={<ViewCatData/>}/>
           <Route path='/Cataract/:id' element={<SingleCatData/>}/>
           <Route path='/UpdateCataract/:id' element={<UpdateCatData/>}/>
           <Route path='/ViewAllCataract' element={<DoctorViewCatData/>}/>
           <Route path='/DoctorviewCataract/:id' element={<DoctorViewSingleCatData/>}/>
+
+          {/* Quiz */}
+          <Route path='/root' element={<Main/>}/>
+          <Route path='/quiz' element={<CheckUserExist><Quiz/></CheckUserExist>}/>
+          <Route path='/result' element={<CheckUserExist><QuizResult/></CheckUserExist>}/>
 
           {/* Glaucoma Application */}
           <Route path='/GlaucomaForm' element={<GlaucomaForm/>}/>
@@ -127,7 +140,12 @@ function App() {
 
         </Routes>
         {/* {user?.UserType === 'Doctor' && <DoctorFooter />} */}
-        {user?.UserType === 'Patient' && <UserFooter/>}
+        {/* {user?.UserType === 'Patient' && <UserFooter/>} */}
+        {user?.UserType === 'Patient'? (
+          <UserFooter />
+        ) : (
+          <DoctorFooter />
+        )}
 
       </div>
      </UserContext.Provider>

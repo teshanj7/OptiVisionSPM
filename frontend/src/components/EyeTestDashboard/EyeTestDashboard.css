@@ -1,0 +1,105 @@
+.TJDashboardBG{
+    background-color: white;
+    height: auto;
+}
+
+
+.TJDashboardHeading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.TJDashboardPara{
+    font-size: 28px;
+    color: #008080;
+    width: 850px;
+    height: 300px;
+    font-family: 'Jost', sans-serif;
+    margin-left: 150px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.DashboardPic{
+    width: 500px;
+    height: 350px;
+    margin-left: 850px;
+    margin-top: -370px;
+    
+}
+
+.TJDashboardSqr1{
+    width: 450px;
+    height: 220px;
+    background-color: white;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid #008080;
+}
+
+.TJSqrHeading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Secular One', sans-serif;
+    color: #008080;
+}
+
+.TJSqrDesc{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+}
+
+.TJDashboardButton{
+    background-color: #008080;
+    color: white;
+    border-radius: 10px;
+    width: 250px !important;
+    margin-left: 170px;
+    transition: 1s;
+    margin-left: -10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.TJDashboardButton:hover {
+    background-color: black;
+    color:white ;
+    transform: scale(1.6);
+  }
+
+.TJDashboardSqr2{
+    width: 450px;
+    height: 220px;
+    background-color:white;
+    margin-top: -240px;
+    margin-left: 517px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid #008080;
+}
+
+.TJDashboardSqr3{
+    width: 450px;
+    height: 220px;
+    background-color:white;
+    margin-top: -240px;
+    margin-left: 1000px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 5px solid #008080;
+}
+
+.TJsecondPara{
+    margin-left: 56px;
+    font-weight: bold;
+    font-size: 35px;
+}

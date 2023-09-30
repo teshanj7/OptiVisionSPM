@@ -42,8 +42,10 @@ export default function DoctorViewAllCataractData(){
                                 <p className="para1">Email : {cat.Email}</p>
                                 <p className="para1">Address : {cat.Address}</p>
                                 <p className="para1">TelephoneNumber : {cat.TelephoneNumber}</p>
+                                <p className="para1">Age : {cat.Age}</p>
                                 <p className="para1">Gender : {cat.Gender}</p>
                             </div>
+                            <br/><br/>
                         </div>
                     )
                 })}

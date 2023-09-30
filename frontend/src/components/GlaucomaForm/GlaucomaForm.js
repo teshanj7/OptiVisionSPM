@@ -42,7 +42,7 @@ export default function CreateGlaucomaForm(){
         <div className="CataractFormBackground">
             <br/>
             <div className="rectangleCat">
-                <h1 className="CataractHeading">Cataract Application</h1>
+                <h1 className="CataractHeading">Glaucoma Application</h1>
             </div>
             <br/>
             <form className="CataractForm" onSubmit={sendData}>

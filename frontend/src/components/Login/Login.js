@@ -1,4 +1,4 @@
-import React, { useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import '../Login/Login.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import UserContext from '../ContextComponents/ContextComponent';
 
 
-export default function Login(){
+export default function Login() {
 
     const history = useNavigate();
     const { setUser } = useContext(UserContext);
@@ -15,13 +15,13 @@ export default function Login(){
     const [Password, setPassword] = useState("");
     const [UserType, setUserType] = useState("");
 
-    async function submit(e){
+    async function submit(e) {
         e.preventDefault();
 
         //Users
         let result = await fetch("http://localhost:8040/login", {
             method: 'post',
-            body: JSON.stringify({Email, Password, UserType}),
+            body: JSON.stringify({ Email, Password, UserType }),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -34,11 +34,11 @@ export default function Login(){
         if (result.Fullname) {
             localStorage.setItem('newUser', JSON.stringify(result))
             if (result.UserType === "Patient") {
-                history(`/PatientHome/${result._id}`, { state: { name:result.Fullname } })
+                history(`/PatientHome/${result._id}`, { state: { name: result.Fullname } })
                 // window.location.href = `/home/${result._id}`;
             }
-            else if (result.UserType === "Doctor"){
-                history(`/DoctorHome/${result._id}`, { state: { id:result.Fullname } })
+            else if (result.UserType === "Doctor") {
+                history(`/DoctorHome/${result._id}`, { state: { id: result.Fullname } })
                 // window.location.href = `/trainer_home/${result._id}`;
             }
         } else {
@@ -51,13 +51,13 @@ export default function Login(){
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                });
+            });
             console.log(e);
         }
 
     }
 
-    return(
+    return (
         <div className="login_page">
             <div className="heading"><a href="/" className="loginCompanyName"><h1 className="name">OptiVision</h1></a>
                 <ul class="nav justify-content-end nav-underline" id="IndexHeading">
@@ -69,37 +69,40 @@ export default function Login(){
                     </li>
                 </ul>
             </div>
-            <br/><br/>
-            <div className="rectangle">
-                <h1 className="login">LOGIN</h1>
-            </div>
+            <br /><br />
+
+
+
             <div className="login_form">
                 <form action="POST">
                     <div>
-                        <label for="UserType" className="loginheading">UserType: </label><br/>
-                        <select className="form-select-lg loginform-select" required={true} id="UserType" name="UserType" onChange={(e)=>{
-                        setUserType(e.target.value)
-                             }} value={UserType} style={{ backgroundColor: "aliceblue", fontWeight: "500" }}>
+                        <h1 className="login">Login</h1>
+                    </div>
+                    <div>
+                        <label for="UserType" className="loginheading">UserType: </label><br />
+                        <select className="form-select-lg loginform-select" required={true} id="UserType" name="UserType" onChange={(e) => {
+                            setUserType(e.target.value)
+                        }} value={UserType} style={{ backgroundColor: "aliceblue", fontWeight: "500" }}>
                             <option defaultValue >Select Type</option>
                             <option value="Patient">Patient</option>
                             <option value="Doctor">Doctor</option>
                         </select>
                     </div>
-                    <label for="email" className="loginheading">Email: </label><br/>
-                    <input type="email" className="loginforminput" placeholder="Email" onChange={(e)=>{
+                    <label for="email" className="loginheading">Email: </label><br />
+                    <input type="email" className="loginforminput" placeholder="Email" onChange={(e) => {
                         setEmail(e.target.value)
-                    }} value={Email}/><br/>
+                    }} value={Email} /><br />
 
-                    <label for="password" className="loginheading">Password: </label><br/>
-                    <input type="password" className="loginforminput" placeholder="Password" onChange={(e)=>{
+                    <label for="password" className="loginheading">Password: </label><br />
+                    <input type="password" className="loginforminput" placeholder="Password" onChange={(e) => {
                         setPassword(e.target.value)
-                    }} value={Password}/><br/><br/><br/>
+                    }} value={Password} /><br /><br /><br />
 
-                    <button type="submit" className="loginsubmit" onClick={submit}>LOGIN</button><br/><br/>
+                    <button type="submit" className="loginsubmit" onClick={submit}>LOGIN</button><br /><br />
 
-                    <label for="loginpage" className="loginheading1">If you don’t have an account ?</label><br/>
+                    <label for="loginpage" className="loginheading1">If you don’t have an account ?</label><br />
                     <label for="redirect" className="loginheading1">please</label>&nbsp;&nbsp;
-                    <a href = "/add">Signup</a>&nbsp;&nbsp;
+                    <a href="/add">Signup</a>&nbsp;&nbsp;
                     <label for="redirect" className="loginheading1">here.</label>
                 </form>
             </div>

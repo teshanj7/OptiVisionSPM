@@ -9,7 +9,7 @@
   font-size: 25px;
   position: relative;
   top: -120px;
-  right: 50px;
+  right: 20px;
   padding: 20px;
   font-weight: bold;
 }
@@ -22,17 +22,15 @@
   padding-top: 15px;  
 }
 #LoginLink{
-  color: black;
-  font-weight: 900;
-  font-size: 30px;
+  color: white;
+  font-size: 20px;
 }
 #LoginLink:hover{
   border-bottom: 2px solid rgb(5, 251, 5);
 }
 #SignupLink{
-  color: black;
-  font-weight: 900;
-  font-size: 30px;
+  color: white;
+  font-size: 20px;
 }
 #SignupLink:hover{
   border-bottom: 2px solid rgb(5, 251, 5);
@@ -40,7 +38,7 @@
 .name{
   font-size: 50px;
   font-weight: 700;
-  color: black;
+  color: white;
   text-align: left;
   padding: 10px;
   padding-left: 20px;
