@@ -1,0 +1,38 @@
+.form-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .file-input {
+    display: none; /* Hide the file input */
+  }
+  
+  .upload-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .upload-label {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .preview-image {
+    max-width: 30%;
+    margin-top: 10px;
+  }
+  
+  .predict-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
