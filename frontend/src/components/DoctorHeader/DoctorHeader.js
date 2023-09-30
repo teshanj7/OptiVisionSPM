@@ -55,20 +55,18 @@ function Header(props) {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="/ViewAllCataract" style={{ color: "#99FF33" }}>ALL CATARACT APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a className="nav-link" href="/ViewAllCataract" style={{ marginLeft: "3rem", color: "#99FF33" }}>ALL CATARACT APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/DRelatedAppoinment" style={{ color: "#99FF33" }}>ALL DOCTOR APPOINTMENT&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#99FF33" }}>DOCTOR RECOVERY PLAN&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li>
+                        
                         <li className="nav-item">
                             <a className="nav-link" href="/DCreatedRecoveryPlans" style={{ color: "#99FF33" }}>CREATED RECOVERY PLANS&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         
                         <li className="nav-item">
-                            <a className="nav-link" href="/financialperformance" style={{ color: "#99FF33" }}>HELP&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a className="nav-link" href="/financialperformance" style={{ marginRight: "15rem", color: "#99FF33" }}>HELP&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li>
                             <div className="NavigationBarBarDropdown dropdown">
