@@ -70,7 +70,7 @@ export default function DCreatedPlans() {
       <div  id = "custom-color">
         <section
           className="h-100 DCreatedPlans"
-          style={{ backgroundColor: "gray" }}
+          style={{ backgroundColor: "white" }}
         >
           <Container className="h-100 py-5 DCreatedPlans">
             <Row className="d-flex justify-content-start align-items-center h-100 DCreatedPlans" id = "custom-card">
@@ -103,8 +103,8 @@ export default function DCreatedPlans() {
                   {allRecoveryPlans ? (
                     allRecoveryPlans.map((recoveryPlan) => (
                       <Card
-                        className="rounded-3 mb-4 DCreatedPlans"
-                        style={{ backgroundColor: "#C0C0C0",boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.2)", animation: "fadeIn 2s ease-in-out" }}
+                        className="rounded-3 mb-4 "
+                        style={{ backgroundColor: "#D4EAF8",boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.2)", animation: "fadeIn 2s ease-in-out" }}
                         key={recoveryPlan._id}
                       >
                         {/* #778899 */}

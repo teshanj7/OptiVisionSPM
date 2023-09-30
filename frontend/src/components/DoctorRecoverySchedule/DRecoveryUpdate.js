@@ -109,7 +109,7 @@ export default function UpdateMedicinePrescription() {
   };
     
     return (
-    <div className="UpdateMedicinePrescription" style={{ backgroundColor: "#1F1F1F" }}>
+    <div className="UpdateMedicinePrescription" style={{ backgroundColor: "white" }}>
       <br/>
       <div className="container-md UpdateMedicinePrescription">
         <div className="row justify-content-center UpdateMedicinePrescription">
