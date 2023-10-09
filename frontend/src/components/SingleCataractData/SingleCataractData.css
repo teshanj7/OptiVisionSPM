@@ -4,7 +4,7 @@
     background-color: white;
 }
 .SingleViewCataract{
-    background-color: #E1F1C1;
+    background-color: white;
     width: 60% !important;
     margin-top: 0;
     margin-bottom: 0;
@@ -37,7 +37,7 @@
     font-weight:900;
     text-align: justify;
     padding-left: 20px;
-    margin-left: -60px;
+    margin-left: 150px;
 }
 .Cataractupdatebtn{
     background-color: #CCFF00;
@@ -106,6 +106,7 @@
     background-color: black;
     display: flex;
     align-items: center;
+    width: 80%;
 }
 .commentpic img{
     object-fit: contain;
@@ -145,6 +146,8 @@
 .Viewcomment{
     font-weight: bold;
     cursor: pointer;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
 }
 #cmntDeletebtn{
     position: fixed;

@@ -10,7 +10,6 @@ function Header(props) {
     const id = props.id
 
     const { user } = useContext(UserContext);
-    console.log(user)
 
     //Log out function
     function logOut() {
@@ -35,10 +34,6 @@ function Header(props) {
             if (user.UserType === "Doctor") {
                 window.location.href = `/DoctorHome/${user._id}`;
             }
-            // else if (user.UserType === "Doctor") {
-            //     // history(`/trainer_home/${user._id}`, { state: { id:user.Fullname } })
-            //     window.location.href = `/trainer_home/${user._id}`;
-            // }
         }
 
     }

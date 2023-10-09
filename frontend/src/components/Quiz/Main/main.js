@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import "../Quiz/main.css";
+import "../Main/main.css";
 import { useDispatch } from "react-redux";
-import { setUserId } from "../../redux/result_reducer";
+import { setUserId } from "../../../redux/result_reducer";
 
 export default function Main() {
 

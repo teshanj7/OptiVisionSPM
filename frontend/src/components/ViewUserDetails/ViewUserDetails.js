@@ -5,18 +5,11 @@ import '../ViewUserDetails/ViewUserDetails.css';
 import Usericon from '../ViewUserDetails/usericon.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import UserContext from '../ContextComponents/ContextComponent';
-// import M from 'materialize-css'
 
 export default function ViewProfile() {
 
     const [data, setData] = useState([]);
     const params = useParams();
-    // const location = useLocation()
-    // const history = useNavigate();
-
-    // const { user } = useContext(UserContext);
-    // console.log(user)
 
     useEffect(() => {
         getData();

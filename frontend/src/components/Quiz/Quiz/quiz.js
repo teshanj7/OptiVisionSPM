@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../Quiz/quiz.css";
-import Questions from "./question";
+import Questions from "../Question/question";
 
-import { moveNextQuestion, movePreviousQuestion } from "../../hooks/FetchQuestion";
-import { PushAnswer } from "../../hooks/setResult";
+import { moveNextQuestion, movePreviousQuestion } from "../../../hooks/FetchQuestion";
+import { PushAnswer } from "../../../hooks/setResult";
 
 //redux store import
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,7 +13,6 @@ export default function Quiz() {
 
     const [check, setChecked] = useState(undefined)
 
-    // const trace = useSelector(state => state.questions.trace)
     const result = useSelector(state => state.result.result)
     const { queue, trace } = useSelector(state => state.questions)
     const state = useSelector(state => state)
@@ -53,6 +52,7 @@ export default function Quiz() {
 
     return (
         <div className="quizpage">
+            <br/>
             <h1 className="quizheading">Quiz Application</h1>
 
             {/* display questions */}

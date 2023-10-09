@@ -31,9 +31,9 @@ import DoctorViewCatData from "./components/DoctorViewAllCataractData/DoctorView
 import DoctorViewSingleCatData from "./components/DoctorViewSingleCataractData/DoctorViewSingleCataractData";
 
 //Quiz
-import Main from "./components/Quiz/main";
-import Quiz from "./components/Quiz/quiz";
-import QuizResult from "./components/Quiz/result";
+import Main from "./components/Quiz/Main/main";
+import Quiz from "./components/Quiz/Quiz/quiz";
+import QuizResult from "./components/Quiz/Result/result";
 import { CheckUserExist } from './helper/helper';
 
 //Glaucoma Application
