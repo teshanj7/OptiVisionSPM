@@ -52,8 +52,8 @@ export default function ViewMeditationPrescription() {
         />
       </Form>
       {filteredPrescriptions.map((prescriptionPlan, index) => (
-        <Card key={index} className="my-3">
-          <Card.Body>
+        <Card key={index} className="my-3" style={{ marginBottom: "5rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#008080" }}>
+          <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
             <Card.Title>Patient Name: {prescriptionPlan.patientName}</Card.Title>
             <Card.Text>Appointment Reason: {prescriptionPlan.appointmentReason}</Card.Text>
             <Link to={`/prescription/${prescriptionPlan.patientName}/${prescriptionPlan.appointmentReason}`} className="btn btn-primary">

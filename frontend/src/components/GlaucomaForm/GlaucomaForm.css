@@ -1,10 +1,11 @@
 .form-container {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .file-input {
-    display: none; /* Hide the file input */
+    display: none;
   }
   
   .upload-button {
@@ -28,11 +29,68 @@
     margin-top: 10px;
   }
   
-  .predict-button {
+  .ml-predict-button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  
+
+  .GFHeading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-family: 'Secular One', sans-serif;
+  }
+
+  .GFPara{
+    color: black;
+    /* width: 150px;
+    height: 300px; */
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .GFPic{
+    width: 272px;
+  }
+
+  .GFPicDiv{
+    border: 10px solid #008080;
+    width: 290px;
+    border-radius: 10px;
+    margin-left: 520px;
+    margin-top: -90px;
+  }
+
+  .GFbutton{
+    background-color: #008080;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 170px;
+    transition: 1s;
+    margin-left: -10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .GFbutton:hover{
+    background-color: black;
+    color:white ;
+    transform: scale(1.4);
+  }
+
+  .GFImgDesc{
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 28px;
+  }

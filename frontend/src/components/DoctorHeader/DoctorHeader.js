@@ -50,21 +50,19 @@ function Header(props) {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="DoctorNavitem">
                         <li className="nav-item">
-                            <a className="nav-link" href="/ViewAllCataract" style={{ color: "#ffffff" }}>ALL CATARACT APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a className="nav-link" href="/ViewAllCataract" style={{ marginLeft: "3rem", color: "#ffffff" }}>ALL CATARACT APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/DRelatedAppoinment" style={{ color: "#ffffff" }}>ALL DOCTOR APPOINTMENT&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/NewRecoveryPlan" style={{ color: "#ffffff" }}>DOCTOR RECOVERY PLAN&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/DCreatedRecoveryPlans" style={{ color: "#ffffff" }}>CREATED RECOVERY PLANS&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         
                         <li className="nav-item">
-                            <a className="nav-link" href="/financialperformance" style={{ color: "#ffffff" }}>HELP&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a className="nav-link" href="/financialperformance" style={{ marginRight: "15rem", color: "#ffffff" }}>HELP&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li>
+
                         <li>
                             <div className="NavigationBarBarDropdown dropdown" >
                                 <button className="NavigationBarB btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >

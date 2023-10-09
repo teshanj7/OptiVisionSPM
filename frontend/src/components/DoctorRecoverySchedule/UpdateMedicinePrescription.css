@@ -23,7 +23,7 @@
   
   /* Background */
   .UpdateMedicinePrescription .body {
-    background-color: black;
+    background-color: #A9D5F1;
     color: white;
   }
   
@@ -117,7 +117,7 @@
   }
   
   .UpdateMedicinePrescription .card {
-    background-color: #fff;
+    background-color: #C9E5F6;
     color: #000;
     border: none;
     border-radius: 0;
@@ -178,11 +178,11 @@
   
   .UpdateMedicinePrescription .outline {
     border-radius: 10px;
-    outline: 1px solid limegreen;
+    outline: 1px solid #A9D5F1;
   }
   
   .UpdateMedicinePrescription .cardoutline {
     border-radius: 10px;
-    outline: 4px solid limegreen;
+    outline: 4px solid #A9D5F1;
   }
   

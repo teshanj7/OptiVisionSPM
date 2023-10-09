@@ -68,7 +68,7 @@ export default function DoctorHome() {
                         <br />
                         <button className="doctorButton" onClick={(e) => {
                             e.preventDefault();
-                            window.location.href = `/educational`;
+                            window.location.href = `/DRelatedAppoinment`;
                         }}>View Appointment</button>
                     </div>
 
