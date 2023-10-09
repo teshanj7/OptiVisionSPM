@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../ContextComponents/ContextComponent";
-import "./GlaucomaForm.css"; 
+import funduspic from "./funduspic.png";
+import "./GlaucomaForm.css";
 
 export default function CreateGlaucomaForm() {
   const { user } = useContext(UserContext);
@@ -45,17 +46,34 @@ export default function CreateGlaucomaForm() {
 
   return (
     <div className="container-xl ml prediction-form">
-      <h1>Glaucoma Detection</h1>
-      <div className="mb-3"> 
-        <label htmlFor="formFile" className="form-label">
+      <h1 className="GFHeading">Glaucoma Detection</h1>
+      <div className="GFImgDesc">
+        <p>fssgsfgsfgsfgsgsgsrgsgsrgsrgsgsfgsgsgsgsfgsfgsgsfrewwwtwrtwrtwr
+          <br/>fadfsdfsgsgsgsfgsgsgsgsgsgsgsgsfgsgsgsgsgsgsgwrtwrtrwtwrt
+          <br/>sdgsfgsfgsfgsrfgsgrgsgsfgsfgsfgsfgsgsgsgsgsgstwrtewrhdhyrjt
+        </p>
+        <br/>
+      </div>
+      <br /><br/>
+      <div className="GFPicDiv">
+        <img src={funduspic} className="GFPic" />
+      </div> <br/><br/>
+      <div className="mb-3">
+      <div className="GFPara">
+      <label htmlFor="formFile" className="form-label" style={{ fontFamily: "'Jost', sans-serif", fontSize: "30px", fontWeight: "bold" }}>
           Insert a Retinal Fundus image for the evaluation
+        </label> <br />
+        <label htmlFor="formFile" className="form-label" style={{ fontFamily: "'Jost', sans-serif", fontSize: "20px",fontWeight: "bold" }}>
+          Fundus images can be taken using a condenser lens.
         </label>
+      </div><br />
         <input
           className="form-control"
           type="file"
           id="formFile"
           accept="image/*"
           onChange={handleFileChange}
+          style={{ width: "500px", marginLeft: "420px", fontFamily: "'Jost', sans-serif" }}
         />
       </div>
       {imagePreview && (
@@ -68,18 +86,18 @@ export default function CreateGlaucomaForm() {
           ) : (
             predictedResult === "Positive" ? (
               <div>
-              <p>you have glaucoma</p>
-              <a href = "/AppointmentMgmt" >Make an appointment</a>
+                <p>you have glaucoma</p>
+                <a href="/AppointmentMgmt" >Make an appointment</a>
               </div>
             ) : null
           )
         )}
       </div>
       <div className="container-sm">
-        <button onClick={handlePredictClick} className="ml-predict-button">
+        <button onClick={handlePredictClick} className="GFbutton">
           Predict
         </button>
-      </div>
+      </div> <br/>
     </div>
   );
 }

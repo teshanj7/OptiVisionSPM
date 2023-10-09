@@ -65,7 +65,7 @@ export default function UserHeader(props) {
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
                                     <a className="NavigationBarB nav-link" id="PatientHeaderHd" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/mainNT`
+                                        window.location.href = `/GlaucomaForm`
                                     }}>GLAUCOMA DETECTION</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
