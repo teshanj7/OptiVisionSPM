@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./result.css";
-// import ResultTable from "./resultTable";
 import { useDispatch, useSelector } from "react-redux";
-import { attempts_Number, earnPoints_Number, flagResult } from "../../helper/helper";
+import { attempts_Number, earnPoints_Number, flagResult } from "../../../helper/helper";
 
 // import actions
-import { resetAllAction } from "../../redux/question_reducer";
-import { resetResultAction } from "../../redux/result_reducer";
+import { resetAllAction } from "../../../redux/question_reducer";
+import { resetResultAction } from "../../../redux/result_reducer";
 
 export default function QuizResult() {
 

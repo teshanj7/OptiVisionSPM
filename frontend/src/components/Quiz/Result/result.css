@@ -23,38 +23,13 @@
 .resultPage .flex span.achive {
     font-weight: bold;
     color: #ff2a66;
-    color: #2aff95;
+    color: #008080;
 }
-
-/* table {
-    width: 70%;
-    margin-left: 232px;
-}
-
-.table-header {
-    color: black;
-    font-size: 1.1em;
-    text-align: center;
-    background: #212121;
-    padding: 18px 0;
-    color: white;
-}
-
-.table-body {
-    font-size: 1.1em;
-    text-align: center;
-    background: #d8d8d8;
-    padding: 18px 0;
-}
-
-.table-header > tr > td{
-    border: 1px solid white;   
-} */
 .restartbtn{
     display: flex;
     justify-content: center;
     padding-top: 10px;
-    margin-left: 650px;
+    margin-left: 670px;
     text-decoration: none;
     background-color: #CCFF00;
     color: #1F1F1F;
