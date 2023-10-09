@@ -1,10 +1,11 @@
 .form-container {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .file-input {
-    display: none; /* Hide the file input */
+    display: none;
   }
   
   .upload-button {
@@ -28,11 +29,14 @@
     margin-top: 10px;
   }
   
-  .predict-button {
+  .ml-predict-button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
+
   
