@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
-import "../Quiz/question.css";
+import "../Question/question.css";
 import { useDispatch, useSelector } from 'react-redux';
 // import data from "../database/data";
-import visual from "../../database/visual_acuity.jpg";
-import color from "../../database/color_blindness.jpg";
+import color_1 from "../quizImages/color_blindness_1.jpg";
+import color_2 from "../quizImages/color_blindness_2.jpg";
+import color_3 from "../quizImages/color_blindness_3.jpg";
+import color_4 from "../quizImages/color_blindness_4.jpg";
+import visual_1 from "../quizImages/visual_acuity_1.jpg";
+import visual_2 from "../quizImages/visual_acuity_2.jpg";
+import visual_3 from "../quizImages/visual_acuity_3.jpg";
+import con_1 from "../quizImages/contrast_sensitivity_1.jpg";
+import con_2 from "../quizImages/contrast_sensitivity_2.jpg";
 
 // Custom Hook
-import { useFetchQuestion } from "../../hooks/FetchQuestion";
-import { updateResult } from "../../hooks/setResult";
+import { useFetchQuestion } from "../../../hooks/FetchQuestion";
+import { updateResult } from "../../../hooks/setResult";
 
 export default function Questions({ onChecked }) {
 
@@ -15,11 +22,10 @@ export default function Questions({ onChecked }) {
     const { trace } = useSelector(state => state.questions);
     const result = useSelector(state => state.result.result);
     const [{ isLoading, apiData, serverError }] = useFetchQuestion()
-    useSelector(state => console.log(state));
     const questions = useSelector(state => state.questions.queue[state.questions.trace])
     const dispatch = useDispatch()
 
-    const image = [visual,color];
+    const image = [color_1,color_2,color_3,color_4,visual_1,visual_2,visual_3,con_1,con_2,con_2];
 
     useEffect(() => {
         dispatch(updateResult({ trace, checked }))
@@ -37,9 +43,10 @@ export default function Questions({ onChecked }) {
     return (
         <div className="questions">
 
-            <img src={image[questions?.id-1]} alt={`Image for question ${questions?.id}`}/>
-        r
-            <h2 className="ques">{questions?.question}</h2>
+            <br/>
+            <img src={image[questions?.id-1]} className="quesImage" alt={`Image for question ${questions?.id}`}/>
+        
+            <h2 className="ques">{questions?.id}. {questions?.question}</h2>
 
             <ul className="allquestion" key={questions?.id}>
                 {
@@ -53,7 +60,7 @@ export default function Questions({ onChecked }) {
                                 onChange={() => onSelect(i)}
                             />
 
-                            <label className="text-primary" htmlFor={`q${i}-option`}>{q}</label>
+                            <label className="text" htmlFor={`q${i}-option`}>{q}</label>
                             <div className={`check ${result[trace] == i ? 'checked' : ''}`}></div>
                         </li>
                     ))

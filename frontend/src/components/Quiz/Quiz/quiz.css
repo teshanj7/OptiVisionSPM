@@ -1,3 +1,10 @@
+.quizheading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
 .quizbtn{
     margin-top: 100px;
     display: grid;
@@ -5,7 +12,7 @@
     padding: 20px;
 }
 .btnPrev{
-    background-color: #faff5a;
+    background-color: #008080;
     justify-self: flex-start;
     padding: 10px;
     border: none;
@@ -15,11 +22,11 @@
 }
 .btnPrev:hover{
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: #CCFF00;
     color: #202020;
 }
 .btnNext{
-    background-color: #faff5a;
+    background-color: #008080;
     justify-self: flex-end;
     padding: 10px;
     width: 100px;
@@ -30,6 +37,6 @@
 }
 .btnNext:hover{
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: #CCFF00;
     color: #202020;
 }

@@ -23,7 +23,6 @@ export default function ViewCataractData(){
         }
 
     }
-    console.log(data);
 
     return(
         <div className="ViewCataractBody">

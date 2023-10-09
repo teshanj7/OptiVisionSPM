@@ -24,8 +24,6 @@ export default function SingleCataractData() {
         });
     }, []);
 
-    console.log(data);
-
     //show and hide comments
     const showComment = (data) => {
         if (show) {
@@ -33,7 +31,6 @@ export default function SingleCataractData() {
         } else {
             setShow(true);
             setItem(data);
-            console.log(item);
         }
     }
 

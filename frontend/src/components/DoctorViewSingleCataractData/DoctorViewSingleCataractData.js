@@ -39,8 +39,6 @@ export default function DoctorViewSingleCataractData() {
         });
     }
 
-    console.log(data);
-
     const DeleteData = async (_id) => {
         if (window.confirm("Are You Sure You Want To Delete This Details?")) {
             const response = await axios.delete(`http://localhost:8040/CataractApplication/deleteCataract/${id}`);
@@ -70,7 +68,7 @@ export default function DoctorViewSingleCataractData() {
                 <h1 className="SingleViewHeading">SINGLE CATARACT</h1>
             </div>
             <br />
-            <div className="SingleCataract">
+            <div className="SingleCataractDoctor">
                 <br />
                 <img src={'http://localhost:8040/' + data.image} alt="P 1" width="70%"></img>
                 <div className="SingleCataractContent">

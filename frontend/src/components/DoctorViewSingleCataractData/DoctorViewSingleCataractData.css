@@ -2,15 +2,15 @@
 .SingleViewbody{
     background-color: white;
 }
-.SingleCataract{
-    background-color: #E1F1C1;
+.SingleCataractDoctor{
+    background-color: white;
     width:50%;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    /* border: 5px solid black; */
+    border: 5px solid black;
 }
 .SingleCataractContent{
     font-size: 20px;
