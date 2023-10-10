@@ -99,11 +99,12 @@ export default function AppointmentsComponent() {
       </Form>
 
       {filteredAppointments.map((appointment) => (
+        // #00CDCD
         <div className="d-flex justify-content-center align-items-center">
-        <Card id = 'doctorimg'  key={appointment._id} style={{ margin: "2rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#00CDCD" }}>
+        <Card id = 'doctorimg'  key={appointment._id} style={{ margin: "2rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#008080" }}>
           <Card.Body className="p-4 DCreatedPlans" style={{ margin: "2rem", borderRadius: "10px" }}>
-            <Card.Title className="lead fw-normal mb-2 DCreatedPlans">Patient Name -: {appointment.fullName}</Card.Title>
-            <Card.Text>
+            <Card.Title className="lead fw-normal mb-2 DCreatedPlans" style={{fontWeight: "300"}}>Patient Name -: {appointment.fullName}</Card.Title>
+            <Card.Text className="text-white">
               Age: {appointment.age}
               <br />
               Email: {appointment.email}
@@ -113,7 +114,8 @@ export default function AppointmentsComponent() {
               Date: {new Date(appointment.date).toLocaleDateString()}
             </Card.Text>
             <Button
-              variant="primary"
+              
+              variant="warning"
               onClick={() =>
                 handleCreateRecoveryPlan(
                   appointment.fullName,

@@ -44,7 +44,7 @@ export default function ViewMeditationPrescription() {
   return (
     <Container>
       <h1 style={{ margin: "2rem", fontSize: "3rem" }} className="PatientDivHeading">View Meditation Prescriptions</h1>
-      <Form className="my-3" style={{ margin: "20rem"}}>
+      <Form className="my-3" style={{ margin: "20rem" }}>
         <FormControl
           type="text"
           placeholder="Search by Appointment Reason"
@@ -53,19 +53,33 @@ export default function ViewMeditationPrescription() {
 
         />
       </Form>
-      {filteredPrescriptions.map((prescriptionPlan, index) => (
-      <div className="d-flex justify-content-center align-items-center">  
-        <Card key={index} className="my-3" id="patientimg" style={{ width: "700px", height: "250px", padding: "1rem", margin: "2rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#008080" }}>
-          <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080" }}>
-          <Card.Title className="text-white" style={{ fontFamily: 'Jost, sans-serif', fontSize: '25px', fontWeight: 700, fontStyle: 'normal' }}>Patient Name: {prescriptionPlan.patientName}</Card.Title>
-          <Card.Text  className="text-white" style={{ fontFamily: 'Jost, sans-serif', fontSize: '20px', fontWeight: 300 }}>Appointment Reason: {prescriptionPlan.appointmentReason}</Card.Text>
-            <Link to={`/prescription/${prescriptionPlan.patientName}/${prescriptionPlan.appointmentReason}`} className="btn btn-primary"style={{boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)" }}>
-              View Prescription Details
-            </Link>
-          </Card.Body>
-        </Card>
+      <div className="d-flex flex-wrap justify-content-center">
+        {filteredPrescriptions.map((prescriptionPlan, index) => (
+          <div key={index} className="mx-2 mb-4">
+            <Card
+              id="patientimg"
+              style={{
+                width: "500px",
+                height: "250px",
+                padding: "1rem",
+                margin: "0.5rem",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)",
+                borderRadius: "10px",
+                backgroundColor: "#008080",
+              }}
+            >
+              <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080" }}>
+                <Card.Title className="text-white" style={{ fontFamily: 'Jost, sans-serif', fontSize: '25px', fontWeight: 700, fontStyle: 'normal' }}>Patient Name: {prescriptionPlan.patientName}</Card.Title>
+                <Card.Text className="text-white" style={{ fontFamily: 'Jost, sans-serif', fontSize: '20px', fontWeight: 300 }}>Appointment Reason: {prescriptionPlan.appointmentReason}</Card.Text>
+                <Link to={`/prescription/${prescriptionPlan.patientName}/${prescriptionPlan.appointmentReason}`} className="btn btn-warning" style={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)" }}>
+                  View Prescription Details
+                </Link>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
       </div>
-      ))}
+
     </Container>
   );
 }
