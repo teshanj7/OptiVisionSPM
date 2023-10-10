@@ -87,7 +87,7 @@ export default function AppointmentsComponent() {
 
   return (
     <div>
-      <h2 style={{ margin: "3rem", borderRadius: "10px", backgroundColor: "#778899" }}>Appointments for {doctorName}</h2>
+      <h2 style={{ fontFamily: 'Secular One, sans-serif', fontSize: "30px", fontWeight: '300', margin: '2rem', color: '#008080' }}>Appointments for {doctorName}</h2>
 
       <Form className="my-3"style={{ marginLeft: "30rem", marginRight:"30rem", borderRadius: "10px", backgroundColor: "#778899" }}>
         <FormControl
@@ -99,7 +99,8 @@ export default function AppointmentsComponent() {
       </Form>
 
       {filteredAppointments.map((appointment) => (
-        <Card key={appointment._id} style={{ margin: "5rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#00CDCD" }}>
+        <div className="d-flex justify-content-center align-items-center">
+        <Card id = 'doctorimg'  key={appointment._id} style={{ margin: "2rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#00CDCD" }}>
           <Card.Body className="p-4 DCreatedPlans" style={{ margin: "2rem", borderRadius: "10px" }}>
             <Card.Title className="lead fw-normal mb-2 DCreatedPlans">Patient Name -: {appointment.fullName}</Card.Title>
             <Card.Text>
@@ -124,6 +125,7 @@ export default function AppointmentsComponent() {
             </Button>
           </Card.Body>
         </Card>
+      </div>
       ))}
 
     </div>
