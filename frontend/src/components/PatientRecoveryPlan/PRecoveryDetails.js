@@ -157,7 +157,7 @@ export default function PrescriptionDetailsPage() {
           </Card>
         </Card.Body>
       </Card>
-      <Button style={{ margin: "8px" }} variant="warning" onClick={handleTogglePdf}>
+      <Button style={{ margin: "25px", backgroundColor: '#008080', color: 'white', width: '200px',  }} variant="warning" onClick={handleTogglePdf}>
         {showPdf ? "Hide PDF" : "Show PDF"}
       </Button>
       {showPdf && (
