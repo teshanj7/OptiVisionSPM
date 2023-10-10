@@ -123,40 +123,40 @@ export default function NewMeditationPrescription() {
     <>
       <div className="NewMeditationPrescription">
         <br />
-        <div className="container-md">
-          <div className="row justify-content-center">
+        <div className="container-md ">
+          <div className="row justify-content-center ">
             <div className="col-md-8 col-lg-10 col-xl-12">
-              <div className="card shadow NewMeditationPrescription card w-100 cardoutline">
-                <div className="card w-100" >
+              <div className="card shadow w-50 cardoutline mx-auto ">
+                <div className="card w-100 card shadow" >
                   <div className="card-body ">
-                    <h1 className="card-title">Create a new Meditation Prescription</h1>
+                    <h1 className="card-title NewMeditationPrescription text-white" style={{ fontFamily: 'Secular One, sans-serif', fontSize: "30px", fontWeight: '300' }}>Create a new Meditation Prescription</h1>
                     <div>
-                      <p>Patient Name: {patientName}</p>
-                      <p>Appointment Reason: {appointmentReason}</p>
+                      <p className="text-white" style={{ fontFamily: 'Jost, sans-serif', fontSize: '20px', fontWeight: 300 }}>Patient Name: {patientName}</p>
+                      <p className="text-white" style={{ fontFamily: 'Jost, sans-serif', fontSize: '20px', fontWeight: 300 }}>Appointment Reason: {appointmentReason}</p>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1rem' }}>
+                      <label htmlFor="medicineName" className="form-label text-white" >Medicine Name</label>
+                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineName" value={medicineName} onChange={handleMedicineNameChange} style={{ width: '500px' }} autoComplete="off" required />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1rem' }}>
+                      <label htmlFor="medicineDosage" className="form-label text-white">Medicine Dosage</label>
+                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineDosage" value={medicineDosage} onChange={handleMedicineDosageChange} style={{ width: '500px' }} autoComplete="off" />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1rem' }}>
+                      <label htmlFor="medicineDuration" className="form-label text-white">Medicine Duration</label>
+                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineDuration" value={medicineDuration} onChange={handleMedicineDurationChange} style={{ width: '500px' }} autoComplete="off" required />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1rem' }}>
+                      <label htmlFor="medicineFrequency" className="form-label text-white">Medicine Frequency</label>
+                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineFrequency" value={medicineFrequency} onChange={handleMedicineFrequencyChange} style={{ width: '500px' }} autoComplete="off" required />
                     </div>
                     <div className="mb-3">
-                      <label htmlFor="medicineName" className="form-label">Medicine Name</label>
-                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineName" value={medicineName} onChange={handleMedicineNameChange} autoComplete="off" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="medicineDosage" className="form-label">Medicine Dosage</label>
-                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineDosage" value={medicineDosage} onChange={handleMedicineDosageChange} autoComplete="off" />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="medicineDuration" className="form-label">Medicine Duration</label>
-                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineDuration" value={medicineDuration} onChange={handleMedicineDurationChange} autoComplete="off" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="medicineFrequency" className="form-label">Medicine Frequency</label>
-                      <input type="text" className="form-control NewMeditationPrescription outline" id="medicineFrequency" value={medicineFrequency} onChange={handleMedicineFrequencyChange} autoComplete="off" required />
-                    </div>
-                    <div className="mb-3">
-                      <h3 className="card-title ">Exercise Plan</h3>
+                      <h3 className="card-title text-white">Exercise Plan</h3>
                       {exercisePlan.map((day, dayIndex) => (
                         <div key={dayIndex} className="day-container mb-6">
                           <hr /> 
                           <div className="d-flex justify-content-between align-items-center mb-2">
-                            <h3 id ="custom-text" className="card-subtitle">Day {dayIndex + 1}</h3>
+                            <h3 id ="custom-text" className="card-subtitle text-white">Day {dayIndex + 1}</h3>
                             {exercisePlan.length > 0 && (
                               <button id= "custom-radius" type="button" className="btn btn-danger" onClick={() => removeDay(dayIndex)}>
                                 Remove Day
@@ -170,25 +170,25 @@ export default function NewMeditationPrescription() {
                                 
                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                 
-                                  <h4 id ="custom-text" className="card-subtitle ">Exercise {exerciseIndex + 1}</h4>
+                                  <h4 id ="custom-text" className="card-subtitle text-white" >Exercise {exerciseIndex + 1}</h4>
                                   <button id= "custom-radius" type="button" className="btn btn-danger" onClick={() => removeExercise(dayIndex, exerciseIndex)}>
                                     Remove Exercise
                                   </button>
                                 </div>
                                 <div className="mb-2">
-                                  <label htmlFor={`exerciseName-${dayIndex}-${exerciseIndex}`} className="form-label">Exercise Name</label>
+                                  <label htmlFor={`exerciseName-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Name</label>
                                   <input type="text" className="form-control NewMeditationPrescription outline" id={`exerciseName-${dayIndex}-${exerciseIndex}`} name="exerciseName" defaultValue={exercise.exerciseName} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} autoComplete="off" />
                                 </div>
                                 <div className="mb-2">
-                                  <label htmlFor={`exerciseDuration-${dayIndex}-${exerciseIndex}`} className="form-label">Exercise Duration</label>
+                                  <label htmlFor={`exerciseDuration-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Duration</label>
                                   <input type="number" className="form-control NewMeditationPrescription outline" id={`exerciseDuration-${dayIndex}-${exerciseIndex}`} name="exerciseDuration" defaultValue={exercise.exerciseDuration} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} />
                                 </div>
                                 <div className="mb-2">
-                                  <label htmlFor={`exerciseName-${dayIndex}-${exerciseIndex}`} className="form-label">Exercise Frequency</label>
+                                  <label htmlFor={`exerciseName-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Frequency</label>
                                   <input type="text" className="form-control NewMeditationPrescription outline" id={`exerciseFrequency-${dayIndex}-${exerciseIndex}`} name="exerciseFrequency" defaultValue={exercise.exerciseFrequency} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} autoComplete="off" />
                                 </div>
                                 <div className="mb-2">
-                                  <label htmlFor={`exerciseInstruction-${dayIndex}-${exerciseIndex}`} className="form-label">Exercise Instruction</label>
+                                  <label htmlFor={`exerciseInstruction-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Instruction</label>
                                   <input type="text" className="form-control NewMeditationPrescription outline" id={`exerciseInstruction-${dayIndex}-${exerciseIndex}`} name="exerciseInstruction" defaultValue={exercise.exerciseInstruction} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} autoComplete="off" />
                                 </div>
                               </div>))}

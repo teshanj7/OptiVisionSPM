@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Container, Card, Button } from "react-bootstrap";
 import { Document, Page, Text, View, StyleSheet, PDFViewer, pdf } from "@react-pdf/renderer";
+import '../PatientHomePage/Phomepage.css';
 
 export default function PrescriptionDetailsPage() {
   const { patientName, appointmentReason } = useParams();
@@ -114,45 +115,49 @@ export default function PrescriptionDetailsPage() {
 
   return (
     <Container>
-      <h1 className="mt-3">View Meditation Prescription</h1>
+      <h1 style={{ margin: "2rem", fontSize: "3rem" }} className="PatientDivHeading">View Meditation Prescription</h1>
       
-      <Card className="my-3" style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080" }}>
-        <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080" }}>
-          <Card.Title>Patient Name: {prescriptionPlan.patientName}</Card.Title>
-          <Card.Text>Appointment Reason: {prescriptionPlan.appointmentReason}</Card.Text>
-          <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
-            <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
-              <Card.Title>Medicine Details</Card.Title>
-              <Card.Text>Medicine Name: {prescriptionPlan.medicineName}</Card.Text>
-              <Card.Text>Medicine Dosage: {prescriptionPlan.medicineDosage}</Card.Text>
-              <Card.Text>Medicine Duration: {prescriptionPlan.medicineDuration}</Card.Text>
-              <Card.Text>Medicine Frequency: {prescriptionPlan.medicineFrequency}</Card.Text>
+      <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#FFFFFF", border: "none" }}>
+        <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#FFFFFF" }}>
+          <Card.Title className="PHPara2">Patient Name: {prescriptionPlan.patientName}</Card.Title>
+          <Card.Text className="PHPara1">Appointment Reason: {prescriptionPlan.appointmentReason}</Card.Text>
+          <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080", boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" }} >
+            <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#FFFFFF" }}>
+              <Card.Title style={{ margin: "2rem", fontSize: "2rem" }} className="PHPara2">Medicine Details</Card.Title>
+              <Card.Text className="PatientDivPara2" style={{fontSize: "1rem"}}>Medicine Name -: {prescriptionPlan.medicineName}</Card.Text>
+              <Card.Text className="PatientDivPara2" style={{fontSize: "1rem" }}>Medicine Dosage -: {prescriptionPlan.medicineDosage}</Card.Text>
+              <Card.Text className="PatientDivPara2" style={{fontSize: "1rem" }}>Medicine Dosage -: {prescriptionPlan.medicineDosage}</Card.Text>
+              <Card.Text className="PatientDivPara2" style={{fontSize: "1rem" }}>Medicine Duration -: {prescriptionPlan.medicineDuration}</Card.Text>
+              <Card.Text className="PatientDivPara2" style={{fontSize: "1rem" }}>Medicine Frequency -: {prescriptionPlan.medicineFrequency}</Card.Text>
             </Card.Body>
           </Card>
-          <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
-            <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#00B3B3" }}>
-              <Card.Title>Exercise Plan</Card.Title>
+          <Card style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#008080", boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" }}>
+            <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#FFFFFF" }}>
+              <Card.Title style={{ margin: "2rem", fontSize: "2rem" }} className="PHPara2">Exercise Plan</Card.Title>
               {prescriptionPlan.exercisePlan.map((day, dayIndex) => (
                 <div key={dayIndex}>
-                  <Card.Title>Day {dayIndex + 1}</Card.Title>
+                <Card.Title style={{ margin: "2rem", fontSize: "1rem" }} className="PHPara2">Day {dayIndex + 1}</Card.Title>
+                <div className="d-flex flex-wrap justify-content-center">
                   {day.map((exercise, exerciseIndex) => (
-                    <Card key={exerciseIndex} className="my-2" style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
-                      <Card.Body style={{ margin: "2rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
-                        <Card.Title>Exercise {exerciseIndex + 1}</Card.Title>
-                        <Card.Text>Exercise Name: {exercise.exerciseName}</Card.Text>
-                        <Card.Text>Exercise Duration: {exercise.exerciseDuration}</Card.Text>
-                        <Card.Text>Exercise Frequency: {exercise.exerciseFrequency}</Card.Text>
-                        <Card.Text>Exercise Instruction: {exercise.exerciseInstruction}</Card.Text>
+                    <Card key={exerciseIndex} className="my-2" style={{ flex: "1", maxWidth: "600px", margin: "1rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }} id="patientimg">
+                      <Card.Body style={{ margin: "1rem", maxWidth: "600px", maxHeight: "300px" , borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
+                        <Card.Title style={{ margin: "1rem", fontSize: "1rem" }} className="PHPara2">Exercise {exerciseIndex + 1}</Card.Title>
+                        <Card.Text className="PatientDivPara2" style={{ fontSize: "1rem" }}>Exercise Name: {exercise.exerciseName}</Card.Text>
+                        <Card.Text className="PatientDivPara2" style={{ fontSize: "1rem" }}>Exercise Duration: {exercise.exerciseDuration}</Card.Text>
+                        <Card.Text className="PatientDivPara2" style={{ fontSize: "1rem" }}>Exercise Frequency: {exercise.exerciseFrequency}</Card.Text>
+                        <Card.Text className="PatientDivPara2" style={{ fontSize: "1rem" }}>Exercise Instruction: {exercise.exerciseInstruction}</Card.Text>
                       </Card.Body>
                     </Card>
                   ))}
                 </div>
+              </div>
+              
               ))}
             </Card.Body>
           </Card>
         </Card.Body>
       </Card>
-      <Button style={{ margin: "8px" }} variant="primary" onClick={handleTogglePdf}>
+      <Button style={{ margin: "25px", backgroundColor: '#008080', color: 'white', width: '200px',  }} variant="warning" onClick={handleTogglePdf}>
         {showPdf ? "Hide PDF" : "Show PDF"}
       </Button>
       {showPdf && (

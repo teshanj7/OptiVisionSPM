@@ -116,12 +116,14 @@
     margin-bottom: 50px;
   }
   
+    /*  */
   .UpdateMedicinePrescription .card {
-    background-color: #C9E5F6;
+    background-color: #008080;
     color: #000;
     border: none;
     border-radius: 0;
   }
+
   
   .UpdateMedicinePrescription .card-title {
     font-size: 2.5rem;
@@ -185,4 +187,11 @@
     border-radius: 10px;
     outline: 4px solid #A9D5F1;
   }
+
+  #custom-radius {
+    border-radius: 10px;
+  }
   
+  #custom-text {
+    font-weight: bolder;
+  }
