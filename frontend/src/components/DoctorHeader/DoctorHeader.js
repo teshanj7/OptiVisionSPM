@@ -40,7 +40,7 @@ function Header(props) {
 
     return (
 
-        <nav className="navbar navbar-expand-lg" style={{ background: "#008080" }}>
+        <nav className="navbar navbar-expand-lg" style={{ background: "#008080" }} id="docNavfont">
             <div className="container-fluid" id="DocNavBar"> 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
                     <span className="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@ function Header(props) {
                         </li>
 
                         <li>
-                            <div className="NavigationBarBarDropdown dropdown" >
+                            <div className="NavigationBarBarDropdown dropdown" id="docDrop">
                                 <button className="NavigationBarB btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                                     {user.Username}
                                 </button>

@@ -15,14 +15,15 @@
     background-color: #008080;
     justify-self: flex-start;
     padding: 10px;
-    border: none;
+    border: 2px solid black;
+    color: white;
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Secular One', sans-serif;
 }
 .btnPrev:hover{
     cursor: pointer;
-    background-color: #CCFF00;
+    background-color: white;
     color: #202020;
 }
 .btnNext{
@@ -30,13 +31,14 @@
     justify-self: flex-end;
     padding: 10px;
     width: 100px;
-    border: none;
+    color: white;
+    border: 2px solid black;
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Secular One', sans-serif;
 }
 .btnNext:hover{
     cursor: pointer;
-    background-color: #CCFF00;
+    background-color: white;
     color: #202020;
 }

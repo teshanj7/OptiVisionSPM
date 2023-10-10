@@ -37,9 +37,10 @@
     padding-top: 10px;
     margin-left: 320px;
     text-decoration: none;
-    background-color: #CCFF00;
-    color: #1F1F1F;
+    background-color: #008080;
+    color: white;
     border-radius: 10px;
+    border: 2px solid black;
     width: 250px;
     height: 50px;
     transition: 1s;
@@ -48,7 +49,7 @@
     font-family: 'Secular One', sans-serif;
 }
 .startbtn:hover{
-    background-color: #1F1F1F;
-    color: #CCFF00;
+    background-color: white;
+    color: #008080;
     font-family: 'Secular One', sans-serif;
 }

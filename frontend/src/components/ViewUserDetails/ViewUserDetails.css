@@ -29,38 +29,18 @@
 
 
  .user_page_heading{
+    color: #008080;
+    font-size: 45px;
     font-weight: bold;
-    padding: 4px;
-    margin-left: 8%;
-}
-.rectangle{
-    background-color: #CCFF00;
-    width: 300px;
-    height: 60px;
-    border-radius: 10px;
-    margin-left: 600px;
-    margin-top: 0px;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
 }
 .img-fluid{
-    width: 200px;
-}
-.otherusersbtn{
-   background-color: #CCFF00;
-   color: #1F1F1F;
-   border-radius: 10px;
-   width: 250px;
-   height: 50px;
-   transition: 1s;
-   font-weight: bold;
-   font-size: 20px;
-}
-.otherusersbtn:hover{
-   background-color: #1F1F1F;
-   color: #CCFF00;
+    width: 250px;
 }
 .Userupdatebtn{
-    background-color: #CCFF00;
-    color: #1F1F1F;
+    background-color: #56c411;
+    color: white;
     border-radius: 10px;
     width: 200px;
     height: 50px;
@@ -68,27 +48,29 @@
     font-weight: bold;
     font-size: 20px;
     margin-left: 790px;
+    font-family: 'Secular One', sans-serif;
 }
 .Userupdatebtn:hover{
     background-color: #1F1F1F;
-    color: #CCFF00;
+    color: #56c411;
 }
 .Userdeletebtn{
     background-color: red;
-    color: #1F1F1F;
+    color: white;
     border-radius: 10px;
     width: 250px;
     height: 50px;
     transition: 1s;
     font-weight: bold;
     font-size: 20px;
+    font-family: 'Secular One', sans-serif;
 }
 .Userdeletebtn:hover{
     background-color: #1F1F1F;
-    color: red;
+    color: #56c411;
 }
 .view_body{
-   background-color: #1F1F1F;
+   background-color: white;
    height: auto;
 }
 .text-muted{
@@ -96,15 +78,29 @@
 }
 #view_User_heading{
     font-size: 20px;
-    font-weight: bold;
     text-align: left;
+    color: white;
+    font-family: 'Secular One', sans-serif;
 }
 #view_User_details{
     margin-left: 40%;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
 }
 .collection-item{
    width: 100%;
 }
 .ViewUserDetailsCard{
     width: 65%;
+}
+.viewUserCard{
+    background-color: #008080;
+}
+.ViewUserImgCard{
+    background-color: #008080;
+}
+.nameAndType{
+    color: white;
+    font-family: 'Secular One', sans-serif;
 }
