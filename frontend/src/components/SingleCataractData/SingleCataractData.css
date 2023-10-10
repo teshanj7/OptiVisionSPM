@@ -40,8 +40,8 @@
     margin-left: 150px;
 }
 .Cataractupdatebtn{
-    background-color: #CCFF00;
-    color: #1F1F1F;
+    background-color: #56c411;
+    color: white;
     border-radius: 10px;
     width: 200px;
     height: 50px;
@@ -53,12 +53,12 @@
 }
 .Cataractupdatebtn:hover{
     background-color: #1F1F1F;
-    color: #CCFF00;
+    color: #56c411;
     font-family: 'Secular One', sans-serif;
 }
 .Cataractdeletebtn{
     background-color: red;
-    color: #1F1F1F;
+    color: white;
     border-radius: 10px;
     width: 200px;
     height: 50px;
@@ -69,7 +69,7 @@
 }
 .Cataractdeletebtn:hover{
     background-color: #1F1F1F;
-    color: red;
+    color: #56c411;
     font-family: 'Secular One', sans-serif;
 }
 

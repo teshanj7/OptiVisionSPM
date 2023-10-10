@@ -22,9 +22,9 @@
   }
   
   /* Background */
-  .NewMeditationPrescription {
+  .NewMeditationPrescription .body{
     background-color: white;
-    color: white;
+    color: rgb(11, 11, 11);
   }
   /*rgb(218, 211, 191)*/
   
@@ -118,18 +118,19 @@
   }
   
   .NewMeditationPrescription .card {
-    background-color: #C9E5F6;
+    background-color: #008080;
     color: #000;
     border: none;
-    border-radius: 2;
+    border-radius: 0;
   }
   
   .NewMeditationPrescription .card-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #351f1f;
     margin-bottom: 1rem;
-    border-radius: 2;
+    margin-top: 1rem;
+   
   }
   
   .NewMeditationPrescription .card-text {
