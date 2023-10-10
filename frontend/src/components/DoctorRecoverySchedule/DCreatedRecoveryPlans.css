@@ -95,4 +95,27 @@
       opacity: 1;
     }
   }
+
+  #doctorimg:hover{
+    transform: scale(1.1);
+  }
+ 
+  #doctorimg{
+    border-radius: 100% 0% 0% 100%;
+    border: 2px solid black;
+    width: 700px;
+    height: 275px;
+    transition: 1s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  }
   
+  #doctorimg2:hover{
+    transform: scale(1.04);
+  }
+
+  #doctorimg2{
+    
+    border: 2px solid black;
+    transition: 1s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  }

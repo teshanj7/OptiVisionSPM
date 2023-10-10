@@ -15,7 +15,9 @@ export default function DeleteButton(props) {
       .delete(`http://localhost:8040/meditationPrescription/${deleteId}`)
       .then(() => {
         handleClose(); // Close the confirmation dialog
-        window.location.reload(); // Force a full page refresh
+         // Force a full page refresh
+        navigate("/DCreatedRecoveryPlans");
+        window.location.reload();
       })
       .catch((err) => {
         alert(err.message);
