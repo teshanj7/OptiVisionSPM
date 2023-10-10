@@ -70,7 +70,7 @@ function Header(props) {
                                 </button>
 
                                 <ul className="NavigationBarB dropdown-menu dropdown-menu-dark">
-                                    <li><a className="NavigationBarB dropdown-item" onClick={(e) => {
+                                    <li><a className="NavigationBarB dropdown-item DocProfilebtn" onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/profile/${user._id}`
                                     }}>My Profile</a></li>

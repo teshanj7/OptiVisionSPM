@@ -13,3 +13,6 @@
 #docNavfont{
     font-family: 'Secular One', sans-serif;
 }
+.DocProfilebtn{
+    cursor: pointer;
+}
