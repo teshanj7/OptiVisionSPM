@@ -81,7 +81,7 @@ export default function UpdateUserDetails() {
         <div className="update_page">
 
             <br />
-            <div className="rectangle">
+            <div className="rec">
                 <h1 className="updateprofile">User Profile</h1>
             </div>
             <div className="view_form">

@@ -1,4 +1,11 @@
-
+.SingleViewHeading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+    margin-bottom: 30px;
+}
 .SingleViewbody{
     background-color: white;
 }

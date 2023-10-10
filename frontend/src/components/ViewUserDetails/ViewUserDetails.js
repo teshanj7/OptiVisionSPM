@@ -53,7 +53,7 @@ export default function ViewProfile() {
             <div className="view_body">
 
                 <br /><br />
-                <div className="rectangle">
+                <div className="rec">
                     <h1 className="user_page_heading">User Account</h1>
                 </div>
 
@@ -61,26 +61,26 @@ export default function ViewProfile() {
                     <div class="container py-5">
 
                         <div class="row">
-                            <div class="col-lg-4 ViewUserImgCard">
-                                <div class="card mb-4">
+                            <div class="col-lg-4">
+                                <div class="card mb-4 ViewUserImgCard">
                                     <div class="card-body text-center #">
                                         <img src={Usericon} alt="avatar"
                                             class="rounded-circle img-fluid" />
-                                        <h3 class="my-3">{data.user?.Fullname}</h3>
-                                        <p class="text-muted mb-4" id="ViewUserImgDetails">{data.user?.UserType}</p>
+                                        <h3 class="my-3 nameAndType">{data.user?.Fullname}</h3>
+                                        <p class="mb-4 nameAndType">{data.user?.UserType}</p>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="col-lg-8 ViewUserDetailsCard">
-                                <div class="card mb-4">
+                                <div class="card mb-4 viewUserCard">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-sm-3">
                                                 <p class="mb-0 ViewUserHeadingCard" id="view_User_heading">Full Name</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Fullname}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.Fullname}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -89,7 +89,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_User_heading">Email</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Email}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.Email}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -98,7 +98,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_User_heading">Address</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Address}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.Address}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -107,7 +107,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_User_heading">Telephone Number</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.TelephoneNumber}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.TelephoneNumber}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -116,7 +116,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_User_heading">User Type</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.UserType}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.UserType}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -125,7 +125,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_User_heading">Gender</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Gender}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.Gender}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -134,7 +134,7 @@ export default function ViewProfile() {
                                                 <p class="mb-0" id="view_User_heading">Username</p>
                                             </div>
                                             <div class="col-sm-9">
-                                                <p class="text-muted mb-0" id="view_User_details">{data.user?.Username}</p>
+                                                <p class="mb-0" id="view_User_details">{data.user?.Username}</p>
                                             </div>
                                         </div>
                                     </div>
