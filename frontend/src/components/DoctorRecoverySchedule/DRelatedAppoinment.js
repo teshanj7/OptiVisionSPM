@@ -52,7 +52,7 @@ export default function AppointmentsComponent() {
 
   const filterAppointments = (query) => {
     let filtered;
-  
+
     if (query) {
       filtered = appointments.filter((appointment) => {
         const reasonOfApp = appointment.reasonOfApp.toLowerCase();
@@ -68,10 +68,10 @@ export default function AppointmentsComponent() {
         (appointment) => appointment.docName === doctorName
       );
     }
-  
+
     setFilteredAppointments(filtered);
   };
-  
+
 
 
   const handleCreateRecoveryPlan = (fullName, reasonOfApp) => {
@@ -89,7 +89,7 @@ export default function AppointmentsComponent() {
     <div>
       <h2 style={{ fontFamily: 'Secular One, sans-serif', fontSize: "30px", fontWeight: '300', margin: '2rem', color: '#008080' }}>Appointments for {doctorName}</h2>
 
-      <Form className="my-3"style={{ marginLeft: "30rem", marginRight:"30rem", borderRadius: "10px", backgroundColor: "#778899" }}>
+      <Form className="my-3" style={{ marginLeft: "30rem", marginRight: "30rem", borderRadius: "10px", backgroundColor: "#778899" }}>
         <FormControl
           type="text"
           placeholder="Search by Patient Name or Reason for Appointment"
@@ -98,37 +98,46 @@ export default function AppointmentsComponent() {
         />
       </Form>
 
-      {filteredAppointments.map((appointment) => (
-        // #00CDCD
-        <div className="d-flex justify-content-center align-items-center">
-        <Card id = 'doctorimg'  key={appointment._id} style={{ margin: "2rem", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)", borderRadius: "10px", backgroundColor: "#008080" }}>
-          <Card.Body className="p-4 DCreatedPlans" style={{ margin: "2rem", borderRadius: "10px" }}>
-            <Card.Title className="lead fw-normal mb-2 DCreatedPlans" style={{fontWeight: "300"}}>Patient Name -: {appointment.fullName}</Card.Title>
-            <Card.Text className="text-white">
-              Age: {appointment.age}
-              <br />
-              Email: {appointment.email}
-              <br />
-              Reason for Appointment: {appointment.reasonOfApp}
-              <br />
-              Date: {new Date(appointment.date).toLocaleDateString()}
-            </Card.Text>
-            <Button
-              
-              variant="warning"
-              onClick={() =>
-                handleCreateRecoveryPlan(
-                  appointment.fullName,
-                  appointment.reasonOfApp,
-                )
-              }
+      <div className="d-flex flex-wrap justify-content-center">
+        {filteredAppointments.map((appointment) => (
+          <div key={appointment._id} className="mx-2 mb-4">
+            <Card
+              id="doctorimg"
+              style={{
+                margin: "1rem",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.4)",
+                borderRadius: "10px",
+                backgroundColor: "#008080",
+              }}
             >
-              Create a Recovery Plan
-            </Button>
-          </Card.Body>
-        </Card>
+              <Card.Body className="p-4 DCreatedPlans" style={{ margin: "2rem", borderRadius: "10px" }}>
+                <Card.Title className="lead fw-normal mb-2 DCreatedPlans" style={{ fontWeight: "300" }}>Patient Name -: {appointment.fullName}</Card.Title>
+                <Card.Text className="text-white">
+                  Age: {appointment.age}
+                  <br />
+                  Email: {appointment.email}
+                  <br />
+                  Reason for Appointment: {appointment.reasonOfApp}
+                  <br />
+                  Date: {new Date(appointment.date).toLocaleDateString()}
+                </Card.Text>
+                <Button
+                  variant="warning"
+                  onClick={() =>
+                    handleCreateRecoveryPlan(
+                      appointment.fullName,
+                      appointment.reasonOfApp,
+                    )
+                  }
+                >
+                  Create a Recovery Plan
+                </Button>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
       </div>
-      ))}
+
 
     </div>
   );
