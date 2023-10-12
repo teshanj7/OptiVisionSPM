@@ -168,7 +168,7 @@ export default function UpdateMedicinePrescription() {
                                 </div>
                                 <div className="mb-2">
                                   <label htmlFor={`exerciseDuration-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Duration</label>
-                                  <input type="number" className="form-control NewMeditationPrescription outline" id={`exerciseDuration-${dayIndex}-${exerciseIndex}`} name="exerciseDuration" defaultValue={exercise.exerciseDuration} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} />
+                                  <input type="text" className="form-control NewMeditationPrescription outline" id={`exerciseDuration-${dayIndex}-${exerciseIndex}`} name="exerciseDuration" defaultValue={exercise.exerciseDuration} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} />
                                 </div>
                                 <div className="mb-2">
                                   <label htmlFor={`exerciseName-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Frequency</label>
