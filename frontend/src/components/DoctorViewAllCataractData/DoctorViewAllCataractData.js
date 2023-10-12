@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"
 import UserContext from '../ContextComponents/ContextComponent';
 import axios from "axios";
 import "../DoctorViewAllCataractData/DoctorViewAllCataractData.css";
-// import "../ViewCataractData/ViewCataractData";
 
 export default function DoctorViewAllCataractData(){
     const history = useNavigate()
@@ -23,7 +22,6 @@ export default function DoctorViewAllCataractData(){
         }
 
     }
-    console.log(data);
 
     return(
         <div className="ViewallCataractBody">

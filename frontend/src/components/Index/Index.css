@@ -30,7 +30,7 @@
 }
 
 #LoginLink:hover {
-  border-bottom: 2px solid rgb(5, 251, 5);
+  border-bottom: 2px solid black;
 }
 
 #SignupLink {
@@ -40,7 +40,7 @@
 }
 
 #SignupLink:hover {
-  border-bottom: 2px solid rgb(5, 251, 5);
+  border-bottom: 2px solid black;
 }
 
 .name {

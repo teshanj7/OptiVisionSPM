@@ -50,9 +50,9 @@ function ViewAll() {
 
     console.log(data);
     return (
-       
+
         <div className="TJViewAppointmentPage">
-             <br/>
+            <br />
             <h1 className="TJViewHeading">MY APPOINTMENTS</h1>
             {/* Search Appointment*/}
             <input type="" placeholder="Search Transaction" className="TJViewSearch" onChange={searchHandle} /><FaSearch className="TJSearchIcon" />
@@ -90,7 +90,7 @@ function ViewAll() {
                                 <td>{item.docName}</td>
                                 <td>{moment(item.date).format('YYYY-MM-DD')}</td>
                                 <td>
-                                    <button className="TJButton TJButton-update" onClick={(e) => {
+                                    <button className="TJButton TJButton-update" variant="primary" onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/updateAppointment/${item._id}`;
                                     }}>Update</button><br />

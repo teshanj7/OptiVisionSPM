@@ -4,6 +4,7 @@
     font-weight: 500;
     transition: 1s;
     cursor: pointer !important;
+    font-family: 'Secular One', sans-serif;
  }
 #PatientNavHeading:hover{
     color: black;
@@ -15,6 +16,7 @@
  #PatientNavbar{
    background-color: #008080;
    height: 80px;
+   font-family: 'Secular One', sans-serif;
  }
  #PatientNav{
    margin-left: 20px;

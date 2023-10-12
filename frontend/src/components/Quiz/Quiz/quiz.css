@@ -1,0 +1,44 @@
+.quizheading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+.quizbtn{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+.btnPrev{
+    background-color: #008080;
+    justify-self: flex-start;
+    padding: 10px;
+    border: 2px solid black;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.btnPrev:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #202020;
+}
+.btnNext{
+    background-color: #008080;
+    justify-self: flex-end;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.btnNext:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #202020;
+}

@@ -38,7 +38,7 @@ function Footer() {
 
                     <p className="FNFooterHead3" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = `#`;
+                        window.location.href = `/GlaucomaForm`;
                     }}>GLAUCOMA DETECTION</p>
 
                     <p className="FNFooterHead4" onClick={(e) => {

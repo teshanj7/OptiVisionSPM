@@ -10,7 +10,6 @@ export default function UserHeader(props) {
     const id = props.id
 
     const { user } = useContext(UserContext);
-    console.log(user)
 
     
     const hideHeader = location.pathname === '/' || location.pathname === '/login' || location.pathname === '/add';
@@ -30,10 +29,6 @@ export default function UserHeader(props) {
             if (user.UserType === "Patient") {
                 window.location.href = `/PatientHome/${user._id}`;
             }
-            // else if (user.UserType === "Doctor") {
-            //     // history(`/trainer_home/${user._id}`, { state: { id:user.Fullname } })
-            //     window.location.href = `/trainer_home/${user._id}`;
-            // }
         }
 
     }
@@ -70,7 +65,7 @@ export default function UserHeader(props) {
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>
                                     <a className="NavigationBarB nav-link" id="PatientHeaderHd" style={{ color: "#ffffff" }} onClick={(e) => {
                                         e.preventDefault();
-                                        window.location.href = `/mainNT`
+                                        window.location.href = `/GlaucomaForm`
                                     }}>GLAUCOMA DETECTION</a>
                                 </li>
                                 <li className="NavigationBarB nav-item" id='PatientNavitem'>

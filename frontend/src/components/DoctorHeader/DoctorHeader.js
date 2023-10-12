@@ -10,7 +10,6 @@ function Header(props) {
     const id = props.id
 
     const { user } = useContext(UserContext);
-    console.log(user)
 
     //Log out function
     function logOut() {
@@ -35,17 +34,13 @@ function Header(props) {
             if (user.UserType === "Doctor") {
                 window.location.href = `/DoctorHome/${user._id}`;
             }
-            // else if (user.UserType === "Doctor") {
-            //     // history(`/trainer_home/${user._id}`, { state: { id:user.Fullname } })
-            //     window.location.href = `/trainer_home/${user._id}`;
-            // }
         }
 
     }
 
     return (
 
-        <nav className="navbar navbar-expand-lg" style={{ background: "#008080" }}>
+        <nav className="navbar navbar-expand-lg" style={{ background: "#008080" }} id="docNavfont">
             <div className="container-fluid" id="DocNavBar"> 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
                     <span className="navbar-toggler-icon"></span>
@@ -69,13 +64,13 @@ function Header(props) {
                         </li>
 
                         <li>
-                            <div className="NavigationBarBarDropdown dropdown" >
+                            <div className="NavigationBarBarDropdown dropdown" id="docDrop">
                                 <button className="NavigationBarB btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                                     {user.Username}
                                 </button>
 
                                 <ul className="NavigationBarB dropdown-menu dropdown-menu-dark">
-                                    <li><a className="NavigationBarB dropdown-item" onClick={(e) => {
+                                    <li><a className="NavigationBarB dropdown-item DocProfilebtn" onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/profile/${user._id}`
                                     }}>My Profile</a></li>

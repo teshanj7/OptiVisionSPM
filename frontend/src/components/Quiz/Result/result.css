@@ -1,0 +1,49 @@
+.flex-center{
+    display: flex;
+    width: 1000px;
+    margin-left: 250px;
+    justify-content: center;    
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 3em 4em;
+    gap: 1em;
+}
+
+.resultPage .flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.resultPage .flex span {
+    font-size: 1.4em;
+    color: black;
+}
+
+.resultPage .flex span.achive {
+    font-weight: bold;
+    color: #ff2a66;
+    color: #008080;
+}
+.restartbtn{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 670px;
+    text-decoration: none;
+    background-color: #008080;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 150px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.restartbtn:hover{
+    background-color: white;
+    color: #008080;
+    font-family: 'Secular One', sans-serif;
+}

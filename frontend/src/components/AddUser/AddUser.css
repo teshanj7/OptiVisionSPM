@@ -1,22 +1,23 @@
 .reg_form{
-    background: transparent;
-    border: 4px solid rgba(255, 255, 255, .5);
+    border: 9px solid #008080;
     text-align: center;
     width: 600px;
     height: 930px;
     border-radius: 25px;
-    margin-left: 450px;
-    backdrop-filter: blur(15px);
+    margin-left: 740px;
+    margin-top: -920px;
 }
 .SignupCompanyName{
     text-decoration: none;
 }
 .signupheading{
-    color: white;
+    color: black;
     padding-top: 10px;
+    font-family: 'Secular One', sans-serif;
 }
 .signupheading1{
-    color: white;
+    color: black;
+    font-family: 'Secular One', sans-serif;
 }
 .signupforminput{
     width: 500px;
@@ -46,21 +47,47 @@
     width: 15px;
     height: 15px;
 }
-.reg_page{
-    background-image: url("../AddUser/back1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 150vh;
-    background-position: 69%;
-}
 .heading{
     margin-bottom: -120px;
 }
 .signup{
     font-weight: bold;
     padding: 4px;
-    color: white;
+    color: black;
     font-family: 'Secular One', sans-serif;
 }
+.signupImg{
+    margin-left: -750px;
+    margin-top: -550px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 0% 40% 0% 0%;
+}
+.signupImg:hover{
+    transform: scale(1.1);
+    transition: 2s;
+ }
+.signupImg1{
+    margin-left: -442px;
+    margin-top: 51px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 0% 0% 0% 0%;
+}
+.signupImg1:hover{
+    transform: scale(1.1);
+    transition: 2s;
+ }
+.signupImg2{
+    margin-left: -442px;
+    margin-top: 650px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 0% 0% 0% 40%;
+}
+.signupImg2:hover{
+    transform: scale(1.1);
+    transition: 2s;
+ }
 
 

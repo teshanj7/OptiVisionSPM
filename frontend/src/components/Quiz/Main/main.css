@@ -1,0 +1,55 @@
+.Quizheading{
+    color: #008080;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Secular One', sans-serif;
+    margin-bottom: 30px;
+}
+.Quizmaincontent{
+    border: 5px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: 320px;
+}
+.quizruleslist{
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.quizrules{
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Secular One', sans-serif;
+}
+.quizformInput{
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    height: 40px;
+    font-family: 'Jost', sans-serif;
+}
+.startbtn{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 320px;
+    text-decoration: none;
+    background-color: #008080;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 250px;
+    height: 50px;
+    transition: 1s;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Secular One', sans-serif;
+}
+.startbtn:hover{
+    background-color: white;
+    color: #008080;
+    font-family: 'Secular One', sans-serif;
+}

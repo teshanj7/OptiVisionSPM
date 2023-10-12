@@ -66,8 +66,8 @@
 }
 
 .TJCreateSubmit{
-    background-color: #99FF33;
-    color: #1F1F1F;
+    background-color: #56c411;
+    color: white;
     border-radius: 10px;
     width: 150px;
     height: 50px;
@@ -81,13 +81,13 @@
 
 .TJCreateSubmit:hover{
     background-color: #1F1F1F;
-    color: #99FF33;
+    color: #56c411;
     font-family: 'Secular One', sans-serif;
 }
 
 .TJCreateReset{
-    background-color: #99FF33;
-    color: #1F1F1F;
+    background-color: #56c411;
+    color: white;
     border-radius: 10px;
     width: 100px;
     height: 30px;
@@ -100,7 +100,7 @@
 
 .TJButtonCancel{
     background-color: #F44336;
-    color: #1F1F1F;
+    color: white;
     border: 3px solid black;
     width: 80px;
     font-weight: bold;

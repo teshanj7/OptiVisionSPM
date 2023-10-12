@@ -16,7 +16,6 @@ export default function DoctorHome() {
     const params = useParams();
 
     const { user } = useContext(UserContext);
-    console.log(user)
 
     //Log out function
     function logOut() {
