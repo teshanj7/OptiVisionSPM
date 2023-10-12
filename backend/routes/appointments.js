@@ -5,6 +5,13 @@ let Appointment = require("../models/appointment");
 router.route("/add").post((req, res) => {
     const { userId, fullName, age, email, telephoneNo, reasonOfApp, docName, date } = req.body;
 
+    const currentDate = new Date();
+    const appointmentDate = new Date(date);
+
+    if (appointmentDate < currentDate) {
+        return res.status(400).json({ message: 'Appointment date must be in the future' });
+    }
+
     const newAppointment = new Appointment({
         userId,
         fullName,
