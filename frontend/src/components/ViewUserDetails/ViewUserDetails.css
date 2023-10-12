@@ -104,3 +104,17 @@
     color: white;
     font-family: 'Secular One', sans-serif;
 }
+
+.UserPaymentbtn{
+    background-color: goldenrod;
+    color: white;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    font-family: 'Secular One', sans-serif;
+    margin-left: -170px;
+    margin-top: -20070px;
+}

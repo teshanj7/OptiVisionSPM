@@ -148,6 +148,10 @@ export default function ViewProfile() {
                             window.location.href = `/updateProfile/${params.id}`
                         }}>Update Details</button> &nbsp;&nbsp;&nbsp;&nbsp;
                         <button type="submit" className="Userdeletebtn" onClick={() => deleteUser(params.id)}>Delete My Account</button>
+                        <button className="UserPaymentbtn" onClick={(e) => {
+                                        e.preventDefault();
+                                        window.location.href = `/UserPayments`
+                                    }}>View Payments</button>
                     </div>
                 </div>
 

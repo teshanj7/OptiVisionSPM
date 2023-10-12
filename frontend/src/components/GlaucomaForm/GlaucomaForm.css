@@ -67,6 +67,12 @@
     border-radius: 10px;
     margin-left: 520px;
     margin-top: -90px;
+    margin-bottom: 10px;
+  }
+
+  .GFPreviewPic{
+    margin-top:5px;
+    margin-bottom: 20px;
   }
 
   .GFbutton{
@@ -79,6 +85,7 @@
     margin-left: -10px;
     font-weight: bold;
     font-size: 18px;
+    margin-top: 20px;
   }
 
   .GFbutton:hover{
