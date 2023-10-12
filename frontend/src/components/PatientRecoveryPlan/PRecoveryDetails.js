@@ -38,7 +38,7 @@ export default function PrescriptionDetailsPage() {
       page: {
         flexDirection: "column",
         backgroundColor: "#ffffff",
-        padding: "0cm",
+        padding: "2cm",
       },
       section: {
         margin: 10,
@@ -56,7 +56,7 @@ export default function PrescriptionDetailsPage() {
       },
       text: {
         fontSize: 12,
-        marginVertical: 5,
+        marginVertical: 10,
       },
     });
 
@@ -139,8 +139,8 @@ export default function PrescriptionDetailsPage() {
                 <Card.Title style={{ margin: "2rem", fontSize: "1rem" }} className="PHPara2">Day {dayIndex + 1}</Card.Title>
                 <div className="d-flex flex-wrap justify-content-center">
                   {day.map((exercise, exerciseIndex) => (
-                    <Card key={exerciseIndex} className="my-2" style={{ flex: "1", maxWidth: "600px", margin: "1rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }} id="patientimg">
-                      <Card.Body style={{ margin: "1rem", maxWidth: "600px", maxHeight: "300px" , borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
+                    <Card key={exerciseIndex} className="my-2" style={{ flex: "1", maxWidth: "600px", maxHeight: "500px", margin: "1rem", borderRadius: "10px", backgroundColor: "#DFEFFA" }} id="patientimg">
+                      <Card.Body style={{ margin: "1rem", maxWidth: "600px", maxHeight: "100px" , borderRadius: "10px", backgroundColor: "#DFEFFA" }}>
                         <Card.Title style={{ margin: "1rem", fontSize: "1rem" }} className="PHPara2">Exercise {exerciseIndex + 1}</Card.Title>
                         <Card.Text className="PatientDivPara2" style={{ fontSize: "1rem" }}>Exercise Name: {exercise.exerciseName}</Card.Text>
                         <Card.Text className="PatientDivPara2" style={{ fontSize: "1rem" }}>Exercise Duration: {exercise.exerciseDuration}</Card.Text>

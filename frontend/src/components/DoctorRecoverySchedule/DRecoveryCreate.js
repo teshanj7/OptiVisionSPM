@@ -46,6 +46,19 @@ export default function NewMeditationPrescription() {
       alert("Please enter a medicine name");
       return;
     }
+    if (!medicineDosage) {
+      alert("Please enter medicine dosage");
+      return;
+    }
+    if (!medicineDuration) {
+      alert("Please enter medicine duration");
+      return;
+    }
+    if (!medicineFrequency) {
+      alert("Please enter medicine frequency");
+      return;
+    }
+    
 
     const newMeditationPrescription = {
       userID,
@@ -181,7 +194,7 @@ export default function NewMeditationPrescription() {
                                 </div>
                                 <div className="mb-2">
                                   <label htmlFor={`exerciseDuration-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Duration</label>
-                                  <input type="number" className="form-control NewMeditationPrescription outline" id={`exerciseDuration-${dayIndex}-${exerciseIndex}`} name="exerciseDuration" defaultValue={exercise.exerciseDuration} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} />
+                                  <input type="text" className="form-control NewMeditationPrescription outline" id={`exerciseDuration-${dayIndex}-${exerciseIndex}`} name="exerciseDuration" defaultValue={exercise.exerciseDuration} onChange={(event) => handleExercisePlanChange(event, dayIndex, exerciseIndex)} />
                                 </div>
                                 <div className="mb-2">
                                   <label htmlFor={`exerciseName-${dayIndex}-${exerciseIndex}`} className="form-label text-white">Exercise Frequency</label>
