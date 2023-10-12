@@ -216,8 +216,6 @@ export default function NewMeditationPrescription() {
                 </div>
               </div>
               
-{/*            
-            <DeleteButton id = {id}/> */}
           </div>
           
         </div>
