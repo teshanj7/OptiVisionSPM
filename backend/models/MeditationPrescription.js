@@ -10,11 +10,11 @@ const exercisePlanSchema = new mongoose.Schema({
     required: true
   },
   exerciseDuration: {
-    type: Number,
+    type: String,
     required: true
   },
   exerciseFrequency: {
-    type: Number,
+    type: String,
     required: true
   },
   date: {
