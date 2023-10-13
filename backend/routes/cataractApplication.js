@@ -25,7 +25,15 @@ router.post("/addCataract", uploadMiddleware.single('files'), async (req, res) =
         Gender,
         image:newPath,
     })
-    res.json(postCataract);
+    postCataract.save().then(()=>{
+        if (TelephoneNumber < 0 || !TelephoneNumber === 'number') {
+            return res.status(400).json({ message: 'Telephone Number must be positive' })
+        }
+        if (Age <= 0 || !Age === 'number') {
+            return res.status(400).json({ message: 'Age must be positive' })
+        }
+        res.json("Cataract application succefully");
+    })
 });
 //-----------------comment-----------------------------------
 router.put("/comment",(req,res) => {
