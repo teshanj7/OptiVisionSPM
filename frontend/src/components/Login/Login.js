@@ -20,7 +20,7 @@ export default function Login() {
         e.preventDefault();
 
         //Users
-        let result = await fetch("http://localhost:8040/login", {
+        let result = await fetch("http://localhost:8040/auth/login", {
             method: 'post',
             body: JSON.stringify({ Email, Password, UserType }),
             headers: {
@@ -29,14 +29,15 @@ export default function Login() {
         });
 
         result = await result.json();
-        setUser(result);
-        if (result.Fullname) {
+        console.log(result);
+        setUser(result.user);
+        if (result.user.Fullname) {
             localStorage.setItem('newUser', JSON.stringify(result))
-            if (result.UserType === "Patient") {
-                history(`/PatientHome/${result._id}`, { state: { name: result.Fullname } })
+            if (result.user.UserType === "Patient") {
+                history(`/PatientHome/${result.user._id}`, { state: { name: result.user.Fullname } })
             }
-            else if (result.UserType === "Doctor") {
-                history(`/DoctorHome/${result._id}`, { state: { id: result.Fullname } })
+            else if (result.user.UserType === "Doctor") {
+                history(`/DoctorHome/${result.user._id}`, { state: { id: result.user.Fullname } })
             }
         } else {
             toast.warn('Please enter correct details..!', {
@@ -57,12 +58,12 @@ export default function Login() {
     return (
         <div className="login_page">
             <div className="heading"><a href="/" className="loginCompanyName"><h1 className="log_sign_heading_name">OptiVision</h1></a>
-                <ul class="nav justify-content-end nav-underline" id="IndexHeading">
-                    <li class="nav-item1" id="Login">
-                        <a class="nav-link" href="/login" id="LoginLink">LOGIN</a>
+                <ul className="nav justify-content-end nav-underline" id="IndexHeading">
+                    <li className="nav-item1" id="Login">
+                        <a className="nav-link" href="/login" id="LoginLink">LOGIN</a>
                     </li>
-                    <li class="nav-item1" id="Signup">
-                        <a class="nav-link" href="/add" id="SignupLink">SIGNUP</a>
+                    <li className="nav-item1" id="Signup">
+                        <a className="nav-link" href="/add" id="SignupLink">SIGNUP</a>
                     </li>
                 </ul>
             </div>

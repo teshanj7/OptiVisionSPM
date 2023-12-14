@@ -48,7 +48,7 @@ export default function AddUser() {
             return;
         }
 
-        axios.post("http://localhost:8040/user/add", newUser).then(() => {
+        axios.post("http://localhost:8040/auth/add", newUser).then(() => {
             alert("User Added")
             window.location.href = `/login`;
         }).catch((err) => {

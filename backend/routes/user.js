@@ -2,34 +2,34 @@ const router = require("express").Router();
 let User = require("../models/user");
 
 //create
-router.route("/add").post((req,res)=>{
-    const Fullname = req.body.Fullname;
-    const Email = req.body.Email;
-    const Address = req.body.Address;
-    const TelephoneNumber = Number(req.body.TelephoneNumber);
-    const UserType = req.body.UserType;
-    const Gender = req.body.Gender;
-    const Username = req.body.Username;
-    const Password = req.body.Password;
+// router.route("/add").post((req,res)=>{
+//     const Fullname = req.body.Fullname;
+//     const Email = req.body.Email;
+//     const Address = req.body.Address;
+//     const TelephoneNumber = Number(req.body.TelephoneNumber);
+//     const UserType = req.body.UserType;
+//     const Gender = req.body.Gender;
+//     const Username = req.body.Username;
+//     const Password = req.body.Password;
 
-    const newUser = new User({
-        Fullname,
-        Email,
-        Address,
-        TelephoneNumber,
-        UserType,
-        Gender,
-        Username,
-        Password
-    })
+//     const newUser = new User({
+//         Fullname,
+//         Email,
+//         Address,
+//         TelephoneNumber,
+//         UserType,
+//         Gender,
+//         Username,
+//         Password
+//     })
 
-    newUser.save().then(()=>{
-        res.json("User Added")
-    }).catch((err)=>{
-        console.log(err);
-    })
+//     newUser.save().then(()=>{
+//         res.json("User Added")
+//     }).catch((err)=>{
+//         console.log(err);
+//     })
 
-})
+// })
 
 //view
 router.route("/").get((req,res)=>{
