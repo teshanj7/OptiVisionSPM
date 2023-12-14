@@ -41,6 +41,8 @@ app.use("/user",userRouter);
 
 const User = require("./models/user.js");
 
+const authRouter = require('./routes/authRoutes.js');
+app.use("/auth", authRouter);
 
 //login
 app.post("/login", async(req,res)=>{
