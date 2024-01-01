@@ -3,13 +3,8 @@ const User = require("../models/user");
 // Handles getting all users from the database
 const getAllUsers = async (req, res) => {
   try {
-    User.find()
-      .then((users) => {
-        res.json(users);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    const users = await User.find();
+    res.json(users);
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
@@ -41,18 +36,10 @@ const updateUser = async (req, res) => {
       Password,
     };
 
-    const update = await User.findByIdAndUpdate(userId, updateUser)
-      .then(() => {
-        res.status(200).send({ status: "User updated" });
-      })
-      .catch((err) => {
-        console.log(err);
-        res
-          .status(500)
-          .send({ status: "Error with updating data", error: err.message });
-      });
+    await User.findByIdAndUpdate(userId, updateUser);
+    res.status(200).send({ status: "User updated" });
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).send({ status: "Error with updating data", error: error.message });
   }
 };
 
@@ -60,19 +47,10 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
   try {
     let userId = req.params.id;
-
-    await User.findByIdAndDelete(userId)
-      .then(() => {
-        res.status(200).send({ status: "User deleted" });
-      })
-      .catch((err) => {
-        console.log(err.message);
-        res
-          .status(500)
-          .send({ status: "Error with delete user", error: err.message });
-      });
+    await User.findByIdAndDelete(userId);
+    res.status(200).send({ status: "User deleted" });
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).send({ status: "Error with delete user", error: error.message });
   }
 };
 
@@ -80,18 +58,10 @@ const deleteUser = async (req, res) => {
 const viewUserDetails = async (req, res) => {
   try {
     let userId = req.params.id;
-    const user = await User.findById(userId)
-      .then((user) => {
-        res.status(200).send({ status: "User fetched", user });
-      })
-      .catch((err) => {
-        console.log(err.message);
-        res
-          .status(500)
-          .send({ status: "Error with get user", error: err.message });
-      });
+    const user = await User.findById(userId);
+    res.status(200).send({ status: "User fetched", user });
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).send({ status: "Error with get user", error: error.message });
   }
 };
 
