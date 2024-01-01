@@ -41,21 +41,8 @@ app.use("/user",userRouter);
 
 const User = require("./models/user.js");
 
-
-//login
-app.post("/login", async(req,res)=>{
-
-if(req.body.Password && req.body.Email){
-    let user = await User.findOne(req.body)
-    if(user){
-        res.send(user)
-    }else{
-        res.send({result:"User not found"})
-    }
-}else{
-    res.send({result:"User not found"})
-}
-})
+const authRouter = require('./routes/authRoutes.js');
+app.use("/auth", authRouter);
 
 //appointment scheduling system
 const appointmentRouter = require("./routes/appointments.js");

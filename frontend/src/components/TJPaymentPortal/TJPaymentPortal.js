@@ -62,36 +62,36 @@ function CreatePayment() {
             <div className="TJAddPaymentForm">
                 <form onSubmit={sendData}>
                     <br/>
-                    <label for="subject" className="TJCreateFormHeading">Payment Amount: </label><br />
+                    <label htmlFor="subject" className="TJCreateFormHeading">Payment Amount: </label><br />
                     <input type="number" className="TJCreateFormInput" id="TJAddAmount"  placeholder="Your payment amount" value={amount}
                  required />
                     <br /><br />
 
-                    <label for="subject" className="TJCreateFormHeading">Card Number: </label><br />
+                    <label htmlFor="subject" className="TJCreateFormHeading">Card Number: </label><br />
                     <input type="number" className="TJCreateFormInput" id="TJAddAmount" placeholder="Enter your card number here " onChange={(e) => {
                         setCardNo(e.target.value);
                     }} required />
                     <br /><br />
 
-                    <label for="subject" className="TJCreateFormHeading">Expiry Details: </label><br />
-                    <label for="subject" className="TJExpHeading">Exp.Month: </label>&nbsp;
+                    <label htmlFor="subject" className="TJCreateFormHeading">Expiry Details: </label><br />
+                    <label htmlFor="subject" className="TJExpHeading">Exp.Month: </label>&nbsp;
                     <input type="number" className="TJCreateExpDetails" id="TJAddExpMonth" onChange={(e) => {
                         setExpiryMonth(e.target.value);
                     }} required /> &nbsp;
-                    <label for="subject" className="TJExpHeading"> / </label>&nbsp;
-                    <label for="subject" className="TJExpHeading">Exp.Year: </label>&nbsp;
+                    <label htmlFor="subject" className="TJExpHeading"> / </label>&nbsp;
+                    <label htmlFor="subject" className="TJExpHeading">Exp.Year: </label>&nbsp;
                     <input type="number" className="TJCreateExpDetails" id="TJAddExpYear" onChange={(e) => {
                         setExpiryYear(e.target.value);
                     }} required />
                     <br /><br />
 
-                    <label for="subject" className="TJCreateFormHeading">Card Holder Name: </label><br />
+                    <label htmlFor="subject" className="TJCreateFormHeading">Card Holder Name: </label><br />
                     <input type="text" className="TJCreateFormInput" id="TJAddName" placeholder="Enter the card holder name here" onChange={(e) => {
                         setCardHolderNo(e.target.value);
                     }} required />
                     <br /><br />
 
-                    <label for="subject" className="TJCreateFormHeading">CVV: </label>&nbsp;
+                    <label htmlFor="subject" className="TJCreateFormHeading">CVV: </label>&nbsp;
                     <input type="password" className="TJCreateExpDetails2" id="TJAddCVV" onChange={(e) => {
                         setCvv(e.target.value);
                     }} required />

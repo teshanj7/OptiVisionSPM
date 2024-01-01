@@ -56,37 +56,37 @@ const UpdateAppointment = () => {
             <h1 className="TJUpdateHeading">APPOINTMENT - UPDATE</h1>
             <div className="TJUpdateForm">
                 <br />
-                <label for="subject" className="TJUpdateFormHeading">Full Name: </label><br />
+                <label htmlFor="subject" className="TJUpdateFormHeading">Full Name: </label><br />
                 <input type="text" className="TJUpdateFormInput" value={fullName} onChange={(e) => {
                     setFullName(e.target.value)
                 }} />
                 <br /><br />
-                <label for="subject" className="TJUpdateFormHeading">Age: </label><br />
+                <label htmlFor="subject" className="TJUpdateFormHeading">Age: </label><br />
                 <input type="Number" className="TJUpdateFormInput" value={age} onChange={(e) => {
                     setAge(e.target.value)
                 }} />
                 <br /><br />
-                <label for="subject" className="TJUpdateFormHeading">Email: </label><br />
+                <label htmlFor="subject" className="TJUpdateFormHeading">Email: </label><br />
                 <input type="text" className="TJUpdateFormInput" value={email} onChange={(e) => {
                     setEmail(e.target.value)
                 }} />
                 <br /><br />
-                <label for="subject" className="TJUpdateFormHeading">Telephone Number: </label><br />
+                <label htmlFor="subject" className="TJUpdateFormHeading">Telephone Number: </label><br />
                 <input type="Number" className="TJUpdateFormInput" value={telephoneNo} onChange={(e) => {
                     setTelephoneNo(e.target.value)
                 }} />
                 <br /><br />
-                <label for="message" className="TJUpdateFormHeading">Reason for Appointment: </label><br />
+                <label htmlFor="message" className="TJUpdateFormHeading">Reason for Appointment: </label><br />
                 <textarea className="TJUpdateTextArea" placeholder="Enter Transaction message here" value={reasonOfApp} rows={4} cols={40} required onChange={(e) => {
                     setReasonOfApp(e.target.value);
                 }} />
                 <br /><br />
-                <label for="subject" className="TJUpdateFormHeading">Doctor's Name: </label><br />
+                <label htmlFor="subject" className="TJUpdateFormHeading">Doctor's Name: </label><br />
                 <input type="text" className="TJUpdateFormInput" value={docName} onChange={(e) => {
                     setDocName(e.target.value)
                 }} />
                 <br /><br />
-                <label for="subject" className="TJUpdateFormHeading">Date: </label><br />
+                <label htmlFor="subject" className="TJUpdateFormHeading">Date: </label><br />
                 <input type="date" className="TJUpdateFormInput" value={moment(date).format('YYYY-MM-DD')} onChange={(e) => {
                     setDate(e.target.value)
                 }} />

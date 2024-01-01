@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect} from "react";
@@ -77,6 +76,7 @@ function App() {
     }
   }, [user]);
 
+  console.log(user)
 
   return (
     <Router>

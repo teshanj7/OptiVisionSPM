@@ -61,7 +61,7 @@ export default function CreateGlaucomaForm() {
       <div className="mb-3">
         <div className="GFPara">
           <label
-            htmlFor="formFile"
+            htmlhtmlFor="formFile"
             className="form-label"
             style={{
               fontFamily: "'Jost', sans-serif",
@@ -73,7 +73,7 @@ export default function CreateGlaucomaForm() {
           </label>{" "}
           <br />
           <label
-            htmlFor="formFile"
+            htmlhtmlFor="formFile"
             className="form-label"
             style={{
               fontFamily: "'Jost', sans-serif",
@@ -122,7 +122,7 @@ export default function CreateGlaucomaForm() {
       </div>
       <div className="container-sm">
         <button onClick={handlePredictClick} className="GFbutton">
-          Predict
+          Get Result
         </button>
       </div>{" "}
       <br />

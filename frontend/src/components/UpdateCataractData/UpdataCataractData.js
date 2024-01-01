@@ -73,37 +73,37 @@ export default function UpdateCataractData() {
             <br />
 
             <form className="UpdateCataractForm" onSubmit={updateData}>
-                <label for="Fullname" className="CataractFormHeading">Full Name: </label><br />
+                <label htmlFor="Fullname" className="CataractFormHeading">Full Name: </label><br />
                 <input type="text" value={Fullname} className="CataractFormInput" placeholder="Full Name" onChange={(event) => {
                     setFullname(event.target.value);
                 }} required /><br />
 
-                <label for="Email" className="CataractFormHeading">Email: </label><br />
+                <label htmlFor="Email" className="CataractFormHeading">Email: </label><br />
                 <input type="email" value={Email} className="CataractFormInput" placeholder="Email" onChange={(event) => {
                     setEmail(event.target.value);
                 }} required /><br />
 
-                <label for="Address" className="CataractFormHeading">Address: </label><br />
+                <label htmlFor="Address" className="CataractFormHeading">Address: </label><br />
                 <input type="text" value={Address} className="CataractFormInput" placeholder="Address" onChange={(event) => {
                     setAddress(event.target.value);
                 }} required /><br />
 
-                <label for="TelephoneNumber" className="CataractFormHeading">Telephone Number: </label><br />
+                <label htmlFor="TelephoneNumber" className="CataractFormHeading">Telephone Number: </label><br />
                 <input type="number" value={TelephoneNumber} className="CataractFormInput" placeholder="Telephone Number" onChange={(event) => {
                     setTelephoneNumber(event.target.value);
                 }} required /><br />
 
-                <label for="Age" className="CataractFormHeading">Age: </label><br />
+                <label htmlFor="Age" className="CataractFormHeading">Age: </label><br />
                 <input type="text" className="CataractFormInput" value={Age} onChange={(event) => {
                     setAge(event.target.value)
                 }} readOnly/><br />
 
-                <label for="gender" className="CataractFormHeading">Gender: </label><br />
+                <label htmlFor="gender" className="CataractFormHeading">Gender: </label><br />
                 <input type="text" className="CataractFormInput" value={Gender} onChange={(event) => {
                     setGender(event.target.value)
                 }} readOnly/><br /><br />
 
-                <label for="image" className="CataractFormHeading">Image: &nbsp;&nbsp;&nbsp;</label>
+                <label htmlFor="image" className="CataractFormHeading">Image: &nbsp;&nbsp;&nbsp;</label>
                 <input type="file" name="file" className="CataractFormImg" onChange={(event) => {
                     setFiles(event.target.files);
                 }} /><br /><br />
