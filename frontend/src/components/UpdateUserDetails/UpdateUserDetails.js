@@ -86,43 +86,43 @@ export default function UpdateUserDetails() {
             </div>
             <div className="view_form">
                 <form>
-                    <label for="fullname" className="viewheading">Full Name: </label><br />
+                    <label htmlFor="fullname" className="viewheading">Full Name: </label><br />
                     <input type="text" className="viewforminput" value={Fullname} onChange={(e) => {
                         setName(e.target.value)
                     }} /><br />
 
-                    <label for="email" className="viewheading">Email: </label><br />
+                    <label htmlFor="email" className="viewheading">Email: </label><br />
                     <input type="email" className="viewforminput" value={Email} onChange={(e) => {
                         setEmail(e.target.value)
                     }} /><br />
 
-                    <label for="address" className="viewheading">Address: </label><br />
+                    <label htmlFor="address" className="viewheading">Address: </label><br />
                     <input type="text" className="viewforminput" value={Address} onChange={(e) => {
                         setAddress(e.target.value)
                     }} /><br />
 
-                    <label for="phonenumber" className="viewheading">Telephone Number: </label><br />
+                    <label htmlFor="phonenumber" className="viewheading">Telephone Number: </label><br />
                     <input type="number" className="viewforminput" value={TelephoneNumber} onChange={(e) => {
                         setTelephoneNumber(e.target.value)
                     }} /><br />
 
-                    <label for="usertype" className="viewheading">User Type: </label><br />
+                    <label htmlFor="usertype" className="viewheading">User Type: </label><br />
                     <input type="text" className="viewforminput" value={UserType} onChange={(e) => {
                         setUserType(e.target.value)
                     }} readOnly /><br />
 
 
-                    <label for="gender" className="viewheading">Gender: </label><br />
+                    <label htmlFor="gender" className="viewheading">Gender: </label><br />
                     <input type="text" className="viewforminput" value={Gender} onChange={(e) => {
                         setGender(e.target.value)
                     }} /><br />
 
-                    <label for="username" className="viewheading">Username: </label><br />
+                    <label htmlFor="username" className="viewheading">Username: </label><br />
                     <input type="text" className="viewforminput" value={Username} onChange={(e) => {
                         setUsername(e.target.value)
                     }} readOnly/><br />
 
-                    <label for="password" className="viewheading">Password: </label><br />
+                    <label htmlFor="password" className="viewheading">Password: </label><br />
                     <input type="password" className="viewforminput" value={Password} onChange={(e) => {
                         setPassword(e.target.value)
                     }} /><br /><br />

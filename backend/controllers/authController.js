@@ -1,68 +1,66 @@
 const User = require("../models/user");
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+// Handles registering a user with the system
 const registerUser = async (req, res) => {
   try {
-    const Fullname = req.body.Fullname;
-    const Email = req.body.Email;
-    const Address = req.body.Address;
-    const TelephoneNumber = Number(req.body.TelephoneNumber);
-    const UserType = req.body.UserType;
-    const Gender = req.body.Gender;
-    const Username = req.body.Username;
-    const Password = req.body.Password;
+    const TelephoneNumber = Number(req.body.newUser.TelephoneNumber);
+    const { Fullname, Email, Address, UserType, Gender, Username, Password } =
+      req.body.newUser;
 
-    const hashedPassword = await bcrypt.hash(Password, 10);
+    const user = await User.findOne({ Email });
 
-    const newUser = new User({
-      Fullname,
-      Email,
-      Address,
-      TelephoneNumber,
-      UserType,
-      Gender,
-      Username,
-      Password: hashedPassword,
-    });
+    if (!user) {
+      const hashedPassword = await bcrypt.hash(Password, 10);
 
-    await newUser.save();
+      const newUser = new User({
+        Fullname,
+        Email,
+        Address,
+        TelephoneNumber,
+        UserType,
+        Gender,
+        Username,
+        Password: hashedPassword,
+      });
 
-    res.json({ message: "User registration successful" });
+      await newUser.save();
+
+      res.status(200).json({ message: "User registration successful" });
+    } else {
+      res.status(403).json({ message: "User with email already exists" });
+    }
   } catch (error) {
-    res.status(500).json({ error: "User registration failed" });
+    console.error(error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
+// Handles the login of a user to the system
 const loginUser = async (req, res) => {
-    try {
-        const { Email, Password } = req.body;
-        const user = await User.findOne({ Email });
+  try {
+    const { Email, Password, UserType } = req.body;
+    const user = await User.findOne({ Email });
 
-        if (!user) {
-            return res.status(401).json({ error: 'User authentication failed' });
-        }
-
-        const passwordMatch = await bcrypt.compare(Password, user.Password);
-
-        if (passwordMatch) {
-            const token = jwt.sign({ email: user.Email }, 'secret_key');
-            return res.json({ token, user });
-        } else {
-            return res.status(401).json({ error: 'User authentication failed' });
-        }
-    } catch (error) {
-        return res.status(500).json({ error: 'User authentication failed' });
+    if (!user) {
+      return res.status(404).json({ error: "Email not found" });
     }
+
+    const passwordMatch = await bcrypt.compare(Password, user.Password);
+
+    if (passwordMatch && UserType == user.UserType) {
+      const token = jwt.sign({ email: user.Email }, "secret_key");
+      return res.status(200).json({ token, user });
+    } else {
+      return res.status(401).json({ error: "Password or User Type incorrect" });
+    }
+  } catch (error) {
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
 };
 
 module.exports = {
   registerUser,
-  loginUser
-};
-
-
-module.exports = {
-  registerUser,
-  loginUser
+  loginUser,
 };

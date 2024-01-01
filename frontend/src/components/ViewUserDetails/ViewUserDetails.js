@@ -26,7 +26,6 @@ export default function ViewProfile() {
     }
     console.log(data);
 
-    //delete
     const deleteUser = async (_id) => {
         if (window.confirm("Are you sure that you want to delete this user account?")) {
             const res = await axios.delete(`http://localhost:8040/user/delete/${_id}`);
@@ -148,10 +147,10 @@ export default function ViewProfile() {
                             window.location.href = `/updateProfile/${params.id}`
                         }}>Update Details</button> &nbsp;&nbsp;&nbsp;&nbsp;
                         <button type="submit" className="Userdeletebtn" onClick={() => deleteUser(params.id)}>Delete My Account</button>
-                        <button className="UserPaymentbtn" onClick={(e) => {
+                        {/* <button className="UserPaymentbtn" onClick={(e) => {
                                         e.preventDefault();
                                         window.location.href = `/UserPayments`
-                                    }}>View Payments</button>
+                                    }}>View Payments</button> */}
                     </div>
                 </div>
 
