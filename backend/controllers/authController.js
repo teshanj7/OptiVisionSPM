@@ -50,7 +50,7 @@ const loginUser = async (req, res) => {
     const passwordMatch = await bcrypt.compare(Password, user.Password);
 
     if (passwordMatch && UserType == user.UserType) {
-      const token = jwt.sign({ email: user.Email }, "secret_key");
+      const token = jwt.sign({ email: user.Email }, "Your_Secret_Token", { expiresIn: '1h' });
       return res.status(200).json({ token, user });
     } else {
       return res.status(401).json({ error: "Password or User Type incorrect" });
