@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 const app = express();
 require("dotenv").config();
 const path = require("path")
+const authenticate = require("./middleware/authMiddleware.js")
 
 //image upload
 app.use(express.static(path.join(__dirname)))
@@ -37,9 +38,7 @@ mongoose.connect(URL).then(() => {
 
 //user management
 const userRouter = require("./routes/user.js");
-app.use("/user",userRouter);
-
-const User = require("./models/user.js");
+app.use("/user",authenticate, userRouter);
 
 const authRouter = require('./routes/authRoutes.js');
 app.use("/auth", authRouter);
@@ -59,8 +58,8 @@ app.use("/CataractApplication",cataract);
 const glaucoma = require("./models/glaucoma.js");
 app.use("/Glaucoma",glaucoma);
 
-const meditationPrescriptionRouter = require('./routes/MeditationPrescription'); // Import the meditationPrescriptionRoute file
-app.use("/meditationPrescription", meditationPrescriptionRouter); // Use the meditationPrescriptionRouter for the "/meditationPrescription" route
+const meditationPrescriptionRouter = require('./routes/MeditationPrescription'); 
+app.use("/meditationPrescription", meditationPrescriptionRouter);
 
 
 

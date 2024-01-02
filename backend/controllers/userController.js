@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const authenticate = require('../middleware/authMiddleware')
 
 // Handles getting all users from the database
 const getAllUsers = async (req, res) => {
@@ -61,7 +62,7 @@ const viewUserDetails = async (req, res) => {
     const user = await User.findById(userId);
     res.status(200).send({ status: "User fetched", user });
   } catch (error) {
-    res.status(500).send({ status: "Error with get user", error: error.message });
+    res.status(500).send({ status: "Error with fetching user", error: error.message });
   }
 };
 
