@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import axios from "axios"
 import "../SingleCataractData/SingleCataractData.css";
 import { toast, ToastContainer } from 'react-toastify';
@@ -61,7 +61,9 @@ export default function SingleCataractData() {
         if (window.confirm("Are you sure you want to delete this details?")) {
             const response = await axios.delete(`http://localhost:8040/CataractApplication/deleteCataract/${id}`);
             if (response.status === 200) {
-                window.location.href = `/ViewCataractData/${userID}`;
+                setTimeout(() => {
+                    window.location.href = `/ViewCataractData/${userID}`;
+                }, 2000);
                 toast.success('Details Deleted Successfully', {
                     position: "top-right",
                     autoClose: 2000,

@@ -6,7 +6,7 @@ const {
     loginUser
 } = require("../controllers/authController");
 
-// Regsiter a User
+// Register a User
 router.post("/add", registerUser);
 
 // Login user

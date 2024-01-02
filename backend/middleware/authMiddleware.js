@@ -1,24 +1,19 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 //jwt token authentication
 const authenticate = (req, res, next) => {
-    const token = req.header('Authorization');
+  const token = req.headers.authorization;
 
-    if (!token) {
-        return res.status(401).json({ error: 'Authentication required' });
-    }
-
-    try {
-        jwt.verify(token, 'secret_key', (err, user) => {
-            if (err) {
-                return res.status(401).json({ error: 'Authentication failed' });
-            }
-            req.user = user;
-            next();
-        });
-    } catch (error) {
-        res.status(500).json({ error: 'Authentication failed' });
-    }
+  try {
+    const token = req.headers.authorization.split(" ")[1];
+    const decodedToken = jwt.verify(token, "Your_Secret_Token");
+    req.userData = {
+      email: decodedToken.email,
+    };
+    next();
+  } catch (error) {
+    res.status(401).json({ message: "Auth failed!" });
+  }
 };
 
 module.exports = authenticate;

@@ -59,58 +59,58 @@ export default function CreateCataractForm(){
             </div>
             <br/>
             <form className="CataractForm" onSubmit={sendData}>
-            <label for="Fullname" className="CataractFormHeading">Full Name: </label><br />
+            <label htmlFor="Fullname" className="CataractFormHeading">Full Name: </label><br />
                     <input type="text" value={Fullname} className="CataractFormInput" placeholder="Full Name" onChange={(event) => {
                         setFullname(event.target.value);
                     }} required /><br />
 
-                    <label for="Email" className="CataractFormHeading">Email: </label><br />
+                    <label htmlFor="Email" className="CataractFormHeading">Email: </label><br />
                     <input type="email" value={Email} className="CataractFormInput" placeholder="Email" onChange={(event) => {
                         setEmail(event.target.value);
                     }} required /><br />
 
-                    <label for="Address" className="CataractFormHeading">Address: </label><br />
+                    <label htmlFor="Address" className="CataractFormHeading">Address: </label><br />
                     <input type="text" value={Address} className="CataractFormInput" placeholder="Address" onChange={(event) => {
                         setAddress(event.target.value);
                     }} required /><br />
 
-                    <label for="TelephoneNumber" className="CataractFormHeading">Telephone Number: </label><br />
+                    <label htmlFor="TelephoneNumber" className="CataractFormHeading">Telephone Number: </label><br />
                     <input type="number" value={TelephoneNumber} className="CataractFormInput" placeholder="Telephone Number" onChange={(event) => {
                         setTelephoneNumber(event.target.value);
                     }} required /><br />
 
-                    <label for="Age"  className="CataractFormHeading">Age: </label><br/>
+                    <label htmlFor="Age"  className="CataractFormHeading">Age: </label><br/>
                     <input type="radio"  className="ageradio" name="age" value="Under 18" onChange={(event) => {
                         setAge(event.target.value);
                     }} required />&nbsp;&nbsp;
-                    <label for="Under 18" className="CataractFormHeading">Under 18</label>
+                    <label htmlFor="Under 18" className="CataractFormHeading">Under 18</label>
                     &nbsp;&nbsp;&nbsp;
                     <input type="radio" className="ageradio" name="age" value="18-30" onChange={(event) => {
                         setAge(event.target.value);
                     }} required />&nbsp;&nbsp;
-                    <label for="18-30" className="CataractFormHeading">18-30</label>&nbsp;&nbsp;&nbsp;
+                    <label htmlFor="18-30" className="CataractFormHeading">18-30</label>&nbsp;&nbsp;&nbsp;
                     <input type="radio"  className="ageradio" name="age" value="31-50" onChange={(event) => {
                         setAge(event.target.value);
                     }} required />&nbsp;&nbsp;
-                    <label for="31-50" className="CataractFormHeading">31-50</label>
+                    <label htmlFor="31-50" className="CataractFormHeading">31-50</label>
                     &nbsp;&nbsp;&nbsp;
                     <input type="radio" className="ageradio" name="age" value="Above 50" onChange={(event) => {
                         setAge(event.target.value);
                     }} required />&nbsp;&nbsp;
-                    <label for="Above 50" className="CataractFormHeading">Above 50</label><br />
+                    <label htmlFor="Above 50" className="CataractFormHeading">Above 50</label><br />
 
-                    <label for="Gender"  className="CataractFormHeading">Gender: </label><br/>
+                    <label htmlFor="Gender"  className="CataractFormHeading">Gender: </label><br/>
                     <input type="radio"  className="genderradio" name="gender" value="Male" onChange={(event) => {
                         setGender(event.target.value);
                     }} required />&nbsp;&nbsp;
-                    <label for="Male" className="CataractFormHeading">Male</label>
+                    <label htmlFor="Male" className="CataractFormHeading">Male</label>
                     &nbsp;&nbsp;&nbsp;
                     <input type="radio" className="genderradio" name="gender" value="Female" onChange={(event) => {
                         setGender(event.target.value);
                     }} required />&nbsp;&nbsp;
-                    <label for="Female" className="CataractFormHeading">Female</label><br />
+                    <label htmlFor="Female" className="CataractFormHeading">Female</label><br />
 
-                    <label for="image" className="CataractFormHeading">Image: &nbsp;&nbsp;&nbsp;</label>            
+                    <label htmlFor="image" className="CataractFormHeading">Image: &nbsp;&nbsp;&nbsp;</label>            
                     <input type="file" name="file"  className="CataractFormImg" onChange={(event) => {
                         setFiles(event.target.files);
                     }} /><br/><br/>

@@ -60,7 +60,7 @@ export default function Questions({ onChecked }) {
                                 onChange={() => onSelect(i)}
                             />
 
-                            <label className="text" htmlFor={`q${i}-option`}>{q}</label>
+                            <label className="text" htmlhtmlFor={`q${i}-option`}>{q}</label>
                             <div className={`check ${result[trace] == i ? 'checked' : ''}`}></div>
                         </li>
                     ))

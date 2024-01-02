@@ -4,7 +4,6 @@ const GlaucomaPost = require("../models/glaucoma");
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'glaucomaImages/' });
 
-//---------------create Glaucoma Form---------------------------------
 router.post("/addGlaucoma", uploadMiddleware.single('files'), async (req, res) => {
     
     const {originalname,path} = req.file;
